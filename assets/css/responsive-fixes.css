@@ -3333,44 +3333,110 @@ iframe {
     }
 }
 
-/* 2. Top info bar: on phones the tagline + phone + portal + cart squeezed
-      into one row (phone number broke over 3 lines) and the hidden cart
-      dropdown stuck out past the right edge. */
-@media (max-width: 767.98px) {
+/* ============================================================
+   HEADER — MOBILE & TABLET TOP BAR FIX
+   Reference: dojoonlinemarketing.com mobile header
+   Goal: compact single-line top bar (~36px) with marquee text
+   on the left and icon-only buttons on the right.
+   ============================================================ */
+
+/* --- Tablet (768–991px) ------------------------------------ */
+@media (min-width: 768px) and (max-width: 991.98px) {
     .top-header {
-        flex-wrap: wrap;
-        justify-content: center;
-        row-gap: 6px;
-        column-gap: 16px;
-        padding: 8px 14px;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 7px 16px;
+        gap: 10px;
     }
 
     .top-header-left {
-        flex: 1 1 100%;
-        justify-content: center;
-        text-align: center;
+        flex: 1 1 0;
+        min-width: 0;
     }
 
     .top-header-left a {
         font-size: 12px;
-        justify-content: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
     }
 
     .top-header-right {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 6px 16px;
+        flex: 0 0 auto;
+        flex-wrap: nowrap;
+        gap: 14px;
     }
 
     .top-header-right a {
         font-size: 13px;
         white-space: nowrap;
     }
+}
+
+/* --- Mobile (≤767px) --------------------------------------- */
+@media (max-width: 767.98px) {
+    .top-header {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 6px 14px;
+        gap: 8px;
+    }
+
+    .top-header-left {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .top-header-left a {
+        font-size: 11px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+    }
+
+    .top-header-right {
+        flex: 0 0 auto;
+        flex-wrap: nowrap;
+        gap: 12px;
+        align-items: center;
+    }
+
+    /* Hide text labels on phone & student portal — show icons only */
+    .top-header-right > a {
+        font-size: 0;
+    }
+    .top-header-right > a > i {
+        font-size: 16px;
+    }
+    .top-header-right > a > i.me-2 {
+        margin-right: 0 !important;
+    }
 
     .top-header .cart-dropdown {
         right: 0;
         left: auto;
         width: min(288px, calc(100vw - 28px));
+    }
+}
+
+/* --- Small phones (≤420px) --------------------------------- */
+@media (max-width: 420px) {
+    .top-header {
+        padding: 5px 12px;
+    }
+
+    .top-header-left a {
+        font-size: 10px;
+    }
+
+    .top-header-right {
+        gap: 10px;
+    }
+
+    .top-header-right > a > i {
+        font-size: 15px;
     }
 }
 
