@@ -1,0 +1,306 @@
+﻿@media (max-width: 1199.98px) {
+            html {
+                height: auto !important;
+                min-height: 100% !important;
+                overflow-x: hidden !important;
+                overflow-y: auto !important;
+            }
+
+.programv2-page {
+                width: 100%;
+                max-width: 100%;
+                height: auto !important;
+                min-height: 100% !important;
+                overflow-x: hidden !important;
+                overflow-y: visible !important;
+            }
+
+            .programv2-page *,
+            .programv2-page *::before,
+            .programv2-page *::after {
+                box-sizing: border-box;
+            }
+
+            .programv2-page img,
+            .programv2-page iframe,
+            .programv2-page video,
+            .programv2-page svg {
+                max-width: 100%;
+            }
+
+            .programv2-page .container,
+            .programv2-page .container-fluid {
+                max-width: 100%;
+            }
+
+            .programv2-page .program-sectionss {
+                min-height: 500px;
+                height: auto;
+                overflow: hidden;
+            }
+
+            .programv2-page .program-sectionss .banner-content {
+                padding: 132px 0 0px;
+                text-align: center;
+            }
+
+            .programv2-page .program-sectionss .banner-content h1 {
+                max-width: 820px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .programv2-page .program-sectionss .banner-content p {
+                max-width: 760px;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 17px;
+                line-height: 1.65;
+            }
+
+            .programv2-page .hero-wrap {
+                overflow: hidden;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .programv2-page .g-title h3,
+            .programv2-page .main-title {
+                font-size: clamp(30px, 4.5vw, 44px);
+                line-height: 1.12;
+            }
+
+            .programv2-page .timeline-container {
+                max-width: 100%;
+                padding-left: 86px;
+                padding-right: 18px;
+                overflow: hidden;
+            }
+
+            .programv2-page .timeline-item {
+                margin: 60px 0;
+            }
+
+            .programv2-page .timeline-item .row {
+                row-gap: 28px;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .programv2-page .timeline-track,
+            .programv2-page .timeline-fill {
+                left: 34px !important;
+                transform: translateX(-50%);
+            }
+
+            .programv2-page .timeline-badge {
+                display: none;
+                pointer-events: none;
+            }
+
+            .programv2-page .timeline-item .row {
+                position: relative;
+                z-index: 2;
+            }
+
+            .programv2-page .timeline-item.alternate .col-lg-6:first-child,
+            .programv2-page .timeline-item:not(.alternate) .col-lg-6:last-child {
+                order: initial;
+                margin-top: 0;
+            }
+
+            .programv2-page .content-side {
+                max-width: 100%;
+            }
+
+            .programv2-page .hero-title {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+            }
+
+            .programv2-page .hero-text {
+                font-size: clamp(18px, 2.6vw, 24px);
+            }
+
+            .programv2-page .sub-title p {
+                font-size: 16px;
+                line-height: 1.65;
+            }
+
+            .programv2-page .skill-inline {
+                overflow-wrap: anywhere;
+            }
+
+            .programv2-page .right-col,
+            .programv2-page .left-col {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .programv2-page .hero-image {
+                width: 100%;
+                /* max-width: 520px; */
+                height: auto;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+
+            .programv2-page .skill-box {
+                width: min(100%, 430px);
+                max-width: 100%;
+                position: relative;
+                left: auto;
+                right: auto;
+                margin: 18px auto 0;
+            }
+
+            .programv2-page .ma-footer {
+                height: auto !important;
+                max-height: none !important;
+                overflow: visible !important;
+            }
+
+
+        }
+
+        @media (max-width: 991.98px) {
+            .programv2-page .program-sectionss .banner-content {
+                padding: 150px 0 68px;
+            }
+
+            .programv2-page .timeline-container {
+                padding-left: 82px;
+                padding-right: 14px;
+            }
+
+            .programv2-page .timeline-track,
+            .programv2-page .timeline-fill {
+                left: 30px !important;
+            }
+
+            .programv2-page .timeline-item {
+                margin: 50px 0;
+            }
+
+            .programv2-page .content-side {
+                text-align: left;
+            }
+
+        }
+
+        @media (max-width: 767.98px) {
+            .programv2-page .container {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            .programv2-page .program-sectionss {
+                min-height: 430px;
+            }
+
+            .programv2-page .program-sectionss .banner-content {
+                padding: 160px 0 54px;
+            }
+
+            .programv2-page .program-sectionss .banner-content p {
+                font-size: 15px;
+                line-height: 1.58;
+            }
+
+            .programv2-page .hero-wrap {
+                padding-top: 46px;
+            }
+
+            .programv2-page .g-title h3,
+            .programv2-page .main-title {
+                font-size: clamp(26px, 8vw, 34px);
+            }
+
+            .programv2-page .timeline-container {
+                padding-left: 68px;
+            }
+
+            .programv2-page .timeline-track,
+            .programv2-page .timeline-fill {
+                left: 24px !important;
+            }
+
+            .programv2-page .timeline-item {
+                margin: 40px 0;
+            }
+
+            .programv2-page .timeline-item .row > [class*="col-"] {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .programv2-page .hero-title {
+                font-size: clamp(28px, 9vw, 38px);
+            }
+
+            .programv2-page .sub-title p {
+                font-size: 15px;
+                line-height: 1.58;
+            }
+
+            .programv2-page .skill-inline span {
+                margin-left: 4px;
+                margin-right: 4px;
+            }
+
+            .programv2-page .skill-box {
+                padding: 18px;
+            }
+
+            .programv2-page .skill-item {
+                gap: 10px;
+            }
+
+            .programv2-page .skill-name {
+                font-size: 14px;
+            }
+
+            .programv2-page .form-check {
+                align-items: flex-start;
+            }
+
+            .programv2-page .form-check-label {
+                font-size: 13px;
+                line-height: 1.45;
+            }
+
+        }
+
+        @media (max-width: 575.98px) {
+            .programv2-page .container {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            .programv2-page .program-sectionss .banner-content {
+                padding-top: 150px;
+            }
+
+            .programv2-page .timeline-container {
+                padding: 0 30px;
+            }
+
+            .programv2-page .timeline-track,
+            .programv2-page .timeline-fill {
+                left: 21px !important;
+            }
+
+            .programv2-page .hero-image {
+                border-radius: 18px;
+            }
+
+            .programv2-page .skill-box {
+                margin-top: 14px;
+                border-radius: 16px;
+            }
+
+        }
+
+

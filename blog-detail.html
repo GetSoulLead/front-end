@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Self-Defense Techniques — Martial Arts Blog</title>
+    <meta name="description" content="Learn the essential self-defense techniques every beginner should master. Expert guide covering awareness, stance, strikes, and mental discipline.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.css?v=3">
+    <link rel="stylesheet" href="assets/css/blog-grid.css">
+    <link rel="stylesheet" href="assets/css/blog-detail.css">
+    <link rel="stylesheet" href="assets/css/yellow-theme-dark.css">
+   
+</head>
+
+<body class="blog-page bd-page">
+
+    <!-- Reading Progress Bar -->
+    <div class="bd-progress" id="readingProgress"></div>
+
+    <!-- ===== TOP HEADER ===== -->
+    <div class="top-header">
+        <div class="top-header-left">
+            <a href="mailto:info@example.com">Self Defense, Adult &amp; Children Martial Arts Classes in Memphis</a>
+        </div>
+        <div class="top-header-right">
+            <a href="tel:+19087319123"><i class="bi bi-telephone me-2"></i> (908) 763-9123</a>
+            <a href="Stindex.html"><i class="bi bi-person me-2"></i> Student Portal</a>
+            <div class="cart-container position-relative">
+                <a href="#" class="position-relative cart">
+                    <i class="bi bi-cart3"></i>
+                    <span class="cart-count">3</span>
+                </a>
+                <div class="cart-dropdown" id="cartDropdown">
+                    <div class="cart-item gap-3">
+                        <span class="item-remove"></span>
+                        <img src="assets/images/f1.png" class="item-image" alt="">
+                        <div class="item-details flex-grow-1">
+                            <h6>Strike Gloves</h6>
+                            <div class="item-qty-price">2x $64.00</div>
+                        </div>
+                    </div>
+                    <div class="cart-item gap-3">
+                        <span class="item-remove"></span>
+                        <img src="assets/images/f2.png" class="item-image" alt="">
+                        <div class="item-details flex-grow-1">
+                            <h6>Training Pads</h6>
+                            <div class="item-qty-price">1x $52.00</div>
+                        </div>
+                    </div>
+                    <div class="cart-total">
+                        <div class="total-row">
+                            <span>Total</span>
+                            <span class="total-price">$180.00</span>
+                        </div>
+                        <button class="btn w-100 bg-white">Cart</button>
+                        <button class="btn btn-theme w-100">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER / NAV ===== -->
+    <header class="background-header">
+        <a href="Index.html" class="logo">
+            <img src="assets/images/logo-2.png" alt="Logo">
+        </a>        <nav>
+            <a href="Index.html" class="main-menu" id="home-link">Home</a>
+
+            <div class="nav-item-dropdown">
+                <a href="aboutus.html" class="main-menu">About Us <i class="bi bi-chevron-down"></i></a>
+                <div class="full-width-dropdown">
+                    <div class="dropdown-content-align mega-grid about-dropdownGrid aboutus-dropdown">
+                        <div class="simple-list mega-col">
+                            <h6>About Us</h6>
+                            <ul>
+                                <li><a href="aboutus.html">Our School</a></li>
+                                <li><a href="#">Reviews &#128077;</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xxl-3 col-xl-3 d-none d-xxl-block">
+                            <div class="tp-megamenu-portfolio-text">
+                                <h4>50+</h4><span>Martial arts training programs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item-dropdown">
+                <a href="program-category.html" class="main-menu">Our Programs <i class="bi bi-chevron-down"></i></a>
+                <div class="full-width-dropdown">
+                    <div class="dropdown-content-align">
+                        <div class="mega-grid">
+                            <div class="mega-col">
+                                <h6><a href="program-category.html">Children's Programs</a></h6>
+                                <span class="age">Age 4-12</span>
+                                <ul>
+                                    <li><a href="program-category.html">Little Dragons</a></li>
+                                    <li><a href="program-category.html">Juniors</a></li>
+                                    <li><a href="program-category.html">Leadership</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h6><a href="programs-details.html">Adult Programs</a></h6>
+                                <span class="age">Age 18+</span>
+                                <ul>
+                                    <li><a href="programs-details.html">Jeet Kune Do</a></li>
+                                    <li><a href="programs-details.html">Kali</a></li>
+                                    <li><a href="programs-details.html">Kung Fu</a></li>
+                                    <li><a href="programs-details.html">Tai Chi</a></li>
+                                    <li><a href="programs-details.html">Qi Gong</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h6><a href="program-category.html">Just 4 Kids</a></h6>
+                                <span class="age">Age 20+</span>
+                                <ul>
+                                    <li><a href="program-category.html">Parent's Night Out</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 d-none d-xxl-block">
+                                <div class="tp-megamenu-portfolio-text">
+                                    <h4>50+</h4><span>Martial arts training programs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="trial-offer.html" class="main-menu">Trial Offer</a>
+            <a href="product-listing.html" class="main-menu">Shop</a>
+            <a href="blog-grid.html" class="main-menu active">Blog</a>
+
+            <div class="nav-item-dropdown contact-nav-item-dropdown">
+                <a href="contact.html" class="main-menu">Contact Us <i class="bi bi-chevron-down"></i></a>
+                <div class="full-width-dropdown contact-full-width-dropdown">
+                    <div class="dropdown-content-align contact-dropdown-grid contactus-dropdown">
+                        <div class="contact-simple-list contact-mega-col">
+                            <h6>Contact Us</h6>
+                            <ul>
+                                <li><a href="contact.html">Send a Message</a></li>
+                                <li><a href="contact.html#contact">Visit Our School</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xxl-3 col-xl-3 d-none d-xxl-block contact-dropdown-stat">
+                            <div class="contact-megamenu-portfolio-text">
+                                <h4>24h</h4><span>quick response for trial class questions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+<a class="btn btn-theme d-lg-block d-none header-btn" href="contact.html">Try a Class for FREE!</a>
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="bd-hero" aria-label="Article hero">
+        <div class="bd-hero__overlay"></div>
+
+        <div class="container" style="position:relative;z-index:1;">
+            <div class="bd-hero__content">
+                <!-- <span class="bd-hero__badge">Self Defense</span> -->
+                <h1 class="bd-hero__title">Essential Self-Defense Techniques Every Beginner Should Learn</h1>
+                <div class="bd-hero__meta">
+                    <!-- <div class="bd-hero__author">
+                        <img src="assets/images/teacher.jpg" alt="Sensei Marcus">
+                        <div>
+                            <div class="bd-hero__author-name">Sensei Marcus K.</div>
+                            <div class="bd-hero__author-role">Head Instructor</div>
+                        </div>
+                    </div> -->
+                    <div class="bd-hero__sep"></div>
+                    <div class="bd-hero__stat"><i class="bi bi-calendar3"></i> Sep 18, 2025</div>
+                    <div class="bd-hero__sep"></div>
+                    <div class="bd-hero__stat"><i class="bi bi-clock"></i> 7 min read</div>
+                    <div class="bd-hero__stat"><i class="bi bi-shield"></i> Self Defense</div>
+                    <!-- <div class="bd-hero__sep"></div>
+                    <div class="bd-hero__stat"><i class="bi bi-eye"></i> 2.4K Views</div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MAIN ===== -->
+    <div class="bd-main-wrap">
+        <div class="container">
+            <div class="bd-layout">
+
+                <!-- ============================================
+                     LEFT — ARTICLE CONTENT
+                     ============================================ -->
+                <div>
+
+                    <!-- Article Card -->
+                    <article class="bd-article-card" id="articleContent">
+
+                        <!-- Breadcrumb header -->
+                        <div class="bd-article-header">
+                            <nav class="bd-article-crumbs" aria-label="Breadcrumb">
+                                <a href="index.html">Home</a>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="blog-grid.html">Blog</a>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#">Self Defense</a>
+                                <i class="bi bi-chevron-right"></i>
+                                <span>Essential Self-Defense Techniques</span>
+                            </nav>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="bd-article-body">
+                            <div class="bd-content">
+
+                                <p>In an unpredictable world, knowing how to protect yourself is not a luxury — it is a fundamental skill. Self-defense training equips you with the confidence, awareness, and physical ability to handle threatening situations. Whether you are a complete beginner or someone looking to sharpen your skills, this guide covers the most essential techniques every person should know.</p>
+
+                                <p>At USA Karate, we believe self-defense is more than just physical techniques. It begins in the mind — with awareness, discipline, and the mental fortitude to remain calm under pressure. The physical techniques you learn are your last line of defense. Your first line of defense is your mind.</p>
+
+                                <!-- Stats -->
+                                <div class="bd-stats-row">
+                                    <div class="bd-stat-box">
+                                        <div class="bd-stat-box__num">87%</div>
+                                        <div class="bd-stat-box__label">Threats Avoided via Awareness</div>
+                                    </div>
+                                    <div class="bd-stat-box">
+                                        <div class="bd-stat-box__num">6 Wks</div>
+                                        <div class="bd-stat-box__label">Avg. Time to Basic Proficiency</div>
+                                    </div>
+                                    <div class="bd-stat-box">
+                                        <div class="bd-stat-box__num">3×</div>
+                                        <div class="bd-stat-box__label">Confidence Boost Reported</div>
+                                    </div>
+                                </div>
+
+                                <h2>Building the Foundation: Awareness First</h2>
+
+                                <p>The most effective self-defense tool is situational awareness — the ability to read your environment and identify potential threats before they escalate. Law enforcement professionals call this condition yellow: a relaxed but alert state that puts you ahead of any potential threat.</p>
+
+                                <ul>
+                                    <li><strong>Scan your surroundings</strong> when entering any public space — note exits, people, and anything unusual</li>
+                                    <li><strong>Trust your instincts.</strong> If something feels wrong, remove yourself from the situation immediately</li>
+                                    <li><strong>Avoid distractions</strong> such as staring at your phone in unfamiliar or crowded areas</li>
+                                    <li><strong>Project confidence</strong> through body language — attackers target those who appear vulnerable</li>
+                                    <li><strong>Maintain a safe distance</strong> from strangers who approach you aggressively</li>
+                                </ul>
+
+                                <div class="bd-note">
+                                    <div class="bd-note__icon"><i class="bi bi-shield-check"></i></div>
+                                    <div>
+                                        <div class="bd-note__label">Important Principle</div>
+                                        <p class="bd-note__text">The goal of self-defense is always de-escalation and escape — not confrontation. Physical techniques are your absolute last resort after every other option has failed.</p>
+                                    </div>
+                                </div>
+
+                                <h2>Core Self-Defense Techniques for Beginners</h2>
+
+                                <p>Once awareness fails and a physical confrontation becomes unavoidable, these fundamental techniques give you the best chance of escaping safely. Focus on mastering these basics before advancing to complex combinations.</p>
+
+                                <h3>The Defensive Stance</h3>
+
+                                <p>Your stance is the foundation of everything. A proper defensive stance keeps you balanced, protects vital areas, and positions you to either defend or escape. Stand with your feet shoulder-width apart, dominant foot back, hands raised to chin height with palms facing outward. This position signals that you do not want trouble while protecting your face and keeping options open.</p>
+
+                                <!-- Inline Image -->
+                                <div class="bd-img-block">
+                                    <img src="assets/images/program/bx2.jpg" alt="Martial arts defensive stance training">
+                                    <div class="bd-img-caption"><i class="bi bi-camera me-2"></i>Students practicing defensive stances during a USA Karate session</div>
+                                </div>
+
+                                <h3>Effective Blocking and Deflection</h3>
+
+                                <p>Blocking a strike wastes energy. Deflection is superior — redirecting an attack rather than absorbing its force. These are the most critical blocks to learn first:</p>
+
+                                <ol>
+                                    <li><strong>Inside Forearm Block</strong> — Sweep your forearm inward to redirect a straight punch away from your centerline</li>
+                                    <li><strong>High Block</strong> — Raise your forearm diagonally above your head to protect against overhead strikes</li>
+                                    <li><strong>Outside Block</strong> — Sweep outward to deflect hooks and crossing strikes away from your face</li>
+                                    <li><strong>Low Block</strong> — Drop your forearm downward to protect against kicks aimed at your midsection</li>
+                                    <li><strong>Palm Heel Redirect</strong> — Use your open palm to redirect a grab or push without engaging further</li>
+                                </ol>
+
+                                <h3>Striking Fundamentals</h3>
+
+                                <p>If escape is blocked and you must strike, target areas that are effective regardless of size difference: the nose, throat, solar plexus, and knee. Strike with intent, create distance, and run. Never stay and exchange blows — your goal is escape, not victory.</p>
+
+                                <blockquote>
+                                    "The best fight is the one that never happens. But when it does happen, train so hard that it ends in seconds."
+                                    <cite>— Sensei Marcus K., Head Instructor, USA Karate</cite>
+                                </blockquote>
+
+                                <h2>Developing Mental Toughness Through Training</h2>
+
+                                <p>Physical techniques without mental conditioning are like a sword without an edge. The psychological component of self-defense training is what separates someone who freezes in a crisis from someone who acts decisively. At USA Karate, every training session is designed to build this mental resilience alongside technical skill.</p>
+
+                                <p>Regular training under controlled stress — sparring, scenario drills, and pressure testing — trains your nervous system to remain functional when adrenaline spikes. This is why we train. Not to become aggressive, but to become calm precisely when the world demands panic.</p>
+
+                                <div class="bd-note">
+                                    <div class="bd-note__icon"><i class="bi bi-lightbulb"></i></div>
+                                    <div>
+                                        <div class="bd-note__label">Pro Training Tip</div>
+                                        <p class="bd-note__text">Breathe. Deep diaphragmatic breathing activates your parasympathetic nervous system, reducing the freeze response. Practice box breathing (4 counts in, 4 hold, 4 out, 4 hold) daily and under training stress.</p>
+                                    </div>
+                                </div>
+
+                            </div><!-- /bd-content -->
+                        </div><!-- /bd-article-body -->
+
+                        <!-- Continue body -->
+                        <div class="bd-article-body">
+                            <div class="bd-content">
+
+                                <h2>Building Your Weekly Training Routine</h2>
+
+                                <p>Consistency beats intensity every time. A structured weekly routine practiced over months builds the muscle memory and mental conditioning that makes self-defense instinctive rather than deliberate. Here is a beginner-friendly 5-day framework:</p>
+
+                                <ol>
+                                    <li><strong>Monday — Fundamentals:</strong> Stance, footwork, and basic block/strike combinations (45 min)</li>
+                                    <li><strong>Tuesday — Conditioning:</strong> Cardiovascular fitness and functional strength training (30 min)</li>
+                                    <li><strong>Wednesday — Technique Drilling:</strong> Slow, deliberate repetition of 3–5 core techniques (45 min)</li>
+                                    <li><strong>Thursday — Active Recovery:</strong> Flexibility, yoga, or light mobility work (20–30 min)</li>
+                                    <li><strong>Friday — Scenario Training:</strong> Controlled partner drills and live sparring practice (60 min)</li>
+                                </ol>
+
+                                <h2>Common Mistakes Beginners Make</h2>
+
+                                <p>Awareness of these mistakes helps you progress faster and avoid developing habits that can undermine your effectiveness under real pressure:</p>
+
+                                <ul>
+                                    <li><strong>Neglecting footwork</strong> — feet that cannot move efficiently make every technique weaker</li>
+                                    <li><strong>Tensing up during drills</strong> — relaxed muscles are faster and more powerful than tense ones</li>
+                                    <li><strong>Over-committing to a single technique</strong> — combination thinking always wins over single-strike thinking</li>
+                                    <li><strong>Skipping conditioning</strong> — most real confrontations are decided in the first 20 seconds by whoever is fitter</li>
+                                    <li><strong>Practicing only in comfort</strong> — train in different environments, clothing, and lighting conditions</li>
+                                    <li><strong>Ignoring de-escalation</strong> — verbal assertiveness can end a confrontation before it becomes physical</li>
+                                </ul>
+
+                                <p>Self-defense is a journey, not a destination. Every training session adds a layer to your capability. Begin with these fundamentals, train consistently, and you will develop not just the skills to protect yourself but the confidence that transforms how you move through the world.</p>
+
+                            </div>
+                        </div><!-- /bd-article-body -->
+
+                                               
+                        <!-- Tags -->
+                        <div class="bd-tags">
+                            <span class="bd-tags__label"><i class="bi bi-tags me-2"></i>Tags:</span>
+                            <a href="#" class="bd-tag">Self Defense</a>
+                            <a href="#" class="bd-tag">MMA</a>
+                            <a href="#" class="bd-tag">Beginners</a>
+                            <a href="#" class="bd-tag">Martial Arts</a>
+                            <a href="#" class="bd-tag">Training</a>
+                            <a href="#" class="bd-tag">Karate</a>
+                        </div>
+
+                        <!-- Social Share -->
+                        <div class="bd-share">
+                            <span class="bd-share__label"><i class="bi bi-share me-2"></i>Share:</span>
+                            <a href="#" class="bd-share-btn" title="Share on Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="bd-share-btn" title="Share on X" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="bd-share-btn" title="Share on LinkedIn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="bd-share-btn" title="Share on WhatsApp" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#" class="bd-share-btn" title="Copy link" aria-label="Copy link"><i class="bi bi-link-45deg"></i></a>
+                        </div>
+
+                    </article>
+
+                    <!-- <!-- ===== AUTHOR BOX ===== -->
+                   <!--  <div class="bd-author">
+                        <img
+                            class="bd-author__img"
+                            src="assets/images/teacher.jpg"
+                            alt="Sensei Marcus K.">
+                        <div>
+                            <span class="bd-author__badge"><i class="bi bi-award-fill me-1"></i> About the Author</span>
+                            <div class="bd-author__name">Sensei Marcus K.</div>
+                            <div class="bd-author__role">Head Instructor &amp; Founder · 3rd Dan Black Belt</div>
+                            <p class="bd-author__bio">Sensei Marcus has over 20 years of martial arts experience spanning Karate, Jiu-Jitsu, and Krav Maga. A certified self-defense instructor and former competitive fighter, he founded USA Karate to bring world-class martial arts training to Memphis. His philosophy: discipline, respect, and relentless self-improvement.</p>
+                            <div class="bd-author__socials">
+                                <a href="#" class="bd-author__social" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#" class="bd-author__social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="bd-author__social" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="bd-author__social" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- ===== PREVIOUS / NEXT ===== -->
+                    <nav class="bd-post-nav" aria-label="Post navigation">
+                        <a href="#" class="bd-post-nav__item">
+                            <img class="bd-post-nav__img" src="assets/images/program/bx4.jpg" alt="Previous post">
+                            <div class="bd-post-nav__body">
+                                <div class="bd-post-nav__dir"><i class="bi bi-arrow-left"></i> Previous Article</div>
+                                <div class="bd-post-nav__title">Common Mistakes Beginners Make in Kickboxing</div>
+                            </div>
+                        </a>
+                        <a href="#" class="bd-post-nav__item bd-post-nav__item--next">
+                            <img class="bd-post-nav__img" src="assets/images/program/bx2.jpg" alt="Next post">
+                            <div class="bd-post-nav__body">
+                                <div class="bd-post-nav__dir">Next Article <i class="bi bi-arrow-right"></i></div>
+                                <div class="bd-post-nav__title">How MMA Training Improves Physical and Mental Strength</div>
+                            </div>
+                        </a>
+                    </nav>
+
+                    <!-- ===== RELATED ARTICLES ===== -->
+                    <section class="bd-related" aria-label="Related articles">
+                        <div class="bd-section-head">
+                            <h2>Related Articles</h2>
+                        </div>
+                        <div class="bd-related-grid">
+
+                            <article class="blog-card">
+                                <a href="#">
+                                    <div class="blog-card__img">
+                                        <img src="assets/images/program/bx2.jpg" alt="MMA Training">
+                                    </div>
+                                    <div class="blog-card__body">
+                                        <span class="blog-card__cat">MMA Techniques</span>
+                                        <h3 class="blog-card__title">How MMA Training Improves Physical and Mental Strength</h3>
+                                        <div class="blog-card__meta">
+                                            <span><i class="bi bi-calendar3"></i>Sep 18, 2025</span>
+                                            <span><i class="bi bi-clock"></i>5 min</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <article class="blog-card">
+                                <a href="#">
+                                    <div class="blog-card__img">
+                                        <img src="assets/images/about/1.jpg" alt="Karate Training">
+                                    </div>
+                                    <div class="blog-card__body">
+                                        <span class="blog-card__cat">Karate Training</span>
+                                        <h3 class="blog-card__title">Top Conditioning Exercises for Competitive Fighters</h3>
+                                        <div class="blog-card__meta">
+                                            <span><i class="bi bi-calendar3"></i>Sep 12, 2025</span>
+                                            <span><i class="bi bi-clock"></i>6 min</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <article class="blog-card">
+                                <a href="#">
+                                    <div class="blog-card__img">
+                                        <img src="assets/images/program/bx4.jpg" alt="Kickboxing">
+                                    </div>
+                                    <div class="blog-card__body">
+                                        <span class="blog-card__cat">Kickboxing</span>
+                                        <h3 class="blog-card__title">Common Mistakes Beginners Make in Kickboxing</h3>
+                                        <div class="blog-card__meta">
+                                            <span><i class="bi bi-calendar3"></i>Sep 8, 2025</span>
+                                            <span><i class="bi bi-clock"></i>4 min</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                        </div>
+                    </section>                   
+                    
+
+                </div><!-- /left column -->
+
+                <!-- ============================================
+                     RIGHT — SIDEBAR
+                     ============================================ -->
+                <aside class="blog-sidebar" aria-label="Blog sidebar">
+
+                    <!-- Search -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Search</h3>
+                        <div class="sb-search">
+                            <input type="text" placeholder="Search posts...">
+                            <button type="button" aria-label="Search"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Categories</h3>
+                        <div class="sb-categories">
+                            <a href="#" class="sb-cat-item">MMA Training <span class="sb-cat-count">8</span></a>
+                            <a href="#" class="sb-cat-item">Karate <span class="sb-cat-count">5</span></a>
+                            <a href="#" class="sb-cat-item">Kickboxing <span class="sb-cat-count">6</span></a>
+                            <a href="#" class="sb-cat-item">Self Defense <span class="sb-cat-count">9</span></a>
+                            <a href="#" class="sb-cat-item">Fitness &amp; Conditioning <span class="sb-cat-count">4</span></a>
+                            <a href="#" class="sb-cat-item">Martial Arts Tips <span class="sb-cat-count">7</span></a>
+                        </div>
+                    </div>
+
+                    <!-- Recent Posts -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Recent Posts</h3>
+                        <div class="sb-recent-posts">
+                            <a href="#" class="sb-post">
+                                <div class="sb-post__thumb">
+                                    <img src="assets/images/post-1.jpg" alt="Self Defense">
+                                </div>
+                                <div class="sb-post__info">
+                                    <span class="sb-post__cat">Self Defense</span>
+                                    <span class="sb-post__title">Essential Self-Defense Techniques Every Beginner Should Learn</span>
+                                    <span class="sb-post__date">Sep 18, 2025</span>
+                                </div>
+                            </a>
+                            <a href="#" class="sb-post">
+                                <div class="sb-post__thumb">
+                                    <img src="assets/images/program/bx1.jpg" alt="MMA">
+                                </div>
+                                <div class="sb-post__info">
+                                    <span class="sb-post__cat">MMA Techniques</span>
+                                    <span class="sb-post__title">How MMA Training Improves Physical and Mental Strength</span>
+                                    <span class="sb-post__date">Sep 18, 2025</span>
+                                </div>
+                            </a>
+                            <a href="#" class="sb-post">
+                                <div class="sb-post__thumb">
+                                    <img src="assets/images/post-3.jpg" alt="Karate">
+                                </div>
+                                <div class="sb-post__info">
+                                    <span class="sb-post__cat">Karate Training</span>
+                                    <span class="sb-post__title">Benefits of Karate for Children and Adults of All Ages</span>
+                                    <span class="sb-post__date">Sep 12, 2025</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Popular Tags -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Popular Tags</h3>
+                        <div class="sb-tags">
+                            <a href="#" class="sb-tag">MMA</a>
+                            <a href="#" class="sb-tag">Self Defense</a>
+                            <a href="#" class="sb-tag">Boxing</a>
+                            <a href="#" class="sb-tag">Karate</a>
+                            <a href="#" class="sb-tag">Fitness</a>
+                            <a href="#" class="sb-tag">Jiu-Jitsu</a>
+                            <a href="#" class="sb-tag">Kickboxing</a>
+                            <a href="#" class="sb-tag">Training</a>
+                            <a href="#" class="sb-tag">Beginners</a>
+                            <a href="#" class="sb-tag">Krav Maga</a>
+                        </div>
+                    </div>
+
+                    <!-- Promo Card -->
+                    <div class="sidebar-promo">
+                        <img
+                            src="assets/images/cta-bg.jpg"
+                            alt="Train With Us"
+                            class="sidebar-promo__img">
+                        <div class="sidebar-promo__overlay"></div>
+                        <div class="sidebar-promo__body">
+                            <span class="sidebar-promo__tag">Free Trial</span>
+                            <div class="sidebar-promo__title">Start Your<br>Martial Arts<br>Journey Today</div>
+                            <a href="trial-offer.html" class="sidebar-promo__btn">
+                                Book Free Class <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </aside>
+
+            </div><!-- /bd-layout -->
+        </div><!-- /container -->
+    </div><!-- /bd-main-wrap -->
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="ma-footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-6 flex-div-footer">
+                    <div class="footer-brand mb-3">
+                        <img src="assets/images/logo-2.png" alt="Logo" class="footer-logo" width="100" height="100">
+                    </div>
+                    <div class="social-links mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Explore</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Instructors</a></li>
+                        <li><a href="#">Class Schedule</a></li>
+                        <li><a href="#">Pricing Plan</a></li>
+                        <li><a href="blog-grid.html">Latest Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Programs</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Kids Karate</a></li>
+                        <li><a href="#">Krav Maga</a></li>
+                        <li><a href="#">Brazilian Jiu-Jitsu</a></li>
+                        <li><a href="#">Muay Thai</a></li>
+                        <li><a href="#">Private Lessons</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Get In Touch</h5>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>1819 Pleasant Blvd, Memphis, TN 38134</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+47 333 78901</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@usakarate.com</span>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="copyright">© Copyright 2026 USA Karate. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="footer-bottom-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js?v=3"></script>
+
+    <script>
+    // ---- Reading progress bar ----
+    (function() {
+        var bar = document.getElementById('readingProgress');
+        var article = document.getElementById('articleContent');
+        if (!bar || !article) return;
+        window.addEventListener('scroll', function() {
+            var articleTop = article.offsetTop;
+            var articleHeight = article.offsetHeight;
+            var scrolled = window.scrollY - articleTop;
+            var progress = Math.min(100, Math.max(0, (scrolled / articleHeight) * 100));
+            bar.style.width = progress + '%';
+        }, { passive: true });
+    })();
+
+    // ---- Comment reply button toggle ----
+    document.querySelectorAll('.bd-comment__reply').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var form = document.querySelector('.bd-comment-form-wrap');
+            if (form) {
+                form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                var input = form.querySelector('#cmtName');
+                if (input) input.focus();
+            }
+        });
+    });
+
+    // ---- Comment form submit ----
+    var commentForm = document.querySelector('.bd-comment-form-wrap form');
+    if (commentForm) {
+        commentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var name = document.getElementById('cmtName').value.trim();
+            var comment = document.getElementById('cmtComment').value.trim();
+            if (!name || !comment) {
+                alert('Please fill in your name and comment.');
+                return;
+            }
+            alert('Thank you, ' + name + '! Your comment has been submitted for review.');
+            commentForm.reset();
+        });
+    }
+    </script>
+
+</body>
+</html>

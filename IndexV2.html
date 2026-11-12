@@ -1,0 +1,1999 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My PHP Project</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/Navbar.css?v=2">
+    <link rel="stylesheet" href="assets/css/program-category.css?v=2">
+
+    <link rel="stylesheet" href="assets/css/responsive-fixes.css?v=3">
+    <link rel="stylesheet" href="assets/css/yellow-theme-dark.css">
+
+   
+</head>
+
+<body class="nav-v2-page">
+
+    <!-- Navigation -->
+    <div class="top-header">
+        <div class="top-header-left">
+            <a href="mailto:info@example.com">Self Defense, Adult & Children Martial
+                Arts Classes in Memphis</a>
+        </div>
+        <div class="top-header-right">
+            <a href="tel:+19087319123"><i class="bi bi-telephone me-2"></i> (908) 763-9123</a>
+
+            <a href="Stindex.html"><i class="bi bi-person me-2"></i> Student Portal</a>
+            <div class="cart-container position-relative">
+                <a href="#" class="position-relative cart">
+                    <i class="bi bi-cart3"></i>
+                    <span class="cart-count">3</span>
+                </a>
+                <div class="cart-dropdown" id="cartDropdown">
+                    <div class="cart-item gap-3">
+                        <span class="item-remove"></span>
+                        <img src="assets/images/f1.png" class="item-image" alt="">
+                        <div class="item-details flex-grow-1">
+                            <h6>Delica Omantur</h6>
+                            <div class="item-qty-price">2× $99.99</div>
+                        </div>
+                    </div>
+
+                    <div class="cart-item gap-3">
+                        <span class="item-remove"></span>
+                        <img src="assets/images/f2.png" class="item-image" alt="">
+                        <div class="item-details flex-grow-1">
+                            <h6>Omnes Occur reret</h6>
+                            <div class="item-qty-price">1× $33.33</div>
+                        </div>
+                    </div>
+
+                    <div class="cart-total">
+                        <div class="total-row">
+                            <span>Total</span>
+                            <span class="total-price">$0.00</span>
+                        </div>
+                        <button class="btn w-100 bg-white">Cart</button>
+                        <button class="btn btn-theme w-100">Checkout</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ==================== MAIN HEADER ==================== -->
+    <header class="nav-v2-header">
+        <a href="IndexV2.html" class="logo">
+            <img src="assets/images/logo-2.png" alt="Logo">
+        </a>
+
+        <nav>
+            <div class="nav-item-dropdown about-menu-dropdown">
+                <a href="IndexV2.html" class="main-menu" id="home-link">
+                    Home <i class="bi bi-chevron-down"></i>
+                </a>
+                <div class="about-simple-dropdown">
+                    <ul>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="IndexV2.html">Home 2</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="nav-item-dropdown about-menu-dropdown">
+                <a href="aboutus.html" class="main-menu">
+                    About Us <i class="bi bi-chevron-down"></i>
+                </a>
+
+                <div class="about-simple-dropdown">
+                    <ul>
+                        <li><a href="aboutus.html">About Us 1</a></li>
+                        <li><a href="aboutusV.1.html">About Us 2</a></li>
+                        <li><a href="#">Reviews 👍</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- =========================
+                OUR PROGRAMS DROPDOWN
+            ========================= -->
+
+            <div class="nav-item-dropdown">
+                <a href="program-category.html" class="main-menu">
+                    Our Programs <i class="bi bi-chevron-down"></i>
+                </a>
+
+                <div class="academy-programs-dropdown">
+
+                    <div class="academy-dropdown-layout">
+
+                        <!-- LEFT TABS -->
+                        <div class="academy-tabs-sidebar">
+
+                            <a href="program-category.html" class="academy-tab-btn active" data-tab="children">
+                                <span>Children's Programs</span>
+                                <small>Age 4-12</small>
+                            </a>
+
+                            <a href="program-categoryV2.html" class="academy-tab-btn" data-tab="adult">
+                                <span>Adult Programs</span>
+                                <small>Age 18+</small>
+                            </a>
+
+                            <a href="javascript:void(0)" class="academy-tab-btn" data-tab="kids">
+                                <span>Just 4 Kids</span>
+                                <small>Age 20+</small>
+                            </a>
+
+                        </div>
+
+                        <!-- RIGHT CONTENT -->
+                        <div class="academy-panels-area">
+
+                            <!-- CHILDREN -->
+                            <div class="academy-tab-content active" id="children">
+
+                                <div class="academy-card-grid">
+
+                                    <a class="academy-program-box" href="program-category.html">
+                                        <h4>Little Dragons</h4>
+
+                                        <img src="assets/images/1.jpg" alt="">
+                                    </a>
+
+                                    <a class="academy-program-box" href="program-category.html">
+                                        <h4>Juniors</h4>
+
+                                        <img src="assets/images/side-1.jpg" alt="">
+                                    </a>
+
+                                    <a class="academy-program-box" href="program-category.html">
+                                        <h4>Leadership</h4>
+
+                                        <img src="assets/images/side-2.jpg" alt="">
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                            <!-- ADULT -->
+                            <div class="academy-tab-content" id="adult">
+
+                                <div class="academy-card-grid">
+
+                                    <a class="academy-program-box" href="program-categoryV2.html">
+                                        <h4>Jeet Kune Do</h4>
+
+                                        <img src="assets/images/about/65069.jpg" alt="">
+                                    </a>
+
+                                    <a class="academy-program-box" href="program-categoryV2.html">
+                                        <h4>Kali</h4>
+
+                                        <img src="assets/images/program/bx2.jpg" alt="">
+                                    </a>
+
+                                    <a class="academy-program-box" href="program-categoryV2.html">
+                                        <h4>Kung Fu</h4>
+
+                                        <img src="assets/images/program/bx1.jpg" alt="">
+                                    </a>
+
+                                    <a class="academy-program-box" href="program-categoryV2.html">
+                                        <h4>Tai Chi</h4>
+
+                                        <img src="assets/images/program/bx4.jpg" alt="">
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                            <!-- KIDS -->
+                            <div class="academy-tab-content" id="kids">
+
+                                <div class="academy-card-grid">
+
+                                    <a class="academy-program-box" href="program-category.html">
+                                        <h4>Parent's Night Out</h4>
+                                        <img src="assets/images/program/pc-1.jpg" alt="">
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <a href="trial-offer.html" class="main-menu">Trial Offer</a>
+            <a href="product-listing.html" class="main-menu">Shop</a>
+            <a href="blog-grid.html" class="main-menu">Blog</a>
+            <div class="nav-item-dropdown contact-menu-dropdown">
+                <a href="contact.html" class="main-menu active">
+                    Contact Us <i class="bi bi-chevron-down"></i>
+                </a>
+
+                <div class="contact-simple-dropdown">
+                    <ul>
+                        <li><a href="contact.html">Contact 1</a></li>
+                        <li><a href="contactV2.html">Contact 2</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <a class="btn btn-theme d-lg-block d-none header-btn" href="contact.html">Try a Class for
+            FREE!</a>
+
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero position-relative">
+        <div class="hero-background position-absolute top-0 start-0 w-100 h-100 overflow-hidden">
+            <video autoplay muted loop playsinline class="w-100 h-100 object-fit-cover">
+                <source src="assets/images/banner-video.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="container position-relative hero-content-home">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-8 text-white main-content text-center">
+
+                    <!-- <img src="assets/images/logo-2.png" class="hero-logo"> -->
+
+                    <h1 class="fw-bold mb-3  hero-title indexv1herotitle">
+                        <span class="text-dark">Train the mind </span>before training the body
+                    </h1>
+
+                    <p class="mb-4 indexv1herodesc">
+                        We believe true martial arts begins with mindset. We believe true martial arts begins with
+                        mindset...
+                    </p>
+
+                    <div class="d-flex gap-3 justify-content-center hero-buttons" data-aos="zoom-in"
+                        data-aos-duration="900" data-aos-delay="260">
+                        <button class="btn blackbg-button text-white">
+                            CHILDREN CLASSES <i class="bi bi-arrow-right-short"></i>
+                        </button>
+                        <button class="btn btn-theme">
+                            ADULT CLASSES <i class="bi bi-arrow-right-short"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="banner-container indexv4bannerMoving">
+        <div class="scrolling-text">
+            <span>INNOVATION TODAY</span>
+            <div class="dot-separator"></div>
+            <span>INNOVATION TODAY</span>
+            <div class="dot-separator"></div>
+            <span>INNOVATION TODAY</span>
+            <div class="dot-separator"></div>
+            <span>INNOVATION TODAY</span>
+            <div class="dot-separator"></div>
+            <span>INNOVATION TODAY</span>
+            <div class="dot-separator"></div>
+            <span>INNOVATION TODAY</span>
+            <div class="dot-separator"></div>
+            <span>INNOVATION TODAY</span>
+        </div>
+    </div>
+
+    <!-- Main Form Section -->
+    <section class="new-heading_Form">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="max-width">
+                        <h3 class="newForm_heading">Most Schools Give Out Belts. We Build the Belief System Behind
+                            Earning Them!</h3>
+                        <p class="newFrom_des" data-aos="fade-up" data-aos-duration="900">Parents bring their kids to us
+                            when nothing else has worked. What I've
+                            found in 35 years is that these kids are not weak. They just haven't learned how to tap into
+                            the strength that's already in them. After a few months they're standing taller, looking
+                            people in the eye, trying things that used to terrify them. That's not a technique. That's a
+                            shift in who they think they are.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Discover Menu Section -->
+    <section class="discover-menu">
+        <div class="container text-center">
+            <p class="small-title">
+                <span class="dot"></span> Discover Our Programs
+            </p>
+
+            <h2 class="main-title">
+                Explore Our Martial Arts Programs
+            </h2>
+
+            <div class="menu-grid row g-4 mt-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="flip-aos-wrap" data-aos="fade-up" data-aos-duration="900" data-aos-delay="0">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front" style="background-image: url('assets/images/1.jpg');">
+                                    <div class="front-content">
+                                        <i class="bi bi-shield-check program-icon"></i>
+                                        <div class="program-name">Little Dragons</div>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back" style="background-image: url('assets/images/1.jpg');">
+                                    <div class="back-content">
+                                        <div class="program-description">
+                                            <strong>Little Dragons</strong>
+                                        </div>
+                                        <div class="program-details">
+                                            <div class="detail-item">
+                                                <i class="bi bi-hourglass-split"></i>
+                                                <span style="font-weight: 800;"><strong>Duration:</strong> 12-18
+                                                    months</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <i class="bi bi-lightning-charge"></i>
+                                                <span style="font-weight: 800;"><strong>Benefits:</strong> Strength &
+                                                    Focus</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <i class="bi bi-person-raised-hand"></i>
+                                                <span style="font-weight: 800;"><strong>Level:</strong> Beginner to
+                                                    Advanced</span>
+                                            </div>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <div class="level-badge">Recommended: Age 4-6</div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mt-5 justify-content-center">
+                                            <a href="#" class="btn btn-theme">Learn More →</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="flip-aos-wrap" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="150">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front" style="background-image: url('assets/images/2.jpg');">
+                                    <div class="front-content">
+                                        <i class="bi bi-shield-check program-icon"></i>
+                                        <div class="program-name">Juniors</div>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back" style="background-image: url('assets/images/2.jpg');">
+                                    <div class="back-content">
+                                        <div class="program-description">
+                                            <strong>Juniors</strong>
+                                        </div>
+                                        <div class="program-details">
+                                            <div class="detail-item">
+                                                <i class="bi bi-hourglass-split"></i>
+                                                <span style="font-weight: 800;"><strong>Duration:</strong> 12-18
+                                                    months</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <i class="bi bi-lightning-charge"></i>
+                                                <span style="font-weight: 800;"><strong>Benefits:</strong> Positive
+                                                    Mental
+                                                    Attitude</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <i class="bi bi-person-raised-hand"></i>
+                                                <span style="font-weight: 800;"><strong>Level:</strong> Beginner to
+                                                    Advanced</span>
+                                            </div>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <div class="level-badge">Recommended: Age 7-12</div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mt-5 justify-content-center">
+                                            <a href="#" class="btn btn-theme">Learn More →</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="flip-aos-wrap" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front" style="background-image: url('assets/images/1.jpg');">
+                                    <div class="front-content">
+                                        <i class="bi bi-shield-check program-icon"></i>
+                                        <div class="program-name">Little Dragons</div>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back" style="background-image: url('assets/images/1.jpg');">
+                                    <div class="back-content">
+                                        <div class="program-description">
+                                            <strong>Little Dragons</strong>
+                                        </div>
+                                        <div class="program-details">
+                                            <div class="detail-item">
+                                                <i class="bi bi-hourglass-split"></i>
+                                                <span style="font-weight: 800;"><strong>Duration:</strong> 12-18
+                                                    months</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <i class="bi bi-lightning-charge"></i>
+                                                <span style="font-weight: 800;"><strong>Benefits:</strong> Strength &
+                                                    Focus</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <i class="bi bi-person-raised-hand"></i>
+                                                <span style="font-weight: 800;"><strong>Level:</strong> Beginner to
+                                                    Advanced</span>
+                                            </div>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <div class="level-badge">Recommended: Age 4-6</div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mt-5 justify-content-center">
+                                            <a href="#" class="btn btn-theme">Learn More →</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="step-form-section">
+        <div class="container">
+            <div class="step-form-box">
+                <div class="step-right">
+                    <form class="centerd-form">
+                        <div class="row g-3">
+                            <div class="col-md-12 text-center indexv4-form">
+                                <h3>The First Step Is Understanding Your Child.</h3>
+                                <p>Fill in your information and we'll be in touch to discuss your child's needs!</p>
+                            </div>
+                            <div class="col-12">
+                                <div class="indexv4-form-fields">
+                                    <div class="indexv4-form-field" data-aos="fade-right" data-aos-duration="850"
+                                        data-aos-delay="0">
+                                        <input type="text" class="form-control" placeholder="Full Name">
+                                    </div>
+
+                                    <div class="indexv4-form-field" data-aos="fade-left" data-aos-duration="850"
+                                        data-aos-delay="120">
+                                        <input type="email" class="form-control" placeholder="Email">
+                                    </div>
+
+                                    <div class="indexv4-form-field" data-aos="fade-right" data-aos-duration="850"
+                                        data-aos-delay="240">
+                                        <input type="tel" class="form-control" placeholder="Phone">
+                                    </div>
+
+                                    <div class="indexv4-form-field" data-aos="fade-left" data-aos-duration="850"
+                                        data-aos-delay="360">
+                                        <select class="form-control">
+                                            <option selected disabled>Choose a Program</option>
+                                            <option>Kids Martial Arts</option>
+                                            <option>Teen Martial Arts</option>
+                                            <option>Adult Martial Arts</option>
+                                            <option>Family Martial Arts</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12" data-aos="fade-up" data-aos-duration="850" data-aos-delay="420">
+                                <div class="form-check custom-check">
+                                    <input class="form-check-input" type="checkbox" id="smsCheck">
+                                    <label class="form-check-label" for="smsCheck">
+                                        By checking this box, you agree to receive promotional and marketing SMS
+                                        communications from American Dragon Martial Arts Academy. Message frequency may
+                                        vary. Message and data rates may apply. Reply HELP for help or STOP to opt out.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12" data-aos="fade-up" data-aos-duration="850" data-aos-delay="500">
+                                <div class="form-check custom-check indexv4check">
+                                    <input class="form-check-input" type="checkbox" id="termsCheck">
+                                    <label class="form-check-label" for="termsCheck">
+                                        By checking this box, you accept the
+                                        <a href="https://jkdbroward.com/terms-and-conditions" target="_blank">
+                                            Terms & Conditions
+                                        </a>
+                                        and
+                                        <a href="https://jkdbroward.com/privacy-policy" target="_blank">
+                                            Privacy Policy
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12" data-aos="zoom-in" data-aos-duration="850" data-aos-delay="580">
+                                <button type="submit" class="btn submit-btn">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="brand-section">
+        <div class="container-fluid px-0">
+            <div class="row g-0 align-items-center">
+
+                <!-- Left Image -->
+                <div class="col-lg-6">
+                    <div class="brand-img-box">
+                        <img src="assets/images/teacher-2.jpg" alt="Brand Image" class="img-fluid">
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="col-lg-6">
+                    <div class="brand-content">
+                        <p class="small-title" data-aos="fade-down" data-aos-duration="850">
+                            <span class="dot"></span> About Us
+                        </p>
+
+                        <h2>
+                            Hi, my name is Robby Beard
+                        </h2>
+
+                        <p data-aos="fade-left" data-aos-duration="900" data-aos-delay="120">
+                            and I'm the owner of USA KARATE. When I was a child, I began my martial arts journey and the
+                            positive impact it had on my life was remarkable. It was always my dream to someday own my
+                            own school in Memphis and create an enjoyable environment for students to improve their
+                            fitness while building confidence.
+                        </p>
+                        <p data-aos="fade-left" data-aos-duration="900" data-aos-delay="220">
+                            and I'm the owner of USA KARATE. When I was a child, I began my martial arts journey and the
+                            positive impact it had on my life was remarkable. It was always my dream to someday own my
+                            own school in Memphis and create an enjoyable environment for students to improve their
+                            fitness while building confidence.
+                        </p>
+                        <p data-aos="fade-left" data-aos-duration="900" data-aos-delay="320">
+                            and I'm the owner of USA KARATE. When I was a child, I began my martial arts journey and the
+                            positive impact it had on my life was remarkable. It was always my dream to someday own my
+                            own school in Memphis and create an enjoyable environment for students to improve their
+                            fitness while building confidence.
+                        </p>
+
+                        <a href="#" class="btn btn-theme" data-aos="zoom-in" data-aos-duration="850"
+                            data-aos-delay="420">Read More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <hr style="margin-top: 0px;">
+    <!-- How it works New -->
+  <section class="text-center pos-r home-three-steps">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12 col-md-10 ml-auto mr-auto">
+                    <div class="section-title">
+                        <div class="title-effect">
+                            <div class="bar bar-top"></div>
+                            <div class="bar bar-right"></div>
+                            <div class="bar bar-bottom"></div>
+                            <div class="bar bar-left"></div>
+                        </div>
+                        <h6>How It Work</h6>
+                        <h2 class="main-title">
+                            Get Started in 3 Easy Steps
+                        </h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="svg-container">
+                    <svg id="svgC" width="100%" height="100%" viewBox="0 0 620 120" preserveAspectRatio="xMidYMid meet">
+                        <defs></defs>
+                        <path
+                            d="M62.9 14.9c-25-7.74-56.6 4.8-60.4 24.3-3.73 19.6 21.6 35 39.6 37.6 42.8 6.2 72.9-53.4 116-58.9 65-18.2 191 101 215 28.8 5-16.7-7-49.1-34-44-34 11.5-31 46.5-14 69.3 9.38 12.6 24.2 20.6 39.8 22.9 91.4 9.05 102-98.9 176-86.7 18.8 3.81 33 17.3 36.7 34.6 2.01 10.2.124 21.1-5.18 30.1"
+                            id="squiggle" fill="none" class="squiggle" strokeMiterLimit="10"
+                            strokeDashOffset="0" 
+                            style="stroke-width: 1; stroke-dasharray: 5, 10; stroke-dashoffset: 10;"></path>
+                        <g transform="matrix(0.2956,-0.9553,0.9553,0.2956,43.2367,24.8965)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,557,57)"></g>
+                        <g transform="matrix(-0.8615,-0.5077,0.5077,-0.8615,577.307,92.5386)">
+                           <polyline points="0, 30, 15, 0, 30, 30" id="plane" fill="#fff">
+                            </polyline>
+                        </g>
+                    </svg>
+                </div>
+                <div class="col-lg-4 col-md-12" data-aos="fade-up" data-aos-duration="900" data-aos-delay="0">
+                    <div class="work-process">
+                        <div class="step-num-box">
+                            <div class="step-icon">
+                                <div class="chart-icon-group2">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M18 4.71429L19.2 6L22 3M16 8C16 10.2091 14.2091 12 12 12C9.79086 12 8 10.2091 8 8C8 5.79086 9.79086 4 12 4C14.2091 4 16 5.79086 16 8ZM9.31764 14H14.6824C15.1649 14 15.4061 14 15.6219 14.0461C16.3688 14.2056 17.0147 14.7661 17.3765 15.569C17.4811 15.8009 17.5574 16.0765 17.71 16.6278C17.8933 17.2901 17.985 17.6213 17.9974 17.8884C18.0411 18.8308 17.5318 19.6817 16.7756 19.9297C16.5613 20 16.2714 20 15.6916 20H8.30844C7.72864 20 7.43875 20 7.22441 19.9297C6.46818 19.6817 5.95888 18.8308 6.00261 17.8884C6.01501 17.6213 6.10668 17.2901 6.29003 16.6278C6.44262 16.0765 6.51891 15.8009 6.62346 15.569C6.9853 14.7661 7.63116 14.2056 8.37806 14.0461C8.59387 14 8.83513 14 9.31764 14Z"
+                                                stroke="var(--homesvg-icon)" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="step-num">01</div>
+                        </div>
+                        <div class="step-desc">
+                            <h4>Redeem</h4>
+                            <p class="mb-0">Your Free Introductory Class</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 md-mt-5" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="150">
+                    <div class="work-process">
+                        <div class="step-num-box">
+                            <div class="step-icon">
+                                <div class="chart-icon-group2">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M9 20H6C3.79086 20 2 18.2091 2 16V7C2 4.79086 3.79086 3 6 3H17C19.2091 3 21 4.79086 21 7V10"
+                                                stroke="var(--homesvg-icon)" stroke-width="1.224" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M8 2V4" stroke="var(--homesvg-icon)" stroke-width="1.224" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M15 2V4" stroke="var(--homesvg-icon)" stroke-width="1.224" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M2 8H21" stroke="var(--homesvg-icon)" stroke-width="1.224" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M18.5 15.6429L17 17.1429" stroke="var(--homesvg-icon)" stroke-width="1.224"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <circle cx="17" cy="17" r="5" stroke="var(--homesvg-icon)" stroke-width="1.224"
+                                                stroke-linecap="round" stroke-linejoin="round"></circle>
+                                        </g>
+                                    </svg>
+
+                                </div>
+                            </div>
+                            <div class="step-num">02</div>
+                        </div>
+                        <div class="step-desc">
+                            <h4>Schedule</h4>
+                            <p class="mb-0">Your First Session</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 md-mt-5" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+                    <div class="work-process">
+                        <div class="step-num-box">
+                            <div class="step-icon">
+                                <div class="chart-icon-group2">
+                                    <svg fill="var(--homesvg-icon)" viewBox="150 150 450 450" id="a" xmlns="http://www.w3.org/2000/svg"
+                                        stroke="var(--homesvg-icon)" style="width: 100%; height: 100%;">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M561.15,497.6c.03-22.21-1.95-44.38-2.79-66.57-2.82-50.97-1.22-86.85-29.66-132.68-7.02-11.09-15.73-20.98-24.32-30.87-12.59-14.77-25.27-30.09-41.99-40.37-5.68-3.49-11.63-6.64-17.84-9.11,.3-.81,.62-1.62,.9-2.44,2.73-7.8,4.16-18.24-2.63-24.36-5.1-3.99-12.41-1.81-18.44-2.25-18.94,1.1-37.85,.67-56.74-.93-18.25-.36-36.92-3.16-54.98,.34-15.09,3.19-17.86,18.31-10.53,30.26,.53,1.09,1.08,2.18,1.62,3.27-15.35,3.92-33.98,13.06-43.57,19.27-12.03,7.33-21.34,17.97-31.15,27.9-20.37,18.36-30.08,39.83-33.97,66.72-4.02,20.52-4.34,41.4-5.39,62.21-2.28,25.91,.59,54.13,4.08,80.11,1.09,9.12,2.37,18.22,3.45,27.34,.57,5.16,.81,10.73,4,15.08,4.39,6.53,12.91,6.75,20.01,6.36,10.64,.45,21.27,.3,31.91,.32,4.9,.14,9.8,.09,14.69-.05-.68,5.59-1.66,11.19-.88,16.71,2.17,9.85,13.35,11.69,21.77,13.19,19.08,2.96,38.34,5.41,57.64,6.14,31.79,1.22,63.39-4.45,95.15-3.47,11.43,.5,22.84,1.69,34.3,1.68,4.26,.52,8.48-1.09,11.23-4.41,5.26-6.68,6-15.13,5.79-23.52,12.73-.03,25.47-1.35,38.21-.61,9.36,.58,21.2,2.23,26.98-7.02,4.84-8.31,2.26-19,3.16-28.27ZM361.57,206.12c20.64-.68,41.08,3.37,61.66,4.24-16.47,23.93-33.44,47.51-48.31,72.5-.9-1.52-1.91-2.98-2.92-4.38-3.95-5.47-8.49-10.51-13.05-15.46-14.85-15.94-29.52-32.46-39.01-52.27,13.62-3.2,27.71-3.72,41.62-4.63Zm-115.22,296.58c-9.32,.65-18.92,1.36-28.11-.66-1.2-28.29-4.93-53.77-10.36-81.99-6.67-39.85-5.46-84.33,19.3-118.08,14.44-16.74,30.11-33.38,50.28-43.1,10.59-4.93,21.57-9.11,32.63-12.86,1.89-.75,4.04-.99,6.16-1.26,2.63,4.24,5.42,8.38,8.46,12.36,11.21,15.56,25.64,28.45,37.15,43.73-11.19,13-22.4,25.97-31.79,40.38-13.32,18.84-26.34,37.92-37.36,58.22-2.56,4.39-4.83,8.48-7.31,12.97-1.15-21.48-3.9-42.88-9.08-64.11-1.16-5.04-2.62-10-3.8-15.03-.59-4.83-3.6-10.63-9.19-10.63-11.46,1.28-9.8,15.86-7.7,24.06,2.22,10.28,4.63,20.51,6.39,30.88,3.62,16.99,5.08,34.16,5.67,51.4-.31,.28-.61,.59-.89,.93-3.97,4.69-3.99,11.71-.9,16.82,.55,1,1.29,1.82,2.14,2.5,.03,6.43,.02,12.86,.01,19.29,.02,10.95,.25,21.91,.34,32.86-7.38-.01-14.72,.7-22.06,1.33Zm174.42,33.03c-25.34,.17-50.59-2.93-75.94-2.6-9.9,.02-19.8,.25-29.67,1-11.53,.83-23.16,3.14-34.72,1.68,2.4-27.74,4.82-55.61,5.46-83.43,3.04,.12,6.09,.17,9.13,.22,17.21-.04,34.43-.1,51.64-.39-6.48,12.64-12.43,27.58-13.87,33.82-1.49,6.29,1.46,15.58,8.92,15.81,6.37-.18,8.38-6.81,10.32-11.77,4.68-10.25,9.28-20.58,14.67-30.48,10.46,14.94,23.3,27.93,34.54,42.25,11.16,10.43,19.77-9.45,11.84-17.92-5.77-7.22-11.7-14.3-17.8-21.24-3.14-3.76-6.14-7.64-8.99-11.63,19.73-.87,39.43-2.25,59.08-4.47,3.78-.38,7.54-.86,11.33-1.05,1.14-.09,2.14-.43,3-.94-.12,3.63-.22,7.26-.27,10.89-.62,16.23,3.12,32.09,6.08,47.94,1.65,9.99,2.31,20.1,3.19,30.19-16,.54-31.94,2.3-47.97,2.11Zm117.14-94.26c-2.28,22.43,1.17,44.77,1.53,67.2-16.42,.83-32.77-1.6-49.18-1.96-2.66-13.68-7.42-26.91-12.11-40.04-3.66-12.88-4.69-26.24-5.6-39.54-.46-15.51-1.12-31.15,1.69-46.49,1.67-8.89,3.76-17.69,6.18-26.41,2.38-7.37,6.19-18.47-2.91-22.82-9.45-2.75-10.96,9.64-12.55,16.19-3.83,18.91-4.74,38.26-4.29,57.5,.13,7.67-.07,15.33-.34,22.99-.99-.73-2.19-1.2-3.6-1.3-18.84,1.52-37.72,.55-56.58,.19-33.82,1.66-67.67,.26-101.51-.1,5.03-6.51,10.29-12.83,15.36-19.31,16.67-20.12,32.72-40.78,44.85-64.03,13.78-22.65,28.89-44.58,45.65-65.13,10.05-12.38,20.62-24.83,29.1-38.46,.92,.36,1.83,.73,2.69,1.15,8.62,3.72,16.8,8.34,24.42,13.82,26.45,21.27,48.63,47.94,65.82,77.16,22.94,38.94,14.45,67.61,11.39,109.38Z">
+                                            </path>
+                                        </g>
+                                    </svg>
+
+                                </div>
+                            </div>
+                            <div class="step-num">03</div>
+                        </div>
+                        <div class="step-desc">
+                            <h4>Begin</h4>
+                            <p class="mb-0">Watch the Change Happen!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Experience Section -->
+    <section class="taste-section">
+        <div class="red-half-bg ">
+            <img src="assets/images/2150260495.jpg" class="img-fluid w-100 video-thumbnail" alt="Video Thumbnail"
+                style="height: 100%; object-fit: cover;">
+
+            <div class="play-btn" data-aos="zoom-in" data-aos-duration="850" data-aos-delay="160" data-bs-toggle="modal"
+                data-bs-target="#videoModal">
+                <i class="fa-solid fa-play"></i>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content bg-dark">
+                    <div class="modal-body p-0">
+
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/G718oLU51HA?autoplay=1&mute=1" allow="autoplay"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content-area">
+            <h1 class="taste-text mb-4">EXPERIENCE OF</h1>
+            <h1 class="taste-text mb-4">REAL RECIPES</h1>
+            <h1 class="taste-text mb-4">TASTE</h1>
+
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-duration="850" data-aos-delay="120">
+                    <div class="stat-number">98K</div>
+                    <div class="stat-label">Daily Orders</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-duration="850" data-aos-delay="260">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Menu Dish Orders</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Programs -->
+    <section class="features-section bg-gradient">
+        <div class="container text-center">
+            <p class="small-title" data-aos="fade-down" data-aos-duration="850">
+                <span class="dot"></span> Our Programs
+            </p>
+            <h2 class="main-title">
+                Why Choose Our Programs
+            </h2>
+            <div class="row">
+                <div class="col-md-4 px-0" data-aos="fade-right" data-aos-duration="900" data-aos-delay="0">
+                    <figure class="card-3d">
+                        <img src="assets/images/landscape-1.jpg" alt="Little Dragons" />
+                        <figcaption>
+                            <h4>Little Dragons</h4>
+                            <a href="program-category.html" class="btn btn-theme">Learn More →</a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4 px-0" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="150">
+                    <figure class="card-3d">
+                        <img src="assets/images/landscape-2.jpg" alt="Kung Fu" />
+                        <figcaption>
+                            <h4>Kung Fu</h4>
+                            <a href="programs-details.html" class="btn btn-theme">Learn More →</a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4 px-0" data-aos="fade-left" data-aos-duration="900" data-aos-delay="300">
+                    <figure class="card-3d">
+                        <img src="assets/images/landscape-3.jpg" alt="Kali" />
+                        <figcaption>
+                            <h4>Kali</h4>
+                            <a href="programs-details.html" class="btn btn-theme">Learn More →</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Testimonial Area -->
+    <section data-aos="fade-up" data-aos-duration="900" data-aos-delay="0" id="testi"
+        class=" new-testimonial ma-testimonial-section">
+        <div class="container">
+            <div class="section">
+                <div class="text-center">
+                    <p class="small-title text-white position-relative">
+                        <span class="dot"></span>Wall of love
+                    </p>
+
+                    <h2 class="main-title text-white position-relative">
+                        You're in good company
+                    </h2>
+                    <p class="sub text-white position-relative">Don’t just take our word for it
+                        hear from our customers.</p>
+                </div>
+
+
+                <div class="testimonial_slider_holder">
+                    <div class="testimonial_slider_list">
+
+                        <div class="testimonial_slider_item_wrap">
+                            <div class="testimonial_card">
+                                <p class="quote">“Before Wiza, our mobile connect and email reply rates were terrible.
+                                    As
+                                    soon
+                                    as we made the switch, I was suddenly reaching several, target enterprise accounts.”
+                                </p>
+                                <div class="author">
+                                    <div class="author-info">
+                                        <h5>Colin Mokhtary</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial_slider_item_wrap">
+                            <div class="testimonial_card">
+                                <p class="quote">Amazing experience. The platform completely changed our outreach
+                                    performance
+                                    and results.</p>
+                                <div class="author">
+                                    <div class="author-info">
+                                        <h5>Sarah Lee</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial_slider_item_wrap">
+                            <div class="testimonial_card">
+                                <p class="quote">Best tool we’ve used so far. Highly recommend for scaling prospecting.
+                                </p>
+                                <div class="author">
+                                    <div class="author-info">
+                                        <h5>David Kim</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="arrows">
+                        <a class="testimonial_slider_arrow">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                        <a class="testimonial_slider_arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Locations Section -->
+    <section class="ma-locations-v2">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="text-center">
+                    <p class="small-title" data-aos="fade-down" data-aos-duration="850">
+                        <span class="dot"></span>Our Locations
+                    </p>
+
+                    <h2 class="main-title">
+                        Our Elite Dojos
+                    </h2>
+
+                </div>
+
+            </div>
+
+            <div id="dojoContainer">
+
+                <div class="dojo-item" data-aos="fade-up" data-aos-duration="900" data-aos-delay="0">
+                    <div class="location">
+                        <span class="dojo-name">Bartlett Dojo</span>
+                        <div class="shape-wrapper">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.2383541851823!2d-80.2334856251265!3d26.28637198672752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d91007bb5f3d6f%3A0xa362ababaa54b8ee!2sAmerican%20Dragon%20Martial%20Arts%20Academy!5e0!3m2!1sen!2sin!4v1776166776164!5m2!1sen!2sin"
+                                class="shapeimage"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dojo-item" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+                    <div class="location">
+                        <span class="dojo-name">Arlington Dojo</span>
+                        <div class="shape-wrapper">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.2383541851823!2d-80.2334856251265!3d26.28637198672752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d91007bb5f3d6f%3A0xa362ababaa54b8ee!2sAmerican%20Dragon%20Martial%20Arts%20Academy!5e0!3m2!1sen!2sin!4v1776166776164!5m2!1sen!2sin"
+                                class="shapeimage"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dojo-item" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+                    <div class="location">
+                        <span class="dojo-name">Germantown Dojo</span>
+                        <div class="shape-wrapper">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.2383541851823!2d-80.2334856251265!3d26.28637198672752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d91007bb5f3d6f%3A0xa362ababaa54b8ee!2sAmerican%20Dragon%20Martial%20Arts%20Academy!5e0!3m2!1sen!2sin!4v1776166776164!5m2!1sen!2sin"
+                                class="shapeimage"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Part -->
+    <section class="contact-map mt-0">
+        <div class="container">
+
+            <div class="rating-card">
+                <div class="rating-wrap" data-aos="zoom-in" data-aos-duration="850">
+                    <h2 class="rating-number">4.9</h2>
+
+                    <div class="rating-content">
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p class="review-text">220+ Reviews on Google</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right" data-aos-duration="900" data-aos-delay="120">
+                    <div class="map-wrapper">
+                        <div class="map-box">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.2383541851823!2d-80.2334856251265!3d26.28637198672752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d91007bb5f3d6f%3A0xa362ababaa54b8ee!2sAmerican%20Dragon%20Martial%20Arts%20Academy!5e0!3m2!1sen!2sin!4v1776166776164!5m2!1sen!2sin"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-duration="900" data-aos-delay="220">
+                    <div class="bg-white p-5 border-round footer-contact-form">
+                        <h2 class="form-title">Start Your Journey</h2>
+
+                        <form class="row g-4">
+                            <div class="col-md-6" data-aos="fade-up" data-aos-duration="850" data-aos-delay="0">
+                                <input type="text" class="form-control martial-input" placeholder="Enter Full Name">
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-duration="850" data-aos-delay="100">
+                                <input type="tel" class="form-control martial-input" placeholder="Enter Phone Number">
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-duration="850" data-aos-delay="200">
+                                <input type="email" class="form-control martial-input"
+                                    placeholder="Enter Email Address">
+                            </div>
+                            <!-- <div class="col-md-6">
+                            <label class="martial-label">Program</label>
+                            <select class="form-select martial-input">
+                                <option>Karate / MMA</option>
+                                <option>Brazilian Jiu-Jitsu</option>
+                                <option>Muay Thai</option>
+                                <option>Kids Class</option>
+                            </select>
+                        </div> -->
+                            <!-- <div class="col-md-6">
+                            <label class="martial-label">Preferred Date</label>
+                            <input type="date" class="form-control martial-input">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="martial-label">Session Time</label>
+                            <input type="time" class="form-control martial-input">
+                        </div> -->
+                            <div class="col" data-aos="fade-up" data-aos-duration="850" data-aos-delay="300">
+                                <textarea class="form-control martial-input" rows="1"
+                                    placeholder="Enter your message here..."></textarea>
+                            </div>
+                            <div class="col-12" data-aos="fade-up" data-aos-duration="850" data-aos-delay="380">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="check4">
+                                    <label class="form-check-label" for="check4">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                                        industry.Lorem Ipsum is simply dummy text of the printing and
+                                        typesetting industry.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mt-2" data-aos="fade-up" data-aos-duration="850" data-aos-delay="460">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="check5">
+                                    <label class="form-check-label" for="check5">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                                        industry.Lorem Ipsum is simply dummy text of the printing and
+                                        typesetting industry.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mt-2" data-aos="fade-up" data-aos-duration="850" data-aos-delay="540">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="check6">
+                                    <label class="form-check-label" for="check6">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                                        industry.Lorem Ipsum is simply dummy text of the printing and
+                                        typesetting industry.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12" data-aos="zoom-in" data-aos-duration="850" data-aos-delay="620">
+                                <button type="submit" class="btn w-100 mt-0 booktrial-btn">Book Free Trial
+                                    Session</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="map-wrapper mt-5">
+                <div class="map-box">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.2383541851823!2d-80.2334856251265!3d26.28637198672752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d91007bb5f3d6f%3A0xa362ababaa54b8ee!2sAmerican%20Dragon%20Martial%20Arts%20Academy!5e0!3m2!1sen!2sin!4v1776166776164!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <footer class="ma-footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-6 flex-div-footer">
+                    <div class="footer-brand mb-3">
+                        <img src="assets/images/logo-2.png" alt="Logo" class="footer-logo" width="100" height="100">
+                    </div>
+                    <div class="social-links mt-4" data-aos="zoom-in" data-aos-duration="850" data-aos-delay="120">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Explore</h5>
+                    <ul class="footer-links" data-aos="fade-up" data-aos-duration="850" data-aos-delay="160">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Instructors</a></li>
+                        <li><a href="#">Class Schedule</a></li>
+                        <li><a href="#">Pricing Plan</a></li>
+                        <li><a href="#">Latest Blogs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Programs</h5>
+                    <ul class="footer-links" data-aos="fade-up" data-aos-duration="850" data-aos-delay="260">
+                        <li><a href="#">Kids Karate</a></li>
+                        <li><a href="#">Krav Maga</a></li>
+                        <li><a href="#">Brazilian Jiu-Jitsu</a></li>
+                        <li><a href="#">Muay Thai</a></li>
+                        <li><a href="#">Private Lessons</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Get In Touch</h5>
+                    <div class="contact-item" data-aos="fade-up" data-aos-duration="850" data-aos-delay="160">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>1819 Pleasant Blvd, Memphis, TN 38134</span>
+                    </div>
+                    <div class="contact-item" data-aos="fade-up" data-aos-duration="850" data-aos-delay="260">
+                        <i class="fas fa-phone"></i>
+                        <span>+47 333 78901</span>
+                    </div>
+                    <div class="contact-item" data-aos="fade-up" data-aos-duration="850" data-aos-delay="360">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@usakarate.com</span>
+                    </div>
+                    <!-- <div class="mt-4 p-3 bg-light rounded-3">
+                        <p class="small mb-0 text-muted"><strong>DOJO HOURS:</strong><br> Mon-Fri: 10am - 9pm | Sat: 8am
+                            - 12pm</p>
+                    </div> -->
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="copyright">© Copyright 2026 USA Karate. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="footer-bottom-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js?v=3"></script>
+    <script src="assets/js/gsap.js"></script>
+    <script src="assets/js/about-gsap.js?v=2"></script>
+    <script src="assets/js/heading-animation.js?v=4"></script>
+    <script>
+        if (window.AOS) {
+            AOS.init({
+                duration: 900,
+                easing: 'ease-out-cubic',
+                once: false,
+                mirror: false,
+                offset: 80,
+                anchorPlacement: 'top-bottom'
+            });
+        }
+    </script>
+    <script>
+        document.querySelectorAll(".academy-tab-btn").forEach((tab) => {
+            tab.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                const target = this.getAttribute("data-tab");
+
+                document.querySelectorAll(".academy-tab-btn").forEach((item) => {
+                    item.classList.remove("active");
+                });
+
+                document.querySelectorAll(".academy-tab-content").forEach((panel) => {
+                    panel.classList.remove("active");
+                });
+
+                this.classList.add("active");
+                document.getElementById(target).classList.add("active");
+            });
+        });
+    </script>
+
+    <script src="assets/js/theme

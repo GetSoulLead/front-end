@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Training Library — Apex Martial Arts Student Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/portal.css">
+    <link rel="stylesheet" href="assets/css/yellow-theme-new.css">
+   
+    <style>
+        /* ── Page wrapper ── */
+        .vlib-page {
+            min-height: 60vh;
+            padding: 40px 0 60px;
+        }
+
+        .vlib-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ── Filter bar ── */
+        .vlib-filter-bar {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .vlib-filter-label {
+            font-size: .72rem;
+            font-weight: 700;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: .6px;
+            margin-right: 4px;
+        }
+
+        .vlib-filter-btn {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: .72rem;
+            font-weight: 700;
+            letter-spacing: .4px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all .2s;
+            font-family: var(--font);
+        }
+
+        /* ── Section heading ── */
+        .vlib-section-title {
+            font-size: 1rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+        }
+
+        /* ── Grid ── */
+        .vlib-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 1024px) { .vlib-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 680px)  { .vlib-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 420px)  { .vlib-grid { grid-template-columns: 1fr; } }
+
+        /* ── Card ── */
+        .vlib-card {
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: box-shadow .25s, transform .25s;
+        }
+
+        .vlib-card:hover {
+            /* box-shadow: 0 8px 28px rgba(0,0,0,.15); */
+            transform: translateY(-3px);
+        }
+
+        /* thumbnail */
+        .vlib-thumb {
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            background: #e0e0e0;
+        }
+
+        .vlib-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .35s ease;
+        }
+
+        .vlib-card:hover .vlib-thumb img {
+            transform: scale(1.06);
+        }
+
+        /* dark overlay */
+        .vlib-thumb-overlay {
+            position: absolute;
+            inset: 0;
+            transition: background .25s;
+            z-index: 1;
+        }
+
+        .vlib-card:hover .vlib-thumb-overlay {
+            background: rgba(0,0,0,.5);
+        }
+
+        /* center play button */
+        .vlib-play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(.75);
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            opacity: 0;
+            transition: opacity .22s, transform .22s;
+            pointer-events: none;
+        }
+
+        .vlib-play-btn i {
+            font-size: 1.2rem;
+            margin-left: 4px;
+        }
+
+        .vlib-card:hover .vlib-play-btn {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* card info below image */
+        .vlib-info {
+            padding: 12px 14px 14px;
+        }
+
+        .vlib-info h4 {
+            font-size: .95rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            line-height: 1.3;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .vlib-meta {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: .78rem;
+            
+        }
+
+        .vlib-meta .sep {
+            font-size: .5rem;
+            color: #bbb;
+        }
+
+        .vlib-meta .vlib-cat {
+            
+            font-weight: 700;
+        }
+
+        /* ── Pagination ── */
+        .vlib-pagination {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .vlib-pagination a,
+        .vlib-pagination span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 4px;
+            font-size: .8rem;
+            font-weight: 700;
+            color: #555;
+            border: 1px solid #ddd;
+            background: #fff;
+            text-decoration: none;
+            transition: all .2s;
+        }
+
+        .vlib-pagination .pg-next {
+            width: auto;
+            padding: 0 14px;
+            gap: 6px;
+        }
+
+        /* ── Modal ── */
+        .vlib-modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,.88);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .vlib-modal-overlay.open {
+            display: flex;
+        }
+
+        .vlib-modal {
+            background: #fff;
+            overflow: hidden;
+            width: 100%;
+            max-width: 900px;
+            position: relative;
+            animation: mIn .22s ease;
+        }
+
+        @keyframes mIn {
+            from { opacity:0; transform:scale(.93); }
+            to   { opacity:1; transform:scale(1); }
+        }
+
+        .vlib-modal-close {
+            position: absolute;
+            top: 12px;
+            right: 14px;
+            border: none;
+            font-size: 1rem;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: background .18s;
+        }
+
+        .vlib-modal-player video,
+        .vlib-modal-player iframe {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .vlib-modal-footer {
+            padding: 14px 20px 18px;
+        }               
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <header class="top-bar">
+        <div class="top-bar-left">
+            <div class="brand"><span class="apex">Apex</span> Martial Arts<span class="badge-student">Student Area</span></div>
+        </div>
+        <div class="top-bar-right">
+            <div class="cart-wrap"><a href="product-listing.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a></div>
+            <div class="top-bar-divider"></div>
+            <a href="index.html" class="btn-main-site"><i class="fas fa-globe"></i> Main Site</a>
+            <a href="#" class="btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </header>
+
+    <!-- NAV -->
+    <nav class="main-nav">
+        <div class="nav-inner">
+            <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            <ul>
+                <li><a href="Stindex.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li class="has-dropdown">
+                    <a href="class-schedule.html">Class Schedule <i class="fas fa-chevron-down" style="font-size:.6rem;margin-left:4px;"></i></a>
+                    <ul class="dropdown-nav">
+                        <li><a href="class-schedule.html#adults">Adult Classes</a></li>
+                        <li><a href="class-schedule.html#kids">Kids Classes</a></li>
+                        <li><a href="class-schedule.html#advanced">Advanced / Black Belt</a></li>
+                        <li><a href="class-schedule.html#open-mat">Open Mat</a></li>
+                    </ul>
+                </li>
+                <li><a href="8-week-plans.html">8 Week Plans</a></li>
+                <li class="has-dropdown has-mega">
+                    <a href="video-library.html" class="active">Video Training Library <i class="fas fa-chevron-down" style="font-size:.6rem;margin-left:4px;"></i></a>
+                    <div class="mega-dropdown">
+                        <ul class="mega-col-1">
+                            <li><a href="#" data-l1="beginner">Beginner <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="intermediate">Intermediate <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="advanced">Advanced <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="kata">Kata Series <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="sparring">Sparring <i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                        <div class="mega-col-2" data-panel="beginner"><ul>
+                            <li><a href="#" data-l2="fundamentals">Fundamentals <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="kicking">Kicking Drills <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="selfdefense">Self Defense <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-2" data-panel="intermediate"><ul>
+                            <li><a href="#" data-l2="sparring-basics">Sparring Basics <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="combos">Combo Drills <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="kata-mid">Kata Vol. 1–2 <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-2" data-panel="advanced"><ul>
+                            <li><a href="#" data-l2="blackbelt">Black Belt Prep <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="competition">Competition Training <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="weapons">Weapons Kata <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-2" data-panel="kata"><ul>
+                            <li><a href="#" data-l2="heian">Heian Series <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="nidan">Nidan Series <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="kata-adv">Advanced Kata <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-2" data-panel="sparring"><ul>
+                            <li><a href="#" data-l2="counters">Counter Combos <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="point">Point Sparring <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="comp-spar">Competition Sparring <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-3" data-panel="fundamentals"><ul><li><a href="video-library.html">Stances & Blocks — 12:30</a></li><li><a href="video-library.html">Basic Punching Form — 8:15</a></li><li><a href="video-library.html">Dojo Test Walkthrough — 18:42</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="kicking"><ul><li><a href="video-library.html">Kicking Drills — Power & Accuracy — 11:55</a></li><li><a href="video-library.html">Roundhouse & Side Kick — 9:40</a></li><li><a href="video-library.html">Jump Kick Techniques — 7:20</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="selfdefense"><ul><li><a href="video-library.html">Real-World Self Defense — 28:40</a></li><li><a href="video-library.html">Wrist & Grab Escapes — 14:10</a></li><li><a href="video-library.html">Ground Defence Essentials — 19:45</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="sparring-basics"><ul><li><a href="video-library.html">Sparring Tips & Counters — 15:30</a></li><li><a href="video-library.html">Footwork & Distance — 10:05</a></li><li><a href="video-library.html">Blocking & Counter Strikes — 22:10</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="combos"><ul><li><a href="video-library.html">3-Strike Combo Drill — 13:20</a></li><li><a href="video-library.html">Kick-Punch Combinations — 16:00</a></li><li><a href="video-library.html">Speed & Timing Drills — 11:30</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="kata-mid"><ul><li><a href="video-library.html">Kata Series Vol. 1 — Heian Shodan — 32:08</a></li><li><a href="video-library.html">Kata Series Vol. 2 — Heian Nidan — 28:55</a></li><li><a href="video-library.html">Kata Breakdown & Bunkai — 25:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="blackbelt"><ul><li><a href="video-library.html">Black Belt Conditioning Drills — 35:00</a></li><li><a href="video-library.html">1st Dan Requirements — 40:15</a></li><li><a href="video-library.html">Dojo Etiquette & Leadership — 20:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="competition"><ul><li><a href="video-library.html">Competition Sparring Tactics — 30:10</a></li><li><a href="video-library.html">Tournament Preparation — 22:45</a></li><li><a href="video-library.html">Judge Scoring Criteria — 15:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="weapons"><ul><li><a href="video-library.html">Bo Staff Kata — 38:20</a></li><li><a href="video-library.html">Nunchaku Basics — 24:00</a></li><li><a href="video-library.html">Sai Kata Introduction — 18:30</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="heian"><ul><li><a href="video-library.html">Heian Shodan Full — 32:08</a></li><li><a href="video-library.html">Heian Nidan Full — 28:55</a></li><li><a href="video-library.html">Heian Sandan Full — 30:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="nidan"><ul><li><a href="video-library.html">Nidan Kata Breakdown — 35:10</a></li><li><a href="video-library.html">Nidan Bunkai Applications — 27:40</a></li><li><a href="video-library.html">Nidan Speed Drills — 18:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="kata-adv"><ul><li><a href="video-library.html">Advanced Kata — Kanku Dai — 41:20</a></li><li><a href="video-library.html">Bassai Dai Full — 36:00</a></li><li><a href="video-library.html">Empi Kata — 29:15</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="counters"><ul><li><a href="video-library.html">Sparring Tips & Counter Combos — 15:30</a></li><li><a href="video-library.html">Sweep & Counter Drill — 12:00</a></li><li><a href="video-library.html">Jab-Cross-Hook Counter — 10:45</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="point"><ul><li><a href="video-library.html">Point Scoring System — 14:00</a></li><li><a href="video-library.html">Speed Point Sparring — 20:30</a></li><li><a href="video-library.html">Distance Management — 11:15</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="comp-spar"><ul><li><a href="video-library.html">Competition Sparring Tactics — 30:10</a></li><li><a href="video-library.html">Reading Your Opponent — 18:50</a></li><li><a href="video-library.html">Finals Strategy — 22:00</a></li></ul></div>
+                    </div>
+                </li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="Stcontact.html">Contact</a></li>
+                <li><a href="product-listing.html">Shop</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO — same as all pages -->
+    <section class="hero">
+        <div class="hero-noise"></div>
+        <div class="hero-content">
+            <span class="hero-eyebrow">Video Library</span>
+            <h1>Anyone Can Begin Martial Arts.<br>Any Age, Any Fitness Level.</h1>
+            <p>Access your full video training library — watch, rewatch, and master every technique.</p>
+        </div>
+    </section>
+
+    <!-- MAIN VIDEO LIBRARY -->
+    <div class="vlib-page">
+        <div class="vlib-container">
+
+            <!-- Filter -->
+            <div class="vlib-filter-bar">
+                <span class="vlib-filter-label">Filter:</span>
+                <button class="vlib-filter-btn active" data-filter="all">All</button>
+                <button class="vlib-filter-btn" data-filter="beginner">Beginner</button>
+                <button class="vlib-filter-btn" data-filter="intermediate">Intermediate</button>
+                <button class="vlib-filter-btn" data-filter="advanced">Advanced</button>
+                <button class="vlib-filter-btn" data-filter="kata">Kata</button>
+                <button class="vlib-filter-btn" data-filter="sparring">Sparring</button>
+            </div>
+
+            <div class="vlib-section-title">All Videos</div>
+
+            <!-- Grid -->
+            <div class="vlib-grid" id="vlibGrid">
+
+                <div class="vlib-card" data-cat="beginner"
+                    data-video="assets/images/banner-video.mp4"
+                    data-title="Dojo Test — Full Walkthrough"
+                    data-desc="Sensei Mike · 18:42 · 124 views">
+                    <div class="vlib-thumb">
+                        <img src="assets/images/portal/landscape-1.jpg" alt="Dojo Test">
+                        <div class="vlib-thumb-overlay"></div>
+                        <div class="vlib-play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="vlib-info">
+                        <h4>Dojo Test — Full Walkthrough</h4>
+                        <div class="vlib-meta">
+                            <span>18:42</span>
+                            <span class="sep">•</span>
+                            <span class="vlib-cat">Beginner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vlib-card" data-cat="beginner"
+                    data-video="assets/images/banner-video.mp4"
+                    data-title="Dojo Karate — Introduction"
+                    data-desc="Sensei Mike · 24:15 · 89 views">
+                    <div class="vlib-thumb">
+                        <img src="assets/images/portal/landscape-2.jpg" alt="Dojo Karate">
+                        <div class="vlib-thumb-overlay"></div>
+                        <div class="vlib-play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="vlib-info">
+                        <h4>Dojo Karate — Introduction</h4>
+                        <div class="vlib-meta">
+                            <span>24:15</span>
+                            <span class="sep">•</span>
+                            <span class="vlib-cat">Beginner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vlib-card" data-cat="kata"
+                    data-video="assets/images/banner-video.mp4"
+                    data-title="Kata Series Vol. 1 — Heian Shodan"
+                    data-desc="Sensei Lisa · 32:08 · 201 views">
+                    <div class="vlib-thumb">
+                        <img src="assets/images/portal/landscape-3.jpg" alt="Kata Series">
+                        <div class="vlib-thumb-overlay"></div>
+                        <div class="vlib-play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="vlib-info">
+                        <h4>Kata Series Vol. 1 — Heian Shodan</h4>
+                        <div class="vlib-meta">
+                            <span>32:08</span>
+                            <span class="sep">•</span>
+                            <span class="vlib-cat">Kata</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vlib-card" data-cat="sparring"
+                    data-video="assets/images/banner-video.mp4"
+                    data-title="Sparring Tips & Counter Combos"
+                    data-desc="Coach Alex · 15:30 · 67 views">
+                    <div class="vlib-thumb">
+                        <img src="assets/images/portal/1.jpg" alt="Sparring Tips">
+                        <div class="vlib-thumb-overlay"></div>
+                        <div class="vlib-play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="vlib-info">
+                        <h4>Sparring Tips & Counter Combos</h4>
+                        <div class="vlib-meta">
+                            <span>15:30</span>
+                            <span class="sep">•</span>
+                            <span class="vlib-cat">Sparring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vlib-card" data-cat="beginner"
+                    data-video="assets/images/banner-video.mp4"
+                    data-title="Kicking Drills — Power & Accuracy"
+                    data-desc="Sensei Mike · 11:55 · 145 views">
+                    <div class="vlib-thumb">
+                        <img src="assets/images/portal/2.jpg" alt="Kicking Drills">
+                        <div class="vlib-thumb-overlay"></div>
+                        <div class="vlib-play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="vlib-info">
+                        <h4>Kicking Drills — Power & Accuracy</h4>
+                        <div class="vlib-meta">
+                            <span>11:55</span>
+                            <span class="sep">•</span>
+                            <span class="vlib-cat">Beginner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vlib-card" data-cat="beginner"
+                    data-video="assets/images/banner-video.mp4"
+                    data-title="Real-World Self Defense Techniques"
+                    data-desc="Sensei Lisa · 28:40 · 310 views">
+                    <div class="vlib-thumb">
+                        <img src="assets/images/portal/post-1.jpg" alt="Self Defense">
+                        <div class="vlib-thumb-overlay"></div>
+                        <div class="vlib-play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="vlib-info">
+                        <h4>Real-World Self Defense Techniques</h4>
+                        <div class="vlib-meta">
+                            <span>28:40</span>
+                            <span class="sep">•</span>
+                            <span class="vlib-cat">Beginner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vlib-card" data-cat="advanced"
+                    data-video="assets/images/banner-video.mp4"
+                    data-title="Advanced Kata — Kanku Dai"
+                    data-desc="Sensei Mike · 41:20 · 52 views">
+                    <div class="vlib-thumb">
+                        <img src="assets/images/portal/post-3.jpg" alt="Advanced Kata">
+                        <div class="vlib-thumb-overlay"></div>
+                        <div class="vlib-play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="vlib-info">
+                        <h4>Advanced Kata — Kanku Dai</h4>
+                        <div class="vlib-meta">
+                            <span>41:20</span>
+                            <span class="sep">•</span>
+                            <span class="vlib-cat">Advanced</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vlib-card" data-cat="beginner"
+                    data-video="assets/images/banner-video.mp4"
+                    data-title="Kids Basics — Stances & Punches"
+                    data-desc="Coach Sarah · 9:15 · 178 views">
+                    <div class="vlib-thumb">
+                        <img src="assets/images/portal/square-1.jpg" alt="Kids Basics">
+                        <div class="vlib-thumb-overlay"></div>
+                        <div class="vlib-play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="vlib-info">
+                        <h4>Kids Basics — Stances & Punches</h4>
+                        <div class="vlib-meta">
+                            <span>09:15</span>
+                            <span class="sep">•</span>
+                            <span class="vlib-cat">Beginner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vlib-card" data-cat="intermediate"
+                    data-video="assets/images/banner-video.mp4"
+                    data-title="Blocking & Counter Strikes"
+                    data-desc="Sensei Mike · 22:10 · 93 views">
+                    <div class="vlib-thumb">
+                        <img src="assets/images/portal/2-2.jpg" alt="Blocking">
+                        <div class="vlib-thumb-overlay"></div>
+                        <div class="vlib-play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="vlib-info">
+                        <h4>Blocking & Counter Strikes</h4>
+                        <div class="vlib-meta">
+                            <span>22:10</span>
+                            <span class="sep">•</span>
+                            <span class="vlib-cat">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vlib-card" data-cat="intermediate"
+                    data-video="assets/images/banner-video.mp4"
+                    data-title="Ground Defence Essentials"
+                    data-desc="Coach Alex · 19:45 · 76 views">
+                    <div class="vlib-thumb">
+                        <img src="assets/images/portal/1-1.jpg" alt="Ground Defence">
+                        <div class="vlib-thumb-overlay"></div>
+                        <div class="vlib-play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="vlib-info">
+                        <h4>Ground Defence Essentials</h4>
+                        <div class="vlib-meta">
+                            <span>19:45</span>
+                            <span class="sep">•</span>
+                            <span class="vlib-cat">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vlib-card" data-cat="advanced"
+                    data-video="assets/images/banner-video.mp4"
+                    data-title="Black Belt Conditioning Drills"
+                    data-desc="Sensei Mike · 35:00 · 41 views">
+                    <div class="vlib-thumb">
+                        <img src="assets/images/portal/side-1.jpg" alt="Black Belt">
+                        <div class="vlib-thumb-overlay"></div>
+                        <div class="vlib-play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="vlib-info">
+                        <h4>Black Belt Conditioning Drills</h4>
+                        <div class="vlib-meta">
+                            <span>35:00</span>
+                            <span class="sep">•</span>
+                            <span class="vlib-cat">Advanced</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vlib-card" data-cat="kata"
+                    data-video="assets/images/banner-video.mp4"
+                    data-title="Kata Series Vol. 2 — Heian Nidan"
+                    data-desc="Sensei Lisa · 28:55 · 167 views">
+                    <div class="vlib-thumb">
+                        <img src="assets/images/portal/side-2.jpg" alt="Kata Vol 2">
+                        <div class="vlib-thumb-overlay"></div>
+                        <div class="vlib-play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="vlib-info">
+                        <h4>Kata Series Vol. 2 — Heian Nidan</h4>
+                        <div class="vlib-meta">
+                            <span>28:55</span>
+                            <span class="sep">•</span>
+                            <span class="vlib-cat">Kata</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination -->
+            <div class="vlib-pagination">
+                <span class="active">1</span>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#" class="pg-next"><i class="fas fa-chevron-right"></i></a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="portal-footer">
+        <span>© 2025 Apex Martial Arts. All rights reserved.</span>
+        <div class="footer-links"><a href="Stcontact.html">Contact</a><a href="index.html">Main Site</a></div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div class="vlib-modal-overlay" id="vlibModal">
+        <div class="vlib-modal">
+            <button class="vlib-modal-close" id="vlibModalClose"><i class="fas fa-times"></i></button>
+            <div class="vlib-modal-player" id="vlibModalPlayer"></div>
+            <div class="vlib-modal-footer">
+                <h3 id="vlibModalTitle"></h3>
+                <p id="vlibModalDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/portal.js"></script>
+    <script>
+        /* Filter */
+        document.querySelectorAll('.vlib-filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.vlib-filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const f = btn.dataset.filter;
+                document.querySelectorAll('.vlib-card').forEach(card => {
+                    card.style.display = (f === 'all' || card.dataset.cat === f) ? '' : 'none';
+                });
+            });
+        });
+
+        /* Modal */
+        const modal   = document.getElementById('vlibModal');
+        const player  = document.getElementById('vlibModalPlayer');
+        const mTitle  = document.getElementById('vlibModalTitle');
+        const mDesc   = document.getElementById('vlibModalDesc');
+
+        function openModal(src, title, desc) {
+            mTitle.textContent = title;
+            mDesc.textContent  = desc;
+            const isEmbed = src.includes('youtube') || src.includes('youtu.be') || src.includes('vimeo');
+            player.innerHTML   = isEmbed
+                ? `<iframe src="${src}" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>`
+                : `<video src="${src}" controls autoplay></video>`;
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('open');
+            player.innerHTML = '';
+            document.body.style.overflow = '';
+        }
+
+        document.querySelectorAll('.vlib-card').forEach(card => {
+            card.addEventListener('click', e => {
+                if (e.target.closest('.vlib-actions')) return;
+                openModal(card.dataset.video, card.dataset.title, card.dataset.desc);
+            });
+        });
+
+        document.getElementById('vlibModalClose').addEventListener('click', closeModal);
+        modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+    </script>
+</body>
+
+</html>
+
+
+
+
+                                                             

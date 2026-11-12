@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart & Checkout - Martial Arts</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.css?v=3">
+    <link rel="stylesheet" href="assets/css/cart.css">
+    <link rel="stylesheet" href="assets/css/yellow-theme-dark.css">
+   
+</head>
+
+<body class="cart-page">
+
+    <!-- ===== TOP HEADER ===== -->
+    <div class="top-header">
+        <div class="top-header-left">
+            <a href="mailto:info@example.com">Self Defense, Adult &amp; Children Martial Arts Classes in Memphis</a>
+        </div>
+        <div class="top-header-right">
+            <a href="tel:+19087319123"><i class="bi bi-telephone me-2"></i> (908) 763-9123</a>
+            <a href="Stindex.html"><i class="bi bi-person me-2"></i> Student Portal</a>
+            <div class="cart-container position-relative">
+                <a href="#" class="position-relative cart">
+                    <i class="bi bi-cart3"></i>
+                    <span class="cart-count">3</span>
+                </a>
+                <div class="cart-dropdown" id="cartDropdown">
+                    <div class="cart-item gap-3">
+                        <span class="item-remove"></span>
+                        <img src="assets/images/f1.png" class="item-image" alt="">
+                        <div class="item-details flex-grow-1">
+                            <h6>Strike Gloves</h6>
+                            <div class="item-qty-price">2x $64.00</div>
+                        </div>
+                    </div>
+                    <div class="cart-item gap-3">
+                        <span class="item-remove"></span>
+                        <img src="assets/images/f2.png" class="item-image" alt="">
+                        <div class="item-details flex-grow-1">
+                            <h6>Training Pads</h6>
+                            <div class="item-qty-price">1x $52.00</div>
+                        </div>
+                    </div>
+                    <div class="cart-total">
+                        <div class="total-row">
+                            <span>Total</span>
+                            <span class="total-price">$180.00</span>
+                        </div>
+                        <button class="btn w-100 bg-white">Cart</button>
+                        <button class="btn btn-theme w-100">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER / NAV ===== -->
+    <header class="background-header">
+        <a href="Index.html" class="logo">
+            <img src="assets/images/logo-2.png" alt="Logo">
+        </a>        <nav>
+            <a href="Index.html" class="main-menu" id="home-link">Home</a>
+
+            <div class="nav-item-dropdown">
+                <a href="aboutus.html" class="main-menu">About Us <i class="bi bi-chevron-down"></i></a>
+                <div class="full-width-dropdown">
+                    <div class="dropdown-content-align mega-grid about-dropdownGrid aboutus-dropdown">
+                        <div class="simple-list mega-col">
+                            <h6>About Us</h6>
+                            <ul>
+                                <li><a href="aboutus.html">Our School</a></li>
+                                <li><a href="#">Reviews &#128077;</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xxl-3 col-xl-3 d-none d-xxl-block">
+                            <div class="tp-megamenu-portfolio-text">
+                                <h4>50+</h4><span>Martial arts training programs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item-dropdown">
+                <a href="program-category.html" class="main-menu">Our Programs <i class="bi bi-chevron-down"></i></a>
+                <div class="full-width-dropdown">
+                    <div class="dropdown-content-align">
+                        <div class="mega-grid">
+                            <div class="mega-col">
+                                <h6><a href="program-category.html">Children's Programs</a></h6>
+                                <span class="age">Age 4-12</span>
+                                <ul>
+                                    <li><a href="program-category.html">Little Dragons</a></li>
+                                    <li><a href="program-category.html">Juniors</a></li>
+                                    <li><a href="program-category.html">Leadership</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h6><a href="programs-details.html">Adult Programs</a></h6>
+                                <span class="age">Age 18+</span>
+                                <ul>
+                                    <li><a href="programs-details.html">Jeet Kune Do</a></li>
+                                    <li><a href="programs-details.html">Kali</a></li>
+                                    <li><a href="programs-details.html">Kung Fu</a></li>
+                                    <li><a href="programs-details.html">Tai Chi</a></li>
+                                    <li><a href="programs-details.html">Qi Gong</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h6><a href="program-category.html">Just 4 Kids</a></h6>
+                                <span class="age">Age 20+</span>
+                                <ul>
+                                    <li><a href="program-category.html">Parent's Night Out</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 d-none d-xxl-block">
+                                <div class="tp-megamenu-portfolio-text">
+                                    <h4>50+</h4><span>Martial arts training programs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="trial-offer.html" class="main-menu">Trial Offer</a>
+            <a href="product-listing.html" class="main-menu active">Shop</a>
+            <a href="blog-grid.html" class="main-menu">Blog</a>
+
+            <div class="nav-item-dropdown contact-nav-item-dropdown">
+                <a href="contact.html" class="main-menu">Contact Us <i class="bi bi-chevron-down"></i></a>
+                <div class="full-width-dropdown contact-full-width-dropdown">
+                    <div class="dropdown-content-align contact-dropdown-grid contactus-dropdown">
+                        <div class="contact-simple-list contact-mega-col">
+                            <h6>Contact Us</h6>
+                            <ul>
+                                <li><a href="contact.html">Send a Message</a></li>
+                                <li><a href="contact.html#contact">Visit Our School</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xxl-3 col-xl-3 d-none d-xxl-block contact-dropdown-stat">
+                            <div class="contact-megamenu-portfolio-text">
+                                <h4>24h</h4><span>quick response for trial class questions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+<a class="btn btn-theme d-lg-block d-none header-btn" href="contact.html">Try a Class for FREE!</a>
+
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- ===== MAIN ===== -->
+    <main class="cart-main">
+        <div class="container">
+
+            <!-- ===== STEPPER ===== -->
+            <div class="ck-stepper">
+                <div class="ck-step ck-step--active" data-step="1">
+                    <span class="ck-step-num">01</span>
+                    <div class="ck-step-info">
+                        <span class="ck-step-label">Shopping Cart</span>
+                        <span class="ck-step-sub">Review Items</span>
+                    </div>
+                </div>
+                <div class="ck-step" data-step="2">
+                    <span class="ck-step-num">02</span>
+                    <div class="ck-step-info">
+                        <span class="ck-step-label">Checkout</span>
+                        <span class="ck-step-sub">Billing &amp; Payment</span>
+                    </div>
+                </div>
+                <div class="ck-step" data-step="3">
+                    <span class="ck-step-num">03</span>
+                    <div class="ck-step-info">
+                        <span class="ck-step-label">Order Completed</span>
+                        <span class="ck-step-sub">Confirmation</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================================================
+                 STEP 1 — CART
+                 ================================================ -->
+            <div class="ck-panel active" id="panel-1">
+                <div class="cart-layout">
+
+                    <!-- Cart Table -->
+                    <div>
+                        <div class="cart-card">
+                            <table class="cart-table">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th class="th-center">Quantity</th>
+                                        <th class="th-right">Total</th>
+                                        <th class="th-center">Remove</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cartTableBody">
+                                    <tr data-id="1">
+                                        <td>
+                                            <div class="ct-product">
+                                                <img class="ct-img" src="https://images.unsplash.com/photo-1566577739112-5180d4bf9390?w=160&q=80" alt="Poisonous Frog">
+                                                <div>
+                                                    <div class="ct-name">Poisonous Frog Helmet</div>
+                                                    <div class="ct-cat">Protective Gear · Size M · Green</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="ct-price">$170.00</span></td>
+                                        <td>
+                                            <div class="ct-qty-wrap">
+                                                <div class="ct-qty">
+                                                    <button class="ct-qty-btn" onclick="changeQty(this,-1)">−</button>
+                                                    <input type="number" value="1" min="1" max="99" onchange="updateRow(this)">
+                                                    <button class="ct-qty-btn" onclick="changeQty(this,1)">+</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="ct-total">$170.00</span></td>
+                                        <td><button class="ct-remove-btn" onclick="removeRow(this)" title="Remove"><i class="bi bi-x"></i></button></td>
+                                    </tr>
+                                    <tr data-id="2">
+                                        <td>
+                                            <div class="ct-product">
+                                                <img class="ct-img" src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=160&q=80" alt="Strike Gloves">
+                                                <div>
+                                                    <div class="ct-name">Strike Pro Gloves</div>
+                                                    <div class="ct-cat">Gloves · Size L · Black</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="ct-price">$64.00</span></td>
+                                        <td>
+                                            <div class="ct-qty-wrap">
+                                                <div class="ct-qty">
+                                                    <button class="ct-qty-btn" onclick="changeQty(this,-1)">−</button>
+                                                    <input type="number" value="2" min="1" max="99" onchange="updateRow(this)">
+                                                    <button class="ct-qty-btn" onclick="changeQty(this,1)">+</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="ct-total">$128.00</span></td>
+                                        <td><button class="ct-remove-btn" onclick="removeRow(this)" title="Remove"><i class="bi bi-x"></i></button></td>
+                                    </tr>
+                                    <tr data-id="3">
+                                        <td>
+                                            <div class="ct-product">
+                                                <img class="ct-img" src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=160&q=80" alt="Training Pads">
+                                                <div>
+                                                    <div class="ct-name">Power Training Pads</div>
+                                                    <div class="ct-cat">Pads · Standard</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="ct-price">$52.00</span></td>
+                                        <td>
+                                            <div class="ct-qty-wrap">
+                                                <div class="ct-qty">
+                                                    <button class="ct-qty-btn" onclick="changeQty(this,-1)">−</button>
+                                                    <input type="number" value="1" min="1" max="99" onchange="updateRow(this)">
+                                                    <button class="ct-qty-btn" onclick="changeQty(this,1)">+</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="ct-total">$52.00</span></td>
+                                        <td><button class="ct-remove-btn" onclick="removeRow(this)" title="Remove"><i class="bi bi-x"></i></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- Coupon + Update -->
+                            <div class="cart-coupon">
+                                <span class="coupon-label"><i class="bi bi-tag me-2"></i>Coupon</span>
+                                <input type="text" class="coupon-input" placeholder="Enter coupon code">
+                                <button class="btn-coupon mt-0" onclick="applyCoupon()">
+                                    <i class="bi bi-check2-circle"></i> Apply
+                                </button>
+                                <button class="btn-update-cart mt-0" onclick="updateCart()">
+                                    <i class="bi bi-arrow-clockwise"></i> Update Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart Totals -->
+                    <div class="cart-totals">
+                        <div class="ct-title">Cart Totals</div>
+
+                        <div class="ct-row">
+                            <span class="ct-row-label">Subtotal</span>
+                            <span class="ct-row-val" id="totalSubtotal">$350.00</span>
+                        </div>
+                        <div class="ct-row">
+                            <span class="ct-row-label">Shipping</span>
+                            <span class="ct-row-val">
+                                Free
+                                <small>Standard Delivery</small>
+                            </span>
+                        </div>
+                        <div class="ct-row">
+                            <span class="ct-row-label">Discount</span>
+                            <span class="ct-row-val" id="discountVal">—</span>
+                        </div>
+                        <div class="ct-row">
+                            <span class="ct-row-label">Total</span>
+                            <span class="ct-row-val highlight" id="totalVal">$350.00</span>
+                        </div>
+
+                        <button class="btn-checkout" onclick="goToStep(2)">
+                            Proceed to Checkout &nbsp;<i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ================================================
+                 STEP 2 — CHECKOUT
+                 ================================================ -->
+            <div class="ck-panel" id="panel-2">
+                <div class="checkout-layout">
+
+                    <!-- Left: Billing Form -->
+                    <div>
+                        <!-- Billing Details -->
+                        <div class="ck-form-card" style="margin-bottom: 24px;">
+                            <div class="ck-section-title">
+                                <i class="bi bi-person-lines-fill"></i> Billing Details
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>First Name <span class="req">*</span></label>
+                                    <input type="text" class="form-control-ck" placeholder="John">
+                                </div>
+                                <div class="form-group">
+                                    <label>Last Name <span class="req">*</span></label>
+                                    <input type="text" class="form-control-ck" placeholder="Doe">
+                                </div>
+                            </div>
+
+                            <div class="form-row single">
+                                <div class="form-group">
+                                    <label>Company Name <span style="color:#bbb;font-weight:600">(optional)</span></label>
+                                    <input type="text" class="form-control-ck" placeholder="Your company">
+                                </div>
+                            </div>
+
+                            <div class="form-row single">
+                                <div class="form-group">
+                                    <label>Country / Region <span class="req">*</span></label>
+                                    <select class="form-control-ck">
+                                        <option value="">Select country...</option>
+                                        <option selected>United States</option>
+                                        <option>Canada</option>
+                                        <option>United Kingdom</option>
+                                        <option>Australia</option>
+                                        <option>India</option>
+                                        <option>Germany</option>
+                                        <option>France</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row single">
+                                <div class="form-group">
+                                    <label>Street Address <span class="req">*</span></label>
+                                    <input type="text" class="form-control-ck" placeholder="House number and street name" style="margin-bottom:10px">
+                                    <input type="text" class="form-control-ck" placeholder="Apartment, suite, unit, etc. (optional)">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>City <span class="req">*</span></label>
+                                    <input type="text" class="form-control-ck" placeholder="Memphis">
+                                </div>
+                                <div class="form-group">
+                                    <label>State <span class="req">*</span></label>
+                                    <select class="form-control-ck">
+                                        <option value="">Select state...</option>
+                                        <option>Alabama</option>
+                                        <option>California</option>
+                                        <option>Florida</option>
+                                        <option>New York</option>
+                                        <option selected>Tennessee</option>
+                                        <option>Texas</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>ZIP Code <span class="req">*</span></label>
+                                    <input type="text" class="form-control-ck" placeholder="38134">
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone <span class="req">*</span></label>
+                                    <input type="tel" class="form-control-ck" placeholder="+1 (555) 000-0000">
+                                </div>
+                            </div>
+
+                            <div class="form-row single">
+                                <div class="form-group">
+                                    <label>Email Address <span class="req">*</span></label>
+                                    <input type="email" class="form-control-ck" placeholder="you@example.com">
+                                </div>
+                            </div>
+
+                            <!-- Ship to different address toggle -->
+                            <label class="ck-shipping-toggle">
+                                <input type="checkbox" id="shipToggle" onchange="toggleShipping()">
+                                <span><i class="bi bi-truck me-2"></i> Ship to a different address?</span>
+                            </label>
+
+                            <div id="shippingFields">
+                                <div style="height:16px"></div>
+                                <div class="ck-section-title" style="font-size:13px;margin-bottom:18px">
+                                    <i class="bi bi-geo-alt-fill"></i> Shipping Address
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>First Name</label>
+                                        <input type="text" class="form-control-ck" placeholder="John">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Last Name</label>
+                                        <input type="text" class="form-control-ck" placeholder="Doe">
+                                    </div>
+                                </div>
+                                <div class="form-row single">
+                                    <div class="form-group">
+                                        <label>Street Address</label>
+                                        <input type="text" class="form-control-ck" placeholder="House number and street name">
+                                    </div>
+                                </div>
+                                <div class="form-row triple">
+                                    <div class="form-group">
+                                        <label>City</label>
+                                        <input type="text" class="form-control-ck" placeholder="City">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>State</label>
+                                        <input type="text" class="form-control-ck" placeholder="State">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>ZIP</label>
+                                        <input type="text" class="form-control-ck" placeholder="ZIP">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Order notes -->
+                            <div class="form-row single" style="margin-top:20px">
+                                <div class="form-group">
+                                    <label>Order Notes <span style="color:#bbb;font-weight:600">(optional)</span></label>
+                                    <textarea class="form-control-ck" placeholder="Notes about your order, e.g. special delivery instructions."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment -->
+                        <div class="ck-form-card">
+                            <div class="ck-section-title">
+                                <i class="bi bi-credit-card-2-front-fill"></i> Payment Method
+                            </div>
+
+                            <div class="ck-payment-options">
+                                <div class="ck-payment-opt">
+                                    <label class="ck-pay-label">
+                                        <input type="radio" name="payment" value="bank" checked onchange="updatePaymentFields()">
+                                        <div class="ck-pay-icon"><i class="bi bi-bank"></i></div>
+                                        Direct Bank Transfer
+                                    </label>
+                                    <div class="ck-pay-desc">
+                                        Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared.
+                                    </div>
+                                    <div class="ck-pay-fields" id="bankTransferFields">
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label>Account Holder Name <span class="req">*</span></label>
+                                                <input type="text" class="form-control-ck" placeholder="John Doe">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Bank Name <span class="req">*</span></label>
+                                                <input type="text" class="form-control-ck" placeholder="e.g. Bank of America">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label>Account Number <span class="req">*</span></label>
+                                                <input type="text" class="form-control-ck" placeholder="Account number">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>IFSC / SWIFT Code <span class="req">*</span></label>
+                                                <input type="text" class="form-control-ck" placeholder="e.g. ABCD0123456">
+                                            </div>
+                                        </div>
+                                        <div class="form-row single">
+                                            <div class="form-group">
+                                                <label>Transaction Reference <span style="color:#bbb;font-weight:600">(optional)</span></label>
+                                                <input type="text" class="form-control-ck" placeholder="Reference / UTR number after transfer">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="ck-payment-opt">
+                                    <label class="ck-pay-label">
+                                        <input type="radio" name="payment" value="online" onchange="updatePaymentFields()">
+                                        <div class="ck-pay-icon"><i class="bi bi-credit-card"></i></div>
+                                        Credit / Debit Card
+                                    </label>
+                                    <div class="ck-pay-desc">
+                                        Pay securely using Visa, Mastercard, or American Express. Your card details are encrypted and never stored on our servers.
+                                    </div>
+                                    <div class="ck-pay-fields" id="cardPaymentFields">
+                                        <div class="form-row single">
+                                            <div class="form-group">
+                                                <label>Card Holder Name <span class="req">*</span></label>
+                                                <input type="text" class="form-control-ck" placeholder="Name on card">
+                                            </div>
+                                        </div>
+                                        <div class="form-row single">
+                                            <div class="form-group">
+                                                <label>Card Number <span class="req">*</span></label>
+                                                <input type="text" class="form-control-ck" placeholder="1234 5678 9012 3456" inputmode="numeric" maxlength="19">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label>Expiry Date <span class="req">*</span></label>
+                                                <input type="text" class="form-control-ck" placeholder="MM / YY" maxlength="7">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>CVV <span class="req">*</span></label>
+                                                <input type="password" class="form-control-ck" placeholder="123" inputmode="numeric" maxlength="4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="ck-payment-opt">
+                                    <label class="ck-pay-label">
+                                        <input type="radio" name="payment" value="cod" onchange="updatePaymentFields()">
+                                        <div class="ck-pay-icon"><i class="bi bi-cash-coin"></i></div>
+                                        Cash on Delivery
+                                    </label>
+                                    <div class="ck-pay-desc">
+                                        Pay with cash upon delivery. Please have exact change ready. Available for select locations only.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <label class="ck-terms">
+                                <input type="checkbox" id="termsCheck">
+                                <span>I have read and agree to the website <a href="#">terms and conditions</a> and <a href="#">privacy policy</a>.</span>
+                            </label>
+
+                            <button class="btn-place-order" onclick="placeOrder()">
+                                <i class="bi bi-lock-fill"></i> Place Order Securely
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right: Order Summary -->
+                    <div class="order-summary-card">
+                        <div class="ct-title">Your Order</div>
+
+                        <div class="os-product-list">
+                            <div class="os-product-row">
+                                <div>
+                                    <div class="os-prod-name">Poisonous Frog Helmet</div>
+                                    <div class="os-prod-qty os-subtotal-label">×1</div>
+                                </div>
+                                <div class="os-prod-price">$170.00</div>
+                            </div>
+                            <div class="os-product-row">
+                                <div>
+                                    <div class="os-prod-name">Strike Pro Gloves</div>
+                                    <div class="os-prod-qty os-subtotal-label">×2</div>
+                                </div>
+                                <div class="os-prod-price">$128.00</div>
+                            </div>
+                            <div class="os-product-row">
+                                <div>
+                                    <div class="os-prod-name">Power Training Pads</div>
+                                    <div class="os-prod-qty os-subtotal-label">×1</div>
+                                </div>
+                                <div class="os-prod-price">$52.00</div>
+                            </div>
+                        </div>
+
+                        <hr class="os-divider">
+
+                        <div class="os-total-row">
+                            <span class="os-total-label">Subtotal</span>
+                            <span class="os-total-val">$350.00</span>
+                        </div>
+                        <div class="os-total-row">
+                            <span class="os-total-label">Shipping</span>
+                            <span class="os-total-val">Free</span>
+                        </div>
+                        <div class="os-total-row">
+                            <span class="os-total-label">Tax (8%)</span>
+                            <span class="os-total-val">$28.00</span>
+                        </div>
+
+                        <hr class="os-divider">
+
+                        <div class="os-total-row os-grand-total">
+                            <span class="os-total-label">Total</span>
+                            <span class="os-total-val">$378.00</span>
+                        </div>
+
+                        <button class="btn-checkout" style="margin-top:24px" onclick="goToStep(1)">
+                            <i class="bi bi-arrow-left"></i> &nbsp;Back to Cart
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ================================================
+                 STEP 3 — ORDER SUCCESS
+                 ================================================ -->
+            <div class="ck-panel" id="panel-3">
+                <div class="success-card">
+
+                    <!-- Animated checkmark -->
+                    <div class="success-icon">
+                        <i class="bi bi-check-lg"></i>
+                    </div>
+
+                    <div class="success-eyebrow">Order Confirmed</div>
+                    <h2 class="success-title">Thank You for<br>Your Order!</h2>
+                    <p class="success-subtitle">
+                        Your order has been placed and is being processed. You'll receive a confirmation email shortly with your order details and tracking information.
+                    </p>
+
+                    <div class="order-id-pill">
+                        <i class="bi bi-receipt"></i>
+                        Order ID: <span>#MA-2024-78523</span>
+                    </div>
+
+                    <!-- Info Grid -->
+                    <div class="success-info-grid">
+                        <div class="si-box">
+                            <div class="si-box-label"><i class="bi bi-person-fill"></i> Customer</div>
+                            <div class="si-box-val">John Doe<br><span style="font-size:12px;color:#aaa;font-weight:600">john@example.com</span></div>
+                        </div>
+                        <div class="si-box">
+                            <div class="si-box-label"><i class="bi bi-geo-alt-fill"></i> Shipping To</div>
+                            <div class="si-box-val">1819 Pleasant Blvd<br>Memphis, TN 38134</div>
+                        </div>
+                        <div class="si-box">
+                            <div class="si-box-label"><i class="bi bi-credit-card-fill"></i> Payment</div>
+                            <div class="si-box-val">Bank Transfer<br><span style="font-size:12px;color:#4caf50;font-weight:700"><i class="bi bi-check-circle-fill"></i> Confirmed</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Products table -->
+                    <div class="success-products">
+                        <div class="sp-header">
+                            <span>Product</span>
+                            <span>Qty</span>
+                            <span>Unit</span>
+                            <span style="text-align:right">Subtotal</span>
+                        </div>
+                        <div class="sp-row">
+                            <span class="sp-name">Poisonous Frog Helmet · Size M · Green</span>
+                            <span class="sp-qty">×1</span>
+                            <span class="sp-unit">$170.00</span>
+                            <span class="sp-sub">$170.00</span>
+                        </div>
+                        <div class="sp-row">
+                            <span class="sp-name">Strike Pro Gloves · Size L · Black</span>
+                            <span class="sp-qty">×2</span>
+                            <span class="sp-unit">$64.00</span>
+                            <span class="sp-sub">$128.00</span>
+                        </div>
+                        <div class="sp-row">
+                            <span class="sp-name">Power Training Pads · Standard</span>
+                            <span class="sp-qty">×1</span>
+                            <span class="sp-unit">$52.00</span>
+                            <span class="sp-sub">$52.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Totals -->
+                    <div class="success-totals">
+                        <div class="st-row">
+                            <span class="st-label">Subtotal</span>
+                            <span class="st-val">$350.00</span>
+                        </div>
+                        <div class="st-row">
+                            <span class="st-label">Shipping</span>
+                            <span class="st-val">Free</span>
+                        </div>
+                        <div class="st-row">
+                            <span class="st-label">Tax (8%)</span>
+                            <span class="st-val">$28.00</span>
+                        </div>
+                        <div class="st-row">
+                            <span class="st-label">Grand Total</span>
+                            <span class="st-val">$378.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Order Timeline -->
+                    <div class="order-timeline">
+                        <div class="ot-step done">
+                            <div class="ot-dot"><i class="bi bi-check"></i></div>
+                            <span class="ot-label">Order Placed</span>
+                        </div>
+                        <div class="ot-step active">
+                            <div class="ot-dot"><i class="bi bi-box-seam"></i></div>
+                            <span class="ot-label">Processing</span>
+                        </div>
+                        <div class="ot-step">
+                            <div class="ot-dot"><i class="bi bi-truck"></i></div>
+                            <span class="ot-label">Shipped</span>
+                        </div>
+                        <div class="ot-step">
+                            <div class="ot-dot"><i class="bi bi-house-check"></i></div>
+                            <span class="ot-label">Delivered</span>
+                        </div>
+                    </div>
+
+                    <!-- Action buttons -->
+                    <div class="success-actions">
+                        <a href="#" class="btn-invoice" onclick="return false;">
+                            <i class="bi bi-download"></i> Download Invoice
+                        </a>
+                        <a href="product-listing.html" class="btn-continue">
+                            <i class="bi bi-bag"></i> Continue Shopping
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /panel-3 -->
+
+        </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="ma-footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-6 flex-div-footer">
+                    <div class="footer-brand mb-3">
+                        <img src="assets/images/logo-2.png" alt="Logo" class="footer-logo" width="100" height="100">
+                    </div>
+                    <div class="social-links mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Explore</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Instructors</a></li>
+                        <li><a href="#">Class Schedule</a></li>
+                        <li><a href="#">Pricing Plan</a></li>
+                        <li><a href="#">Latest Blogs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Programs</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Kids Karate</a></li>
+                        <li><a href="#">Krav Maga</a></li>
+                        <li><a href="#">Brazilian Jiu-Jitsu</a></li>
+                        <li><a href="#">Muay Thai</a></li>
+                        <li><a href="#">Private Lessons</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Get In Touch</h5>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>1819 Pleasant Blvd, Memphis, TN 38134</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+47 333 78901</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@usakarate.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="copyright">© Copyright 2026 USA Karate. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="footer-bottom-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js?v=3"></script>
+
+    <script>
+    // ============================================================
+    // STEP NAVIGATION
+    // ============================================================
+    var currentStep = 1;
+
+    function goToStep(n) {
+        // Update panels
+        document.querySelectorAll('.ck-panel').forEach(function(p) { p.classList.remove('active'); });
+        document.getElementById('panel-' + n).classList.add('active');
+
+        // Update stepper
+        document.querySelectorAll('.ck-step').forEach(function(s) {
+            var sn = parseInt(s.dataset.step);
+            s.classList.remove('ck-step--active', 'ck-step--done');
+            if (sn < n)       s.classList.add('ck-step--done');
+            else if (sn === n) s.classList.add('ck-step--active');
+        });
+
+        currentStep = n;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Allow clicking done steps to go back
+    document.querySelectorAll('.ck-step').forEach(function(s) {
+        s.addEventListener('click', function() {
+            var sn = parseInt(this.dataset.step);
+            if (sn < currentStep) goToStep(sn);
+        });
+    });
+
+    // ============================================================
+    // CART LOGIC
+    // ============================================================
+    function getPriceFromRow(row) {
+        var priceText = row.querySelector('.ct-price').textContent.replace('$', '').replace(',', '');
+        return parseFloat(priceText);
+    }
+
+    function getQtyFromRow(row) {
+        return parseInt(row.querySelector('input[type="number"]').value) || 1;
+    }
+
+    function updateRow(input) {
+        var row = input.closest('tr');
+        var price = getPriceFromRow(row);
+        var qty = parseInt(input.value) || 1;
+        if (qty < 1) { qty = 1; input.value = 1; }
+        if (qty > 99) { qty = 99; input.value = 99; }
+        row.querySelector('.ct-total').textContent = '$' + (price * qty).toFixed(2);
+        recalcTotals();
+    }
+
+    function changeQty(btn, delta) {
+        var row = btn.closest('tr');
+        var input = row.querySelector('input[type="number"]');
+        var val = parseInt(input.value) || 1;
+        val = Math.min(99, Math.max(1, val + delta));
+        input.value = val;
+        updateRow(input);
+    }
+
+    function removeRow(btn) {
+        var row = btn.closest('tr');
+        row.style.transition = 'opacity 0.3s, transform 0.3s';
+        row.style.opacity = '0';
+        row.style.transform = 'translateX(20px)';
+        setTimeout(function() { row.remove(); recalcTotals(); }, 300);
+    }
+
+    function recalcTotals() {
+        var rows = document.querySelectorAll('#cartTableBody tr');
+        var sub = 0;
+        rows.forEach(function(row) {
+            var totalText = row.querySelector('.ct-total').textContent.replace('$','').replace(',','');
+            sub += parseFloat(totalText) || 0;
+        });
+        document.getElementById('totalSubtotal').textContent = '$' + sub.toFixed(2);
+        document.getElementById('totalVal').textContent = '$' + sub.toFixed(2);
+    }
+
+    function applyCoupon() {
+        var code = document.querySelector('.coupon-input').value.trim().toUpperCase();
+        if (code === 'MARTIAL10') {
+            document.getElementById('discountVal').textContent = '−10%';
+            alert('Coupon applied! 10% discount added.');
+        } else if (code === '') {
+            alert('Please enter a coupon code.');
+        } else {
+            alert('Invalid coupon code. Try MARTIAL10.');
+        }
+    }
+
+    function updateCart() {
+        recalcTotals();
+        var btn = event.currentTarget;
+        var orig = btn.innerHTML;
+        btn.innerHTML = '<i class="bi bi-check2"></i> Updated!';
+        setTimeout(function() { btn.innerHTML = orig; }, 1500);
+    }
+
+    // ============================================================
+    // CHECKOUT LOGIC
+    // ============================================================
+    function toggleShipping() {
+        var fields = document.getElementById('shippingFields');
+        fields.style.display = document.getElementById('shipToggle').checked ? 'block' : 'none';
+    }
+
+    function updatePaymentFields() {
+        var selected = document.querySelector('input[name="payment"]:checked').value;
+        var bankFields = document.getElementById('bankTransferFields');
+        var cardFields = document.getElementById('cardPaymentFields');
+
+        bankFields.classList.toggle('ck-pay-fields-open', selected === 'bank');
+        cardFields.classList.toggle('ck-pay-fields-open', selected === 'online');
+    }
+
+    function placeOrder() {
+        var terms = document.getElementById('termsCheck');
+        if (!terms.checked) {
+            alert('Please agree to the terms and conditions to proceed.');
+            return;
+        }
+        goToStep(3);
+    }
+
+    // Initial calc
+    recalcTotals();
+    updatePaymentFields();
+    </script>
+
+</body>
+</html>

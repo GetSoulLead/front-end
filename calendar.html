@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar — Apex Martial Arts Student Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/portal.css">
+    <link rel="stylesheet" href="assets/css/yellow-theme-new.css">
+   
+    <style>
+        /* ── Calendar App Layout ── */
+        .cal-app {
+            display: flex;
+            min-height: calc(100vh - 200px);
+            background: #f5f6fa;
+        }
+
+        /* ── Left Sidebar ── */
+        .cal-sidebar {
+            width: 270px;
+            flex-shrink: 0;
+            padding: 24px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        /* Mini Calendar */
+        .mini-cal { }
+
+        .mini-cal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .mini-cal-title {
+            font-size: .82rem;
+            font-weight: 700;
+           
+        }
+
+        .mini-cal-nav {
+            width: 26px; height: 26px;
+            border-radius: 50%;
+            font-size: .65rem;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer;
+            transition: background .15s, border-color .15s;
+        }
+
+        .mini-cal-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2px;
+        }
+
+        .mini-day-hdr {
+            font-size: .62rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 4px 0;
+            text-transform: uppercase;
+        }
+
+        .mini-day {
+            width: 30px; height: 30px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: .75rem;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 0 auto;
+            transition: background .15s;
+        }
+
+
+
+        /* Event Filters */
+        .cal-filters-title {
+            font-size: .78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            margin-bottom: 12px;
+        }
+
+        .filter-list { display: flex; flex-direction: column; gap: 10px; }
+
+        .filter-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            font-size: .82rem;
+            font-weight: 500;
+        }
+
+        .filter-check {
+            width: 18px; height: 18px;
+            border-radius: 4px;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+            font-size: .6rem;
+            transition: opacity .15s;
+        }
+
+        .filter-check.unchecked { opacity: .35; }
+
+        /* ── Main Calendar ── */
+        .cal-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .cal-main-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 24px;
+            gap: 16px;
+        }
+
+        .cal-nav-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cal-nav-arrow {
+            width: 32px; height: 32px;
+            border-radius: 6px;
+            font-size: .75rem;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer;
+            transition: background .15s;
+        }
+
+        .cal-main-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+
+        .cal-view-btns {
+            display: flex;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cal-view-btn {
+            padding: 7px 16px;
+            font-size: .76rem;
+            font-weight: 700;
+            font-family: var(--font);
+            border: none;                   
+            cursor: pointer;
+            transition: background .15s, color .15s;
+        }
+  
+
+        /* Calendar Grid */
+        .cal-grid-wrap { flex: 1; overflow: auto; }
+
+        .cal-day-headers {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            
+            
+        }
+
+        .cal-day-hdr {
+            padding: 10px 0;
+            text-align: center;
+            font-size: .72rem;
+            font-weight: 700;
+           
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            
+        }
+
+        .cal-day-hdr:last-child { border-right: none; }
+
+        .cal-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-auto-rows: minmax(110px, auto);
+        }
+
+        .cal-cell {
+           
+            padding: 8px 6px 6px;
+            
+            vertical-align: top;
+            min-height: 110px;
+            position: relative;
+        }
+
+        .cal-cell:nth-child(7n) { border-right: none; }
+
+        
+        .cal-cell.other-month .cal-cell-num { color: #c9cdd4; }
+
+        
+        .cal-cell.today .cal-cell-num {
+            width: 26px; height: 26px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800;
+        }
+
+        .cal-cell-num {
+            font-size: .78rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+
+        .cal-events { display: flex; flex-direction: column; gap: 3px; }
+
+        .cal-event-pill {
+            display: block;
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-size: .67rem;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: pointer;
+            transition: opacity .15s;
+        }
+
+        .cal-event-pill:hover { opacity: .8; }
+
+        /* Event category colors — theme-matched */
+        .ev-class    { background: #fde8eb; color: #b0001a; }
+        .ev-belt     { background: #e8f5e9; color: #2e7d32; }
+        .ev-openmat  { background: #e8f0fe; color: #1a56db; }
+        .ev-tourney  { background: #fff3e0; color: #b45309; }
+        .ev-personal { background: #fce7f3; color: #9d174d; }
+        .ev-holiday  { background: #dcfce7; color: #166534; }
+        .ev-etc      { background: #e0f2fe; color: #0369a1; }
+
+        /* Multi-day span */
+        .cal-event-pill.multi-start { border-radius: 4px 0 0 4px; margin-right: -1px; }
+        .cal-event-pill.multi-mid   { border-radius: 0; margin-right: -1px; margin-left: -1px; }
+        .cal-event-pill.multi-end   { border-radius: 0 4px 4px 0; margin-left: -1px; }
+
+        .cal-more {
+            font-size: .66rem;
+            color: #6b7280;
+            font-weight: 600;
+            margin-top: 2px;
+            cursor: pointer;
+        }
+
+        .cal-more:hover { color: var(--red); }
+
+        /* ── Add Event Modal ── */
+        .cal-modal-overlay {
+            display: none;
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,.5);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .cal-modal-overlay.open { display: flex; }
+
+        .cal-modal {
+            background: #fff;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 440px;
+            padding: 28px;
+            box-shadow: 0 20px 60px rgba(0,0,0,.2);
+            animation: mIn .2s ease;
+        }
+
+        @keyframes mIn { from { opacity:0; transform:scale(.95); } to { opacity:1; transform:scale(1); } }
+
+        .cal-modal h3 {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #111;
+            margin-bottom: 20px;
+        }
+
+        .cal-form-group { margin-bottom: 14px; }
+
+        .cal-form-group label {
+            display: block;
+            font-size: .74rem;
+            font-weight: 700;
+            color: #374151;
+            margin-bottom: 5px;
+        }
+
+        .cal-form-group input,
+        .cal-form-group select {
+            width: 100%;
+            padding: 9px 12px;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            font-size: .82rem;
+            font-family: var(--font);
+            color: #111;
+            outline: none;
+            transition: border-color .15s;
+            box-sizing: border-box;
+        }
+
+        .cal-form-group input:focus,
+        .cal-form-group select:focus { border-color: var(--red); }
+
+        .cal-modal-btns {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: flex-end;
+        }
+
+        .cal-modal-btns button {
+            padding: 9px 20px;
+            border-radius: 6px;
+            font-size: .8rem;
+            font-weight: 700;
+            font-family: var(--font);
+            cursor: pointer;
+            transition: background .15s;
+        }
+
+        .btn-cal-cancel { background: #f3f4f6; border: 1px solid #e5e7eb; color: #555; }
+        .btn-cal-save   { background: var(--red); border: none; color: #fff; }
+        .btn-cal-save:hover { background: var(--primary-dark); }
+        .btn-cal-cancel:hover { background: #e5e7eb; }
+
+        @media (max-width: 768px) {
+            .cal-app { flex-direction: column; }
+            .cal-sidebar { width: 100%; border-right: none; border-bottom: 1px solid #e5e7eb; }
+        }
+
+        /* Responsive audit fixes (2026-11-12) */
+        /* 7 equal columns that can shrink: long event pills were stretching
+           some day columns and pushing Friday/Saturday off-screen. */
+        .cal-day-headers,
+        .cal-grid {
+            grid-template-columns: repeat(7, minmax(0, 1fr));
+        }
+        .cal-main { min-width: 0; }
+        .cal-cell { min-width: 0; overflow: hidden; }
+
+        @media (max-width: 575.98px) {
+            /* Month title + view switcher wrap instead of the switcher
+               being clipped (the "Day" button was cut off). */
+            .cal-main-header {
+                flex-wrap: wrap;
+                padding: 14px;
+                gap: 10px;
+            }
+            .cal-view-btns { flex: 1 1 100%; }
+            .cal-view-btn { flex: 1 1 0; padding: 8px 6px; }
+            .cal-main-title { font-size: 1.05rem; }
+
+            .cal-grid { grid-auto-rows: minmax(78px, auto); }
+            .cal-cell { min-height: 78px; padding: 4px 2px; }
+            .cal-cell-num { font-size: .7rem; }
+            .cal-event-pill { font-size: .58rem; padding: 2px 3px; }
+            .cal-more { font-size: .58rem; }
+            .cal-day-hdr { font-size: .62rem; letter-spacing: 0; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <div class="top-bar-left">
+            <div class="brand"><span class="apex">Apex</span> Martial Arts<span class="badge-student">Student Area</span></div>
+        </div>
+        <div class="top-bar-right">
+            <div class="cart-wrap"><a href="product-listing.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a></div>
+            <div class="top-bar-divider"></div>
+            <a href="index.html" class="btn-main-site"><i class="fas fa-globe"></i> Main Site</a>
+            <a href="#" class="btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-inner">
+            <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            <ul>
+                <li><a href="Stindex.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li class="has-dropdown">
+                    <a href="class-schedule.html">Class Schedule <i class="fas fa-chevron-down" style="font-size:.6rem;margin-left:4px;"></i></a>
+                    <ul class="dropdown-nav">
+                        <li><a href="class-schedule.html#adults">Adult Classes</a></li>
+                        <li><a href="class-schedule.html#kids">Kids Classes</a></li>
+                        <li><a href="class-schedule.html#advanced">Advanced / Black Belt</a></li>
+                        <li><a href="class-schedule.html#open-mat">Open Mat</a></li>
+                    </ul>
+                </li>
+                <li><a href="8-week-plans.html">8 Week Plans</a></li>
+                <li class="has-dropdown has-mega">
+                    <a href="video-library.html">Video Training Library <i class="fas fa-chevron-down" style="font-size:.6rem;margin-left:4px;"></i></a>
+                    <div class="mega-dropdown">
+                        <ul class="mega-col-1">
+                            <li><a href="#" data-l1="beginner">Beginner <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="intermediate">Intermediate <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="advanced">Advanced <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="kata">Kata Series <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="sparring">Sparring <i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                        <div class="mega-col-2" data-panel="beginner"><ul><li><a href="#" data-l2="fundamentals">Fundamentals <i class="fas fa-chevron-right"></i></a></li><li><a href="#" data-l2="kicking">Kicking Drills <i class="fas fa-chevron-right"></i></a></li><li><a href="#" data-l2="selfdefense">Self Defense <i class="fas fa-chevron-right"></i></a></li></ul></div>
+                        <div class="mega-col-2" data-panel="intermediate"><ul><li><a href="#" data-l2="sparring-basics">Sparring Basics <i class="fas fa-chevron-right"></i></a></li><li><a href="#" data-l2="combos">Combo Drills <i class="fas fa-chevron-right"></i></a></li><li><a href="#" data-l2="kata-mid">Kata Vol. 1–2 <i class="fas fa-chevron-right"></i></a></li></ul></div>
+                        <div class="mega-col-2" data-panel="advanced"><ul><li><a href="#" data-l2="blackbelt">Black Belt Prep <i class="fas fa-chevron-right"></i></a></li><li><a href="#" data-l2="competition">Competition Training <i class="fas fa-chevron-right"></i></a></li><li><a href="#" data-l2="weapons">Weapons Kata <i class="fas fa-chevron-right"></i></a></li></ul></div>
+                        <div class="mega-col-2" data-panel="kata"><ul><li><a href="#" data-l2="heian">Heian Series <i class="fas fa-chevron-right"></i></a></li><li><a href="#" data-l2="nidan">Nidan Series <i class="fas fa-chevron-right"></i></a></li><li><a href="#" data-l2="kata-adv">Advanced Kata <i class="fas fa-chevron-right"></i></a></li></ul></div>
+                        <div class="mega-col-2" data-panel="sparring"><ul><li><a href="#" data-l2="counters">Counter Combos <i class="fas fa-chevron-right"></i></a></li><li><a href="#" data-l2="point">Point Sparring <i class="fas fa-chevron-right"></i></a></li><li><a href="#" data-l2="comp-spar">Competition Sparring <i class="fas fa-chevron-right"></i></a></li></ul></div>
+                        <div class="mega-col-3" data-panel="fundamentals"><ul><li><a href="video-library.html">Stances & Blocks — 12:30</a></li><li><a href="video-library.html">Basic Punching Form — 8:15</a></li><li><a href="video-library.html">Dojo Test Walkthrough — 18:42</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="kicking"><ul><li><a href="video-library.html">Kicking Drills — Power & Accuracy — 11:55</a></li><li><a href="video-library.html">Roundhouse & Side Kick — 9:40</a></li><li><a href="video-library.html">Jump Kick Techniques — 7:20</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="selfdefense"><ul><li><a href="video-library.html">Real-World Self Defense — 28:40</a></li><li><a href="video-library.html">Wrist & Grab Escapes — 14:10</a></li><li><a href="video-library.html">Ground Defence Essentials — 19:45</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="sparring-basics"><ul><li><a href="video-library.html">Sparring Tips & Counters — 15:30</a></li><li><a href="video-library.html">Footwork & Distance — 10:05</a></li><li><a href="video-library.html">Blocking & Counter Strikes — 22:10</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="combos"><ul><li><a href="video-library.html">3-Strike Combo Drill — 13:20</a></li><li><a href="video-library.html">Kick-Punch Combinations — 16:00</a></li><li><a href="video-library.html">Speed & Timing Drills — 11:30</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="kata-mid"><ul><li><a href="video-library.html">Kata Series Vol. 1 — Heian Shodan — 32:08</a></li><li><a href="video-library.html">Kata Series Vol. 2 — Heian Nidan — 28:55</a></li><li><a href="video-library.html">Kata Breakdown & Bunkai — 25:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="blackbelt"><ul><li><a href="video-library.html">Black Belt Conditioning Drills — 35:00</a></li><li><a href="video-library.html">1st Dan Requirements — 40:15</a></li><li><a href="video-library.html">Dojo Etiquette & Leadership — 20:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="competition"><ul><li><a href="video-library.html">Competition Sparring Tactics — 30:10</a></li><li><a href="video-library.html">Tournament Preparation — 22:45</a></li><li><a href="video-library.html">Judge Scoring Criteria — 15:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="weapons"><ul><li><a href="video-library.html">Bo Staff Kata — 38:20</a></li><li><a href="video-library.html">Nunchaku Basics — 24:00</a></li><li><a href="video-library.html">Sai Kata Introduction — 18:30</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="heian"><ul><li><a href="video-library.html">Heian Shodan Full — 32:08</a></li><li><a href="video-library.html">Heian Nidan Full — 28:55</a></li><li><a href="video-library.html">Heian Sandan Full — 30:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="nidan"><ul><li><a href="video-library.html">Nidan Kata Breakdown — 35:10</a></li><li><a href="video-library.html">Nidan Bunkai Applications — 27:40</a></li><li><a href="video-library.html">Nidan Speed Drills — 18:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="kata-adv"><ul><li><a href="video-library.html">Advanced Kata — Kanku Dai — 41:20</a></li><li><a href="video-library.html">Bassai Dai Full — 36:00</a></li><li><a href="video-library.html">Empi Kata — 29:15</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="counters"><ul><li><a href="video-library.html">Sparring Tips & Counter Combos — 15:30</a></li><li><a href="video-library.html">Sweep & Counter Drill — 12:00</a></li><li><a href="video-library.html">Jab-Cross-Hook Counter — 10:45</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="point"><ul><li><a href="video-library.html">Point Scoring System — 14:00</a></li><li><a href="video-library.html">Speed Point Sparring — 20:30</a></li><li><a href="video-library.html">Distance Management — 11:15</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="comp-spar"><ul><li><a href="video-library.html">Competition Sparring Tactics — 30:10</a></li><li><a href="video-library.html">Reading Your Opponent — 18:50</a></li><li><a href="video-library.html">Finals Strategy — 22:00</a></li></ul></div>
+                    </div>
+                </li>
+                <li><a href="calendar.html" class="active">Calendar</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="Stcontact.html">Contact</a></li>
+                <li><a href="product-listing.html">Shop</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-noise"></div>
+        <div class="hero-content">
+            <span class="hero-eyebrow">Calendar</span>
+            <h1>Anyone Can Begin Martial Arts.<br>Any Age, Any Fitness Level.</h1>
+            <p>Stay on top of upcoming events, belt tests, tournaments, and dojo announcements.</p>
+        </div>
+    </section>
+
+    <!-- CALENDAR APP -->
+    <div class="cal-app">
+
+        <!-- Sidebar -->
+        <div class="cal-sidebar">
+
+            <!-- Mini Calendar -->
+            <div class="mini-cal">
+                <div class="mini-cal-header">
+                    <button class="mini-cal-nav" id="miniPrev"><i class="fas fa-chevron-left"></i></button>
+                    <span class="mini-cal-title" id="miniTitle"></span>
+                    <button class="mini-cal-nav" id="miniNext"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="mini-cal-grid" id="miniGrid"></div>
+            </div>
+
+            <!-- Event Filters -->
+            <div>
+                <div class="cal-filters-title">Event Filters</div>
+                <div class="filter-list" id="filterList">
+                    <label class="filter-item">
+                        <span class="filter-check" style="background:#374151;" id="chk-all"><i class="fas fa-check"></i></span>
+                        <span>View All</span>
+                        <input type="checkbox" checked hidden data-cat="all">
+                    </label>
+                    <label class="filter-item">
+                        <span class="filter-check" style="background:#e30027;" id="chk-class"><i class="fas fa-check"></i></span>
+                        <span>Class</span>
+                        <input type="checkbox" checked hidden data-cat="class">
+                    </label>
+                    <label class="filter-item">
+                        <span class="filter-check" style="background:#1a56db;" id="chk-openmat"><i class="fas fa-check"></i></span>
+                        <span>Open Mat</span>
+                        <input type="checkbox" checked hidden data-cat="openmat">
+                    </label>
+                    <label class="filter-item">
+                        <span class="filter-check" style="background:#b45309;" id="chk-tourney"><i class="fas fa-check"></i></span>
+                        <span>Tournament</span>
+                        <input type="checkbox" checked hidden data-cat="tourney">
+                    </label>
+                    <label class="filter-item">
+                        <span class="filter-check" style="background:#2e7d32;" id="chk-belt"><i class="fas fa-check"></i></span>
+                        <span>Belt Testing</span>
+                        <input type="checkbox" checked hidden data-cat="belt">
+                    </label>
+                    <label class="filter-item">
+                        <span class="filter-check" style="background:#0369a1;" id="chk-etc"><i class="fas fa-check"></i></span>
+                        <span>Other</span>
+                        <input type="checkbox" checked hidden data-cat="etc">
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Main Calendar -->
+        <div class="cal-main">
+            <div class="cal-main-header">
+                <div class="cal-nav-group">
+                    <button class="cal-nav-arrow" id="mainPrev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="cal-nav-arrow" id="mainNext"><i class="fas fa-chevron-right"></i></button>
+                    <span class="cal-main-title" id="mainTitle"></span>
+                </div>
+                <div class="cal-view-btns">
+                    <button class="cal-view-btn active">Month</button>
+                    <button class="cal-view-btn">Week</button>
+                    <button class="cal-view-btn">Day</button>
+                    <button class="cal-view-btn">List</button>
+                </div>
+            </div>
+
+            <div class="cal-grid-wrap">
+                <div class="cal-day-headers">
+                    <div class="cal-day-hdr">Sun</div>
+                    <div class="cal-day-hdr">Mon</div>
+                    <div class="cal-day-hdr">Tue</div>
+                    <div class="cal-day-hdr">Wed</div>
+                    <div class="cal-day-hdr">Thu</div>
+                    <div class="cal-day-hdr">Fri</div>
+                    <div class="cal-day-hdr">Sat</div>
+                </div>
+                <div class="cal-grid" id="mainGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="portal-footer">
+        <span>© 2025 Apex Martial Arts. All rights reserved.</span>
+        <div class="footer-links"><a href="Stcontact.html">Contact</a><a href="index.html">Main Site</a></div>
+    </footer>
+
+
+    <script src="assets/js/portal.js"></script>
+    <script>
+    // ── Events Data ──
+    const today = new Date();
+    const ty = today.getFullYear(), tm = today.getMonth(), td = today.getDate();
+
+    function dateStr(y, m, d) {
+        return `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    }
+
+    let events = [
+        { date: dateStr(ty,tm,3),  title: 'Beginner Class',    time: '6:00 PM', cat: 'class' },
+        { date: dateStr(ty,tm,5),  title: 'Kids Class',         time: '4:00 PM', cat: 'class' },
+        { date: dateStr(ty,tm,7),  title: 'Belt Testing',       time: '9:00 AM', cat: 'belt' },
+        { date: dateStr(ty,tm,10), title: 'Open Mat',           time: '7:00 PM', cat: 'openmat' },
+        { date: dateStr(ty,tm,12), title: 'Adult Class',        time: '6:00 PM', cat: 'class' },
+        { date: dateStr(ty,tm,14), title: 'Regional Tournament',time: '8:00 AM', cat: 'tourney' },
+        { date: dateStr(ty,tm,14), title: 'Kids Class',         time: '4:00 PM', cat: 'class' },
+        { date: dateStr(ty,tm,14), title: 'Sparring Night',     time: '8:00 PM', cat: 'openmat' },
+        { date: dateStr(ty,tm,14), title: 'Advanced Class',     time: '7:00 PM', cat: 'class' },
+        { date: dateStr(ty,tm,td), title: 'Beginner Class',     time: '6:00 PM', cat: 'class' },
+        { date: dateStr(ty,tm,td), title: 'Belt Ceremony',      time: '7:00 PM', cat: 'belt' },
+        { date: dateStr(ty,tm,19), title: "Open Mat Session",   time: '7:00 PM', cat: 'openmat' },
+        { date: dateStr(ty,tm,19), title: 'Adult Class',        time: '6:00 PM', cat: 'class' },
+        { date: dateStr(ty,tm,21), title: 'Dojo Trip',          time: 'All Day',  cat: 'etc', multiDay: true, endDate: dateStr(ty,tm,22) },
+        { date: dateStr(ty,tm,24), title: 'Belt Ceremony',      time: '7:00 PM', cat: 'belt' },
+        { date: dateStr(ty,tm+1,1),title: 'Monthly Meeting',    time: '10:00 AM', cat: 'etc' },
+        { date: dateStr(ty,tm+1,7),title: 'Tournament Prep',    time: '9:00 AM', cat: 'tourney' },
+    ];
+
+    const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const MONTHS_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+    let curYear = ty, curMonth = tm;
+
+    // Active filters
+    const activeFilters = new Set(['class','openmat','tourney','belt','etc']);
+
+    // ── Mini Calendar ──
+    function renderMini(y, m) {
+        document.getElementById('miniTitle').textContent = `${MONTHS_SHORT[m]}  ${y}`;
+        const grid = document.getElementById('miniGrid');
+        grid.innerHTML = '';
+        ['Su','Mo','Tu','We','Th','Fr','Sa'].forEach(d => {
+            const el = document.createElement('div');
+            el.className = 'mini-day-hdr';
+            el.textContent = d;
+            grid.appendChild(el);
+        });
+        const first = new Date(y, m, 1).getDay();
+        const days = new Date(y, m+1, 0).getDate();
+        const prevDays = new Date(y, m, 0).getDate();
+        for (let i = 0; i < first; i++) {
+            const el = document.createElement('div');
+            el.className = 'mini-day other-month';
+            el.textContent = prevDays - first + 1 + i;
+            grid.appendChild(el);
+        }
+        for (let d = 1; d <= days; d++) {
+            const el = document.createElement('div');
+            el.className = 'mini-day';
+            if (y === ty && m === tm && d === td) el.classList.add('today');
+            if (y === curYear && m === curMonth && d === 1) el.classList.add('selected');
+            el.textContent = d;
+            el.addEventListener('click', () => { curYear = y; curMonth = m; renderMain(); renderMini(y,m); });
+            grid.appendChild(el);
+        }
+        const remaining = 42 - first - days;
+        for (let d = 1; d <= remaining; d++) {
+            const el = document.createElement('div');
+            el.className = 'mini-day other-month';
+            el.textContent = d;
+            grid.appendChild(el);
+        }
+    }
+
+    document.getElementById('miniPrev').addEventListener('click', () => {
+        curMonth--; if (curMonth < 0) { curMonth = 11; curYear--; }
+        renderMini(curYear, curMonth); renderMain();
+    });
+    document.getElementById('miniNext').addEventListener('click', () => {
+        curMonth++; if (curMonth > 11) { curMonth = 0; curYear++; }
+        renderMini(curYear, curMonth); renderMain();
+    });
+
+    // ── Main Calendar ──
+    function getEventsForDate(ds) {
+        return events.filter(ev => {
+            if (!activeFilters.has(ev.cat)) return false;
+            if (ev.multiDay) {
+                return ds >= ev.date && ds <= ev.endDate;
+            }
+            return ev.date === ds;
+        });
+    }
+
+    function fmtTime(t) {
+        if (!t || t === 'All Day') return '';
+        const [h, m] = t.split(':');
+        const hr = parseInt(h);
+        return `${hr > 12 ? hr-12 : hr}:${m}${hr >= 12 ? 'p' : 'a'} `;
+    }
+
+    function catClass(cat) {
+        return { class:'ev-class', belt:'ev-belt', openmat:'ev-openmat', tourney:'ev-tourney', personal:'ev-personal', holiday:'ev-holiday', etc:'ev-etc' }[cat] || 'ev-etc';
+    }
+
+    function renderMain() {
+        document.getElementById('mainTitle').textContent = `${MONTHS[curMonth]} ${curYear}`;
+        const grid = document.getElementById('mainGrid');
+        grid.innerHTML = '';
+
+        const first = new Date(curYear, curMonth, 1).getDay();
+        const days = new Date(curYear, curMonth+1, 0).getDate();
+        const prevDays = new Date(curYear, curMonth, 0).getDate();
+        const total = Math.ceil((first + days) / 7) * 7;
+
+        for (let i = 0; i < total; i++) {
+            let d, mo = curMonth, yr = curYear, isOther = false;
+            if (i < first) {
+                d = prevDays - first + 1 + i;
+                mo = curMonth - 1; if (mo < 0) { mo = 11; yr = curYear - 1; }
+                isOther = true;
+            } else if (i >= first + days) {
+                d = i - first - days + 1;
+                mo = curMonth + 1; if (mo > 11) { mo = 0; yr = curYear + 1; }
+                isOther = true;
+            } else {
+                d = i - first + 1;
+            }
+
+            const ds = dateStr(yr, mo, d);
+            const isToday = (yr === ty && mo === tm && d === td);
+            const cell = document.createElement('div');
+            cell.className = 'cal-cell' + (isOther ? ' other-month' : '') + (isToday ? ' today' : '');
+
+            const num = document.createElement('div');
+            num.className = 'cal-cell-num';
+            num.textContent = d;
+            cell.appendChild(num);
+
+            const evs = getEventsForDate(ds);
+            const evWrap = document.createElement('div');
+            evWrap.className = 'cal-events';
+            const maxShow = 2;
+            evs.slice(0, maxShow).forEach(ev => {
+                const pill = document.createElement('span');
+                pill.className = `cal-event-pill ${catClass(ev.cat)}`;
+                pill.textContent = fmtTime(ev.time) + ev.title;
+                evWrap.appendChild(pill);
+            });
+            if (evs.length > maxShow) {
+                const more = document.createElement('div');
+                more.className = 'cal-more';
+                more.textContent = `+${evs.length - maxShow} more`;
+                evWrap.appendChild(more);
+            }
+            cell.appendChild(evWrap);
+            grid.appendChild(cell);
+        }
+    }
+
+    // ── Nav ──
+    document.getElementById('mainPrev').addEventListener('click', () => {
+        curMonth--; if (curMonth < 0) { curMonth = 11; curYear--; }
+        renderMini(curYear, curMonth); renderMain();
+    });
+    document.getElementById('mainNext').addEventListener('click', () => {
+        curMonth++; if (curMonth > 11) { curMonth = 0; curYear++; }
+        renderMini(curYear, curMonth); renderMain();
+    });
+
+    // ── Filters ──
+    document.querySelectorAll('#filterList input[type=checkbox]').forEach(cb => {
+        cb.parentElement.addEventListener('click', (e) => {
+            e.preventDefault();
+            const cat = cb.dataset.cat;
+            const checkEl = cb.parentElement.querySelector('.filter-check');
+            if (cat === 'all') {
+                const allOn = activeFilters.size === 5;
+                if (allOn) {
+                    activeFilters.clear();
+                    document.querySelectorAll('#filterList .filter-check').forEach(c => c.classList.add('unchecked'));
+                } else {
+                    ['class','openmat','tourney','belt','etc'].forEach(c => activeFilters.add(c));
+                    document.querySelectorAll('#filterList .filter-check').forEach(c => c.classList.remove('unchecked'));
+                }
+            } else {
+                if (activeFilters.has(cat)) {
+                    activeFilters.delete(cat);
+                    checkEl.classList.add('unchecked');
+                } else {
+                    activeFilters.add(cat);
+                    checkEl.classList.remove('unchecked');
+                }
+                const allCheck = document.querySelector('#filterList .filter-check');
+                if (activeFilters.size === 5) allCheck.classList.remove('unchecked');
+                else allCheck.classList.add('unchecked');
+            }
+            renderMain();
+        });
+    });
+
+    // ── Init ──
+    renderMini(curYear, curMonth);
+    renderMain();
+    </script>
+</body>
+</html>

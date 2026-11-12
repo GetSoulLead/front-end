@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poisonous Frog - Product Detail</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.css?v=3">
+    <link rel="stylesheet" href="assets/css/product-detail.css">
+    <link rel="stylesheet" href="assets/css/yellow-theme-dark.css">
+   
+</head>
+
+<body class="product-detail-page">
+
+    <!-- ===== TOP HEADER ===== -->
+    <div class="top-header">
+        <div class="top-header-left">
+            <a href="mailto:info@example.com">Self Defense, Adult &amp; Children Martial Arts Classes in Memphis</a>
+        </div>
+        <div class="top-header-right">
+            <a href="tel:+19087319123"><i class="bi bi-telephone me-2"></i> (908) 763-9123</a>
+            <a href="Stindex.html"><i class="bi bi-person me-2"></i> Student Portal</a>
+            <div class="cart-container position-relative">
+                <a href="#" class="position-relative cart">
+                    <i class="bi bi-cart3"></i>
+                    <span class="cart-count">3</span>
+                </a>
+                <div class="cart-dropdown" id="cartDropdown">
+                    <div class="cart-item gap-3">
+                        <span class="item-remove"></span>
+                        <img src="assets/images/f1.png" class="item-image" alt="">
+                        <div class="item-details flex-grow-1">
+                            <h6>Strike Gloves</h6>
+                            <div class="item-qty-price">2x $64.00</div>
+                        </div>
+                    </div>
+                    <div class="cart-item gap-3">
+                        <span class="item-remove"></span>
+                        <img src="assets/images/f2.png" class="item-image" alt="">
+                        <div class="item-details flex-grow-1">
+                            <h6>Training Pads</h6>
+                            <div class="item-qty-price">1x $52.00</div>
+                        </div>
+                    </div>
+                    <div class="cart-total">
+                        <div class="total-row">
+                            <span>Total</span>
+                            <span class="total-price">$180.00</span>
+                        </div>
+                        <button class="btn w-100 bg-white">Cart</button>
+                        <button class="btn btn-theme w-100">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER / NAV ===== -->
+    <header class="background-header">
+        <a href="Index.html" class="logo">
+            <img src="assets/images/logo-2.png" alt="Logo">
+        </a>        <nav>
+            <a href="Index.html" class="main-menu" id="home-link">Home</a>
+
+            <div class="nav-item-dropdown">
+                <a href="aboutus.html" class="main-menu">About Us <i class="bi bi-chevron-down"></i></a>
+                <div class="full-width-dropdown">
+                    <div class="dropdown-content-align mega-grid about-dropdownGrid aboutus-dropdown">
+                        <div class="simple-list mega-col">
+                            <h6>About Us</h6>
+                            <ul>
+                                <li><a href="aboutus.html">Our School</a></li>
+                                <li><a href="#">Reviews &#128077;</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xxl-3 col-xl-3 d-none d-xxl-block">
+                            <div class="tp-megamenu-portfolio-text">
+                                <h4>50+</h4><span>Martial arts training programs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item-dropdown">
+                <a href="program-category.html" class="main-menu">Our Programs <i class="bi bi-chevron-down"></i></a>
+                <div class="full-width-dropdown">
+                    <div class="dropdown-content-align">
+                        <div class="mega-grid">
+                            <div class="mega-col">
+                                <h6><a href="program-category.html">Children's Programs</a></h6>
+                                <span class="age">Age 4-12</span>
+                                <ul>
+                                    <li><a href="program-category.html">Little Dragons</a></li>
+                                    <li><a href="program-category.html">Juniors</a></li>
+                                    <li><a href="program-category.html">Leadership</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h6><a href="programs-details.html">Adult Programs</a></h6>
+                                <span class="age">Age 18+</span>
+                                <ul>
+                                    <li><a href="programs-details.html">Jeet Kune Do</a></li>
+                                    <li><a href="programs-details.html">Kali</a></li>
+                                    <li><a href="programs-details.html">Kung Fu</a></li>
+                                    <li><a href="programs-details.html">Tai Chi</a></li>
+                                    <li><a href="programs-details.html">Qi Gong</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h6><a href="program-category.html">Just 4 Kids</a></h6>
+                                <span class="age">Age 20+</span>
+                                <ul>
+                                    <li><a href="program-category.html">Parent's Night Out</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 d-none d-xxl-block">
+                                <div class="tp-megamenu-portfolio-text">
+                                    <h4>50+</h4><span>Martial arts training programs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="trial-offer.html" class="main-menu">Trial Offer</a>
+            <a href="product-listing.html" class="main-menu active">Shop</a>
+            <a href="blog-grid.html" class="main-menu">Blog</a>
+
+            <div class="nav-item-dropdown contact-nav-item-dropdown">
+                <a href="contact.html" class="main-menu">Contact Us <i class="bi bi-chevron-down"></i></a>
+                <div class="full-width-dropdown contact-full-width-dropdown">
+                    <div class="dropdown-content-align contact-dropdown-grid contactus-dropdown">
+                        <div class="contact-simple-list contact-mega-col">
+                            <h6>Contact Us</h6>
+                            <ul>
+                                <li><a href="contact.html">Send a Message</a></li>
+                                <li><a href="contact.html#contact">Visit Our School</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xxl-3 col-xl-3 d-none d-xxl-block contact-dropdown-stat">
+                            <div class="contact-megamenu-portfolio-text">
+                                <h4>24h</h4><span>quick response for trial class questions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+<a class="btn btn-theme d-lg-block d-none header-btn" href="contact.html">Try a Class for FREE!</a>
+
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main class="product-main">
+
+        <!-- ===== BREADCRUMB ===== -->
+        <div class="pd-breadcrumb">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="product-listing.html">Browse All</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Poisonous Frog</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- ===== PRODUCT MAIN ===== -->
+        <section class="pd-main">
+            <div class="container">
+                <div class="row g-4">
+
+                    <!-- Gallery -->
+                    <div class="col-lg-6">
+                        <div class="pd-gallery">
+                            <!-- Thumbnails -->
+                            <div class="pd-thumbnails">
+                                <div class="pd-thumb active" data-img="https://images.unsplash.com/photo-1566577739112-5180d4bf9390?w=500&q=80">
+                                    <img src="https://images.unsplash.com/photo-1566577739112-5180d4bf9390?w=120&q=80" alt="Green Helmet">
+                                </div>
+                                <div class="pd-thumb" data-img="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=500&q=80">
+                                    <img src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=120&q=80" alt="Blue Helmet">
+                                </div>
+                                <div class="pd-thumb" data-img="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=500&q=80">
+                                    <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=120&q=80" alt="Yellow Helmet">
+                                </div>
+                                <div class="pd-thumb" data-img="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=500&q=80">
+                                    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=120&q=80" alt="Red Helmet">
+                                </div>
+                            </div>
+
+                            <!-- Main Image -->
+                            <div class="pd-main-image" id="pdMainImageWrap">
+                                <img id="pdMainImg"
+                                     src="https://images.unsplash.com/photo-1566577739112-5180d4bf9390?w=600&q=80"
+                                     alt="Poisonous Frog Helmet">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Info -->
+                    <div class="col-lg-6">
+                        <div class="pd-info">
+                            <div class="pd-title-row">
+                                <h1 class="pd-title">Poisonous Frog</h1>
+                                <span class="pd-price">$170</span>
+                            </div>
+                            <p class="pd-category">For Outdoor Sports</p>
+
+                            <hr class="pd-divider">
+
+                            <p class="pd-description-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis trud
+                                exercitation ullamco laboris nisi ut aliquip ex ea modo consequat.
+                            </p>
+
+                            <!-- Selectors -->
+                            <div class="pd-selectors">
+                                <div class="pd-selector-group">
+                                    <label for="helmetSize">Helmet Size</label>
+                                    <select class="pd-select" id="helmetSize">
+                                        <option>Small</option>
+                                        <option selected>Medium</option>
+                                        <option>Large</option>
+                                        <option>XL</option>
+                                    </select>
+                                </div>
+
+                                <div class="pd-selector-group">
+                                    <label for="baseColor">Base Color</label>
+                                    <select class="pd-select" id="baseColor">
+                                        <option selected>Green</option>
+                                        <option>Blue</option>
+                                        <option>Yellow</option>
+                                        <option>Red</option>
+                                    </select>
+                                </div>
+
+                                <div class="pd-qty-group">
+                                    <label>Quantity</label>
+                                    <div class="pd-qty">
+                                        <button class="pd-qty-btn" id="qtyMinus" aria-label="Decrease">−</button>
+                                        <input type="number" id="qtyInput" value="4" min="1" max="99">
+                                        <button class="pd-qty-btn" id="qtyPlus" aria-label="Increase">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cart Actions -->
+                            <div class="pd-cart-actions">
+                                <button class="btn-add-cart">
+                                    <i class="bi bi-cart3"></i> Add to Cart
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TABS: DESCRIPTION / REVIEWS ===== -->
+
+        <!-- ===== TABS: DESCRIPTION / REVIEWS ===== -->
+        <section class="pd-tabs-section">
+            <div class="container">
+
+                <!-- Section Heading -->
+                <div class="pd-tabs-wrapper">
+                    <div class="pd-tab-heading">
+                        <span class="pd-tab-icon"><i class="bi bi-card-text"></i></span>
+                        <span class="pd-tab-label">Description</span>
+                    </div>
+                </div>
+
+                <!-- ── DESCRIPTION TAB ── -->
+                <div class="pd-tab-content active" id="tab-description">
+
+                    <div class="pd-desc-layout">
+                        <!-- Hero text block -->
+                        <div class="pd-desc-hero">
+                            <!-- <span class="pd-desc-eyebrow">Product Story</span> -->
+                            <h2>Enjoy All Outdoor Sports!</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis trud exercitation ullamco laboris nisi ut aliquip ex ea modo consequat. Duis aute irure dolor in reprehenderit in tate velit esse cillum dolore.</p>
+                        </div>
+
+                        <!-- Two-col content -->
+                        <div class="pd-desc-grid">
+                            <div class="pd-desc-col">
+                                <h3>The Poisonous Color Palette</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis exercitation ullamco laboris nisi.</p>
+                                <ul class="pd-desc-list">
+                                    <li>Advanced polycarbonate shell for maximum protection</li>
+                                    <li>Aerodynamic design for enhanced performance</li>
+                                    <li>Available in 4 signature color variants</li>
+                                    <li>Certified for outdoor sports use</li>
+                                </ul>
+                            </div>
+                            <div class="pd-desc-col">
+                                <h3>Technical Specifications</h3>
+                                <div class="pd-spec-table">
+                                    <div class="pd-spec-row"><span>Material</span><span>Polycarbonate Shell</span></div>
+                                    <div class="pd-spec-row"><span>Weight</span><span>1.2 kg</span></div>
+                                    <div class="pd-spec-row"><span>Sizes</span><span>S / M / L / XL</span></div>
+                                    <div class="pd-spec-row"><span>Colors</span><span>4 Options</span></div>
+                                    <div class="pd-spec-row"><span>Certification</span><span>ASTM F1492</span></div>
+                                    <div class="pd-spec-row"><span>Warranty</span><span>2 Years</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== FEATURED PRODUCTS ===== -->
+        <section class="pd-featured-section pb-5">
+            <div class="container">
+                <p class="pd-section-label">Check Out Other</p>
+                <h2 class="pd-section-title">Featured Products</h2>
+                <div class="pd-section-line"></div>
+
+                <div class="pd-product-grid">
+
+                    <!-- Card 1 -->
+                    <a href="product-detail.html" class="pd-product-card text-decoration-none">
+                        <div class="pd-product-card-img">
+                            <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=300&q=80" alt="The Golden Eagle">
+                        </div>
+                        <div class="pd-product-card-body">
+                            <h5>The Golden Eagle</h5>
+                            <p class="pd-card-cat">For Extreme Conditions</p>
+                            <!-- <div class="pd-card-stars">★★★★☆</div> -->
+                            <div class="pd-card-price">$140</div>
+                        </div>
+                    </a>
+
+                    <!-- Card 2 -->
+                    <a href="product-detail.html" class="pd-product-card text-decoration-none">
+                        <div class="pd-product-card-img">
+                            <img src="https://images.unsplash.com/photo-1566577739112-5180d4bf9390?w=300&q=80" alt="Poisonous Frog">
+                        </div>
+                        <div class="pd-product-card-body">
+                            <h5>Poisonous Frog</h5>
+                            <p class="pd-card-cat">For Outdoor Sports</p>
+                            <div class="pd-card-price">$170</div>
+                        </div>
+                    </a>
+
+                    <!-- Card 3 -->
+                    <a href="product-detail.html" class="pd-product-card text-decoration-none">
+                        <div class="pd-product-card-img">
+                            <img src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=300&q=80" alt="Crasher Blu">
+                        </div>
+                        <div class="pd-product-card-body">
+                            <h5>Crasher Blu</h5>
+                            <p class="pd-card-cat">Water Resistant</p>
+                            <div class="pd-card-price">$165</div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="ma-footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-6 flex-div-footer">
+                    <div class="footer-brand mb-3">
+                        <img src="assets/images/logo-2.png" alt="Logo" class="footer-logo" width="100" height="100">
+                    </div>
+                    <div class="social-links mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Explore</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Instructors</a></li>
+                        <li><a href="#">Class Schedule</a></li>
+                        <li><a href="#">Pricing Plan</a></li>
+                        <li><a href="#">Latest Blogs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Programs</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Kids Karate</a></li>
+                        <li><a href="#">Krav Maga</a></li>
+                        <li><a href="#">Brazilian Jiu-Jitsu</a></li>
+                        <li><a href="#">Muay Thai</a></li>
+                        <li><a href="#">Private Lessons</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Get In Touch</h5>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>1819 Pleasant Blvd, Memphis, TN 38134</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+47 333 78901</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@usakarate.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="copyright">© Copyright 2026 USA Karate. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="footer-bottom-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== IMAGE ZOOM LIGHTBOX ===== -->
+    <div class="pd-lightbox" id="pdLightbox">
+        <span class="pd-lightbox-close" id="pdLightboxClose">&times;</span>
+        <img id="pdLightboxImg" src="" alt="">
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js?v=3"></script>
+
+    <script>
+        // ---- Image zoom lightbox ----
+        var pdLightbox = document.getElementById('pdLightbox');
+        var pdLightboxImg = document.getElementById('pdLightboxImg');
+        var pdMainImg = document.getElementById('pdMainImg');
+
+        document.getElementById('pdMainImageWrap').addEventListener('click', function() {
+            pdLightboxImg.src = pdMainImg.src;
+            pdLightboxImg.alt = pdMainImg.alt;
+            pdLightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        function closePdLightbox() {
+            pdLightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('pdLightboxClose').addEventListener('click', closePdLightbox);
+        pdLightbox.addEventListener('click', function(e) {
+            if (e.target === pdLightbox) closePdLightbox();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closePdLightbox();
+        });
+
+        // ---- Thumbnail switcher ----
+        document.querySelectorAll('.pd-thumb').forEach(function(thumb) {
+            thumb.addEventListener('click', function() {
+                document.querySelectorAll('.pd-thumb').forEach(function(t) { t.classList.remove('active'); });
+                this.classList.add('active');
+                var mainImg = document.getElementById('pdMainImg');
+                mainImg.style.opacity = '0';
+                setTimeout(function() {
+                    mainImg.src = thumb.dataset.img;
+                    mainImg.style.opacity = '1';
+                }, 180);
+            });
+        });
+
+        // ---- Quantity buttons ----
+        var qtyInput = document.getElementById('qtyInput');
+        document.getElementById('qtyMinus').addEventListener('click', function() {
+            if (parseInt(qtyInput.value) > 1) qtyInput.value = parseInt(qtyInput.value) - 1;
+        });
+        document.getElementById('qtyPlus').addEventListener('click', function() {
+            if (parseInt(qtyInput.value) < 99) qtyInput.value = parseInt(qtyInput.value) + 1;
+        });
+    </script>
+
+</body>
+</html>
+
+
+                                                             

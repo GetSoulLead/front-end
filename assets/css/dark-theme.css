@@ -1,0 +1,2321 @@
+:root {
+--color-white: #1a1a1a;
+--primary-color: #121826;
+--secondary-color: #f5c542;
+--color-black: #f5f5f5;
+--tertiary-color: #4db8ff;
+--color-dark-text: #f2f2f2;
+--background-two: #222831;
+--transparent-bg: rgba(255,255,255,0.08);
+--squiggle: rgba(255,255,255,0.12);
+--homesvg-icon: #f5c542;
+--testimonial-bg: rgba(0,0,0,.65);
+--map-bg: #20242c;
+--home-hero-background: #474343ad;
+--contact-placeholder-color: rgba(255,255,255,.55);
+--nav-border-bottom-color: #3a3f46;
+--home-svg-arrow-icons:#f5c542;
+--alternate-row-bg-one:#1f232b;
+--alternate-row-bg-two:#252b36;
+--about-feature-card-bg:#2b3f56;
+--alternate-row-bg-three:#181c22;
+--alternate-row-bg-four:#222831;
+--alternate-row-bg-five:#15181d;
+--color-dark-grey:#b7bcc6;
+--program-detail-alternate-row-bg1:#233548;
+--program-detail-alternate-row-bg2:#2d2a3a;
+--font:"Instrument Sans","Inter",sans-serif;
+--header-gradient:linear-gradient(135deg,#0d1117 0%,#1b2636 55%,#0d1117 100%);
+--about-cta-gradient:linear-gradient(135deg,#1b2636 0%,#2d5d88 100%);
+--select-arrow-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23d0d0d0' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/*  --ss-darknavy:   #1D3557;
+    --ss-blue:       #457B9D;
+    --ss-lightblue:  #A8DADC;
+    --ss-offwhite:   #F1FAEE;
+    --ss-navy-trans: rgba(29, 53, 87, 0.90);
+    --ss-blue-trans: rgba(69, 123, 157, 0.12);
+
+    --primary-color:   #457B9D;
+    --bg-color2: #5995ba;
+    --lessopacity:#457b9dc4;
+    --primary-dark:    #1D3557;
+    --primary-light:   #A8DADC;
+    --primary-bg:      rgba(69, 123, 157, 0.07);
+    --primary-border:  rgba(69, 123, 157, 0.22);
+    --primary-glow:    rgba(69, 123, 157, 0.55);
+    --theme-gradient:  linear-gradient(135deg, #1D3557 0%, #457B9D 100%); */
+	
+	
+}
+
+
+/* -------------------------------------Top Header/Hero Starts Here----------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+header {
+  border-bottom-color: var(--nav-border-bottom-color);
+}
+.background-header{
+background-color: var(--color-white);	
+}
+.top-header {
+  background: var(--primary-color) !important;
+}
+.ma-footer {
+  background-color: var(--primary-color) !important;
+  border-top-color: rgba(229, 59, 123, 0.59) !important;
+ }
+ .top-header-left a:hover, .top-header-right a:hover {
+  color: var(--tertiary-color) !important;
+}
+.top-header-left a {
+  color:  var(--color-white)!important;
+}
+.top-header-right a {
+   color:  var(--color-white) !important;
+}
+.cart-count {
+  background-color: var(--tertiary-color);
+  color: var(--color-white);
+}
+.cart-dropdown {
+  background-color: var(--color-white);
+  box-shadow: 0 10px 30px var(--black-20);
+}
+.text-dark {
+  color: var(--secondary-color) !important;
+}
+.hero h1 {
+ color: var(--primary-color) !important; 
+}
+.hero-background::after {
+  background: var(--home-hero-background)!important;
+}
+.indexv1herodesc {
+  color: var(--color-black) !important;
+}
+.btn {
+  background-color: var(--primary-color)!important;
+  color: var(--color-white);
+}
+.blackbg-button::after {
+  background-color: var(--secondary-color) !important;
+}
+.btn.btn-theme:hover {
+  color: var(--color-white) !important;
+}
+.btn.btn-theme {
+  background-color: var(--primary-color) !important;
+}
+.btn:hover {
+  background-color: var(--secondary-color) !important;
+  color: var(--color-white);
+}
+.button::after {
+  background-color: var(--primary-color);
+}
+.item-qty-price {
+  color: var(--secondary-color);
+}
+.item-remove {
+  background: var(--primary-color);
+}
+.item-remove::after {
+  color: var(--color-white);
+}
+.indexv4bannerMoving {
+  background-color: var(--tertiary-color) !important;
+}
+.indexv4bannerMoving .scrolling-text span {
+  color: var(--color-white);
+}
+.dot-separator {
+  background-color: var(--secondary-color);
+}
+.banner-container {
+  border-top-color: var(--color-black);
+  border-bottom-color: var(--color-black);
+}
+nav a.main-menu {
+  color: var(--primary-color);
+}
+header.scrolled {
+  background: var(--tertiary-color) !important;
+ }
+ 
+ /* -------------------------------------Top Header/Hero Ends Here----------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------Testimonial/Map/Footer Starts Here----------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+.testimonial_card {
+  background: var(--color-white);
+  border-color: var(--color-white);
+}
+.testimonial_slider_arrow {
+  border-color: #e5e5e5;
+  background-color: var(--color-white);
+}
+.testimonial_slider_arrow i {
+  color: var(--secondary-color);
+}
+.ma-testimonial-section::after {
+  background-color: var(--testimonial-bg);
+}
+.contact-map, .rating-card {
+  background-color: var(--map-bg);
+}
+.stars {
+  color: var(--primary-color);
+}
+.contact-map .form-title {
+  border-left-color: var(--secondary-color);
+}
+.form-control::placeholder {
+  color: var(--contact-placeholder-color);
+}
+.contact-map .martial-input {
+  background-color: transparent !important;
+  border-bottom-color: var(--contact-placeholder-color) !important;
+  color: var(--color-black) !important;
+}
+.footer-title::after {
+  background: var(--secondary-color);
+}
+.footer-title {
+  color: var(--color-white);
+}
+.footer-links li a {
+  color: var(--color-white);
+}
+.footer-links li a:hover {
+  color: var(--f-red);
+}
+.contact-item span {
+  color: var(--color-white);
+}
+.contact-item i {
+  color: var(--secondary-color);
+}
+.social-links a {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+.social-links a:hover {
+  background-color: var(--tertiary-color);
+  color: var(--color-white);
+}
+.copyright {
+  color: var(--color-white);
+}
+.footer-bottom-links li a {
+  color: var(--color-white);
+}
+.footer-bottom-links li a:hover {
+  color: var(--tertiary-color);
+}
+.footer-divider {
+  background-color: var(--secondary-color);
+}
+.form-check-input {
+  background-color: var(--color-white);
+  border-color: var(--tertiary-color);
+}
+/* -------------------------------------Testimonial/Map/Footer Ends Here----------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+ 
+/* -------------------------------------Navigation Version One Starts----------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+.full-width-dropdown, .academy-programs-dropdown, .about-simple-dropdown, .contact-simple-dropdown {
+  background: var(--color-white) !important;
+}
+.mega-col h6 {
+  color: var(--color-dark-text) !important;
+  border-bottom-color: var(--nav-border-bottom-color);
+}
+.simple-list a {
+  color: var(--color-black) !important;
+}
+.mega-col ul li a::after, .mega-col h6 a::after, .contact-simple-list a:hover::after {
+  background-color: var(--secondary-color) !important;
+  height: 2px !important;
+}
+.mega-col h6 a {
+  color: var(--color-dark-text) !important;
+}
+.mega-col ul li a {
+  color: var(--color-dark-text);
+}
+.mega-col .age {
+  color: var(--secondary-color);
+}
+.contact-simple-list a {
+  color: var(--color-dark-text) !important;
+}
+.contact-simple-list a:hover {
+  color: var(--color-dark-text) !important;
+}
+
+.tp-megamenu-portfolio-text span, .contact-megamenu-portfolio-text span {
+  color: var(--tertiary-color);
+}
+.contact-megamenu-portfolio-text h4, .tp-megamenu-portfolio-text h4 {
+  -webkit-text-stroke-color: var(--color-black);
+  color: transparent;
+}
+/* -------------------------------------Navigation Version One Ends----------------------------------------- 
+--------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------Navigation Version Two 2 Ends----------------------------------------- 
+--------------------------------------------------------------------------------------------------------- */
+.about-simple-dropdown ul li a::before {
+  background-color: var(--secondary-color);
+}
+.about-simple-dropdown ul li {
+  border-bottom-color: var(--nav-border-bottom-color);;
+  color: var(--color-dark-text);
+}
+.about-simple-dropdown ul li a {
+  color: var(--color-dark-text);
+}
+.about-simple-dropdown ul li a:hover {
+  color: var(--color-black);
+}
+.academy-programs-dropdown{
+  background: var(--color-white) !important;
+}
+.about-sidebar-nav .active,.active:hover,.active:focus,
+[class*="sidebar"] .active {
+   color: var(--primary-color) !important;
+}
+[class*="sidebar"] .active {
+    /* background-color: var(--tertiary-color) !important; */
+   /*  color: var(--primary-color) !important; */
+}
+/* .academy-tab-btn.active small {
+    color: var(--secondary-color) !important;
+} */
+/* .academy-tab-btn.active:hover small {
+    color: var(--primary-color) !important;
+} */
+.academy-tab-btn {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color) !important;
+}
+.academy-tab-btn:hover, .academy-tab-btn.active {
+  background-color: var(--secondary-color)!important;
+  color: var(--primary-color)!important;
+}
+.academy-tab-btn:hover small, .academy-tab-btn.active small {
+  color:var(--tertiary-color) !important;
+}
+.academy-tab-btn small {
+    color:var(--secondary-color);
+}
+.academy-program-box h4::before {
+  background-color: var(--secondary-color);
+}
+.academy-program-box h4 {
+  color: var(--color-dark-text);
+}
+.contact-simple-dropdown ul li a::before {
+  background-color: var(--secondary-color);
+}
+.contact-simple-dropdown ul li a {
+  color: var(--color-dark-text);
+}
+.contact-simple-dropdown ul li a:hover {
+  color: var(--color-black);
+}
+.contact-simple-dropdown ul li {
+  border-bottom-color: var(--nav-border-bottom-color);
+}
+/* -------------------------------------Navigation Version Two 2 Ends----------------------------------------- 
+--------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------Homepage Starts Here----------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+.discover-menu {
+  background: var(--background-two);
+}
+.small-title .dot {
+  background-color: var(--secondary-color);
+}
+.flip-card-front::before {
+ background: #ffffffad !important;;
+}
+.program-icon {
+  color: var(--color-black);
+  text-shadow: 0 2px 10px #00000047;
+}
+.flip-card-back::before {
+  background: linear-gradient(135deg, transparent, var(--primary-color));
+}
+.detail-item, .level-badge {
+  background-color: var(--transparent-bg);
+  border-color: var(--tertiary-color);
+}
+.back-content {
+  color: var(--color-white);
+}
+.step-form-section {
+  background: var(--primary-color) !important;
+}
+.step-right {
+  background-color: #EAEAEA;
+}
+.custom-check .form-check-input{
+  border-color: var(--tertiary-color);
+ }
+.form-check-input:checked {
+  background-color:var(--primary-color) !important;
+  border-color: var(--tertiary-color);
+}
+.indexv4check a {
+  color: var(--primary-color) !important;
+}
+.indexv4check a:hover {
+  color: var(--tertiary-color) !important;
+}
+.brand-content h2 {
+  color: var(--secondary-color);
+}
+.step-num {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+.chart-icon-group2 svg {
+  color: var (--home-svg-arrow-icons) !important;
+}
+.step-icon {
+  background-color: #07030300;
+  border-color: #11030300;
+}
+.squiggle {
+   stroke: var(--primary-color) !important;
+}
+#plane {
+  fill: #FFE552;
+}
+.stat-number {
+  color: var(--secondary-color);
+}
+.taste-section .content-area .scroll-heading-word .scroll-heading-char {
+ -webkit-text-fill-color: var(--primary-color);
+ background: none;
+}
+.play-btn {
+  background-color: var(--secondary-color);
+}
+.play-btn i {
+  color: var(--color-white);
+}
+.title-effect .bar {
+  background-color: var(--primary-color);
+}
+figure.card-3d::after {
+  background-color: var(--about-feature-card-bg);
+}
+figure.card-3d figcaption h4 {
+  color: var(--color-white);
+}
+/* -------------------------------------Homepage Ends Here---------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------Hero Section About, Trial, Contact & Program Category Pages Starts Here-----------
+-------------------------------------------------------------------------------------------------------------------------*/
+.hero-section::after {
+  background-image: radial-gradient(ellipse at 30% 50%, var(--color-black) 0%, transparent 0%);
+}
+
+.hero-section {
+  background-image: var(--header-gradient);
+}
+
+/* -------------------------------------Hero Section About, Trial, Contact & Program Category Pages Ends Here-----------
+------------------------------------------------------------------------------------------------------------------------*/
+
+/* -------------------------------------About Us Starts Here---------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+.custom-sidebar {
+  background-color: var(--color-white);
+  border-right-color: #e0e0e0;
+  box-shadow: #e0e0e0 0px 8px 24px;
+  }
+.custom-sidebar .icon-box::after {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: solid 1px var(--color-black);
+}
+.custom-sidebar .icon-box i {
+  color: var(--secondary-color);
+  text-shadow: 0 0 10px #FFE552;
+}
+.custom-sidebar .icon-box:hover {
+  background-color: var(--tertiary-color);
+  color: var(--color-black);
+}
+.active.icon-box i {
+  color: var(--primary-color) !important;
+}
+.icon-box i {
+  color: var(--primary-color);
+  text-shadow: 0 0 10px #BDBDBD;
+}
+#mission {background: conic-gradient(from 15deg, #1D3557 0.000deg, #1D3557 10.588deg, #1f3c64 calc(10.588deg + 0.1deg), #1f3c64 21.176deg, 
+#21416b calc(21.176deg + 0.1deg), #21416b 31.765deg, #234672 calc(31.765deg + 0.1deg), #234672 42.353deg, #254b79 calc(42.353deg + 0.1deg), 
+#254b79 52.941deg, #275080 calc(52.941deg + 0.1deg), #275080 63.529deg, #2a5588 calc(63.529deg + 0.1deg), #2a5588 74.118deg, #2d5a8f calc(74.118deg + 0.1deg), 
+#2d5a8f 84.706deg, #315f96 calc(84.706deg + 0.1deg), #315f96 95.294deg, #35659e calc(95.294deg + 0.1deg), #35659e 105.882deg, #396aa5 calc(105.882deg + 0.1deg),
+ #396aa5 116.471deg, #3d6fac calc(116.471deg + 0.1deg), #3d6fac 127.059deg, #4174b3 calc(127.059deg + 0.1deg), #4174b3 137.647deg, #457B9D calc(137.647deg + 0.1deg),
+ #457B9D 148.235deg, #4c83a7 calc(148.235deg + 0.1deg), #4c83a7 158.824deg, #538aaf calc(158.824deg + 0.1deg), #538aaf 169.412deg, #5b92b6 calc(169.412deg + 0.1deg),
+ #5b92b6 180.000deg, #6399bc calc(180.000deg + 0.1deg), #6399bc 190.588deg, #6ea3c3 calc(190.588deg + 0.1deg), #6ea3c3 201.176deg, #7aadc9 calc(201.176deg + 0.1deg),
+ #7aadc9 211.765deg, #86b7cf calc(211.765deg + 0.1deg), #86b7cf 222.353deg, #91bfd4 calc(222.353deg + 0.1deg), #91bfd4 232.941deg, #9dc8d9 calc(232.941deg + 0.1deg),
+ #9dc8d9 243.529deg, #A8DADC calc(243.529deg + 0.1deg), #A8DADC 254.118deg, #9dcfd9 calc(254.118deg + 0.1deg), #9dcfd9 264.706deg, #92c3d4 calc(264.706deg + 0.1deg),
+ #92c3d4 275.294deg, #87b7ce calc(275.294deg + 0.1deg), #87b7ce 285.882deg, #7cabc8 calc(285.882deg + 0.1deg), #7cabc8 296.471deg, #6f9fc1 calc(296.471deg + 0.1deg), 
+ #6f9fc1 307.059deg, #6293ba calc(307.059deg + 0.1deg), #6293ba 317.647deg, #5387b3 calc(317.647deg + 0.1deg), #5387b3 328.235deg,  #417bac calc(328.235deg + 0.1deg), 
+ #417bac 338.824deg, #2e6fa5 calc(338.824deg + 0.1deg), #2e6fa5 349.412deg, #1D6399 calc(349.412deg + 0.1deg) 360deg ) !important }
+ 
+ .logo-heading {
+  color:var(--color-white);
+}
+.third-row-sectionAbout {
+  background-color: var(--alternate-row-bg-one);
+}
+.alternateRowBg {
+  background-color: var(--alternate-row-bg-two);
+ }
+ .third-row-content-cardAbout {
+  background-color: var(--color-white);
+}
+.feature-cards {
+  background: var(--about-feature-card-bg) !important;
+  border-color: var(--secondary-color) !important;
+}
+.feature-cards .icon-box img {
+  filter: brightness(0) saturate(100%)
+            invert(88%) sepia(74%) saturate(617%)
+            hue-rotate(2deg) brightness(105%) contrast(103%);
+}
+.promies-grid h2 {
+  color: var(--primary-color);
+}
+.academy-promise::before {
+  background-color: var(--color-black);
+}
+.academy-promise {
+  color: var(--color-white);
+}
+.academy-promise__icon span {
+  background-color: var(--primary-color);
+}
+.academy-promise__circle-line {
+	background-image: repeating-linear-gradient(to right, var(--secondary-color) 0px, transparent 2px, var(--color-black)0 2px, transparent 8px)
+}
+.bg-cta {
+  background-color: var(--primary-color);
+}
+.cta-content {
+  background-image: var(--about-cta-gradient);linear-gradient(135deg, #005581 0%, var(--tertiary-color) 100%);
+  color:  var(--color-white);
+}
+.btn.btn-theme::after {
+  background-color: var(--secondary-color) !important;
+}
+.blackbg-button {
+  background-color: var(--color-black) !important;
+}
+.blackbg-button::after {
+  background-color: var(--secondary-color) !important;
+}
+.team-card::before, .team-card::after {
+  background-color: #00000099;
+}
+.team-card h2 {
+  color: var(--color-white);
+}
+.team-card p {
+  color: var(--secondary-color);
+}
+.trainer-name h2 {
+  color: var(--primary-color);
+}
+/* -------------------------------------About Us Ends Here---------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------About Us Version 2 Starts Here---------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+.program-section {
+  background-color: var(--color-black);
+}
+.program-curve {
+  background-image: radial-gradient(50% 50% at 50% 50%, var(--tertiary-color) 90%, var(--primary-color) 95%, var(--primary-color) 97%, 
+  var(--primary-color) 100%);
+}
+.program-content h1 {
+  color: var(--color-white);
+}
+.text-rotate-box p {
+  color: var(--secondary-color);
+}
+.choose-program-heading {
+  color: var(--color-black);
+}
+/* -------------------------------------About Us Version 2 Ends Here---------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------Program Category Starts Here---------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+.process-section {
+  background-color: var(--alternate-row-bg-three);
+}
+.program-sectionss {
+  background-image:  var(--header-gradient);
+}
+.icon-spot {
+  color: var(--secondary-color);
+}
+.ring-wrap::after {
+  background-color: var(--primary-color);
+}
+.ring-wrap::before {
+  background-image: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color) 100%);
+}
+.arrow-link{
+	color: var(--primary-color);
+}
+.process-card h3 {
+  color: var(--color-black);
+}
+.process-card p {
+  color: var(--color-black);
+}
+.profile-wrap h3 {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.center-card::before {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: var(--primary-color);
+}
+.center-card {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+.arrow-link .dash-path,
+.arrow-link .arrow-head {
+    stroke: #FFD200;
+    fill: none;
+}
+/* -------------------------------------Program Category Ends Here---------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------Program Category Version Two Starts Here-------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+.g-title h3 {
+  color: var(--primary-color);
+}
+.hero-wrap {
+  background-color: var(--alternate-row-bg-two);
+}
+.skill-box {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+.dot-green {
+  background-color: #22c55e;
+}
+.dot-purple {
+  background-color: #9b59b6;
+}
+.dot-blue {
+  background-color: #17a2b8;
+}
+.hero-title {
+  color: var(--primary-color);
+}
+.hero-text {
+  color: var(--secondary-color);
+}
+.timeline-fill {
+  background-color: var(--color-black);
+}
+.timeline-track {
+  background-color: var(--nav-border-bottom-color);
+}
+.timeline-badge i {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-color: var(--color-black);
+}
+/* -------------------------------------Program Category Version Two Ends Here-------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------Program Detail Page Starts Here-------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+.hero-left h1 {
+  color: var(--primary-color);
+}
+.hero-left p {
+  color: var(--color-black);
+}
+.left-image-wrap::after {
+  background-image: linear-gradient(var(--primary-color), var(--color-black));
+}
+.circle-center {
+  background-color: var(--secondary-color);
+  color: var(--color-white);
+}
+.rotating-text  {
+	fill: var(--secondary-color);
+}
+.form-image-box {
+  background-color: var(--primary-color);
+}
+.form-card {
+  background-color: var(--alternate-row-bg-four);
+  border-color: var(--color-white);
+  border-bottom-color: var(--primary-color);
+}
+.checkbox-group label {
+  color: var(--color-black);
+}
+.checkbox-group a {
+  color: var(--primary-color);
+}
+.checkbox-group a:hover {
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+.form-group input {
+	border:1px solid var(--alternate-row-bg-two);
+}
+.banner-strip-new {
+  background-color: var(--tertiary-color);
+  border-top-color: var(--color-black);
+  border-bottom-color: var(--color-black);
+}
+.scrolling-text span {
+  color: var(--color-white);
+}
+.strip-dot-separator {
+  background-color: var(--secondary-color);
+}
+.step-numberV2 {
+  color: transparent;
+  -webkit-text-stroke-color: var(--primary-color);
+}
+.process-box h3 {
+  color: var(--secondary-color);
+  margin-top:28px;
+}
+.process-section {
+  background-color: var(--alternate-row-bg-five);
+}
+.third-row-section {
+  background-color: var(--alternate-row-bg-two);
+}
+.martial-classes-section {
+  background-color: var(--color-white);
+}
+.martial-classes-heading {
+  color: var(--primary-color);
+}
+.martial-class-pill {
+  color: var(--color-white);
+  background-color: var(--primary-color);
+}
+.bg-one {
+  --section-color: var(--tertiary-color);
+}
+.bg-two {
+   --section-color: var(--primary-color);
+}
+.wedding-content {
+   color: var(--color-white);
+}
+.getstarted-icon-circle.light {
+  background-color: var(--secondary-color);
+  color: var(--color-white);
+}
+.getstarted-icon-circle.blue {
+  background-color: var(--secondary-color);
+  color: var(--color-white);
+}
+.getstarted-item h3 {
+  color: var(--primary-color);
+}
+.parents-did::after {
+  background-color: #00000054;
+}
+.parents-did__title {
+  color: var(--color-white);
+}
+.parents-did__card {
+  background-color: var(--color-white);
+}
+.top-cricle {
+  background-color: var(--color-white);
+}
+.help-content {
+  background-color: #FFE552;
+}
+.help-tab::before {
+  background-color: var(--primary-color);
+}
+.help-tab.active {
+  color: var(--color-white);
+}
+.help-tab {
+  background-color: #FFE552;
+   color: var(--color-black);
+}
+.help-tab.active:hover {
+  color: var(--color-white) !important;
+}
+.help-text h2 {
+  color: var(--primary-color);
+}
+.help-point h5 {
+  color: var(--primary-color);
+}
+.help-point p {
+  color: var(--primary-color);
+}
+.orange {
+  background-color: var(--primary-color);
+}
+.yellow {
+  background-color: var(--primary-color);
+}
+.check-icon span {
+  color: var(--color-white);
+}
+.blog-highlight-section {
+  background-color: var(--alternate-row-bg-five);
+}
+.blog-highlight-box {
+  background-color: var(--color-white);
+}
+.blog-highlight-content {
+  background-color: #6ab6dc;
+}
+.blog-bx2 {
+  background-color: #ffee99;
+}
+.blog-bx3 {
+  background-color: #99beff;
+}
+.faq-section {
+  background-color: var(--alternate-row-bg-three);
+}
+.faq-heading h2 {
+  color: var(--color-black);
+}
+.faq-heading p {
+  color: var(--color-dark-grey);
+}
+.faq-card {
+  background-color: var(--color-white);
+  border-color: var(--nav-border-bottom-color) !important;
+}
+.faq-btn {
+  background-color: transparent;
+  border-color: var(--nav-border-bottom-color) !important;
+}
+.faq-card .faq-btn[aria-expanded="true"] {
+  color: var(--primary-color);
+}
+.faq-btn:hover {
+  color: var(--primary-color) !important;
+}
+.faq-card:has(.collapse.show) {
+  border: 1px solid;	
+  border-color: var(--primary-color) !important;
+  box-shadow: 0px 0px 10px 0px var(--tertiary-color) inset !important;
+}
+.work-process-section-second .work-steps-section {
+  background-color: var(--primary-color);
+}
+.work-process-section-second .icon-box {
+  background-color: var(--color-black);
+}
+.work-process-section-second .content-box h4 {
+  color: var(--secondary-color);
+}
+.work-process-section-second .work-form-section {
+  background-color: var(--tertiary-color);
+}
+.work-form-section a {
+  color: var(--primary-color);
+}
+.work-form-section a:hover {
+  color: var(--secondary-color);
+}
+/* -------------------------------------Program Detail Page Ends Here-------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------Program Detail Page Version Two Starts Here-------------------------
+---------------------------------------------------------------------------------------------------------- */
+.herosectionV4-left::after { 
+background-image: linear-gradient(var(--primary-color), var(--color-black)) !important;
+}
+.circle-centerV2 {
+  background-color: var(--tertiary-color);
+  color: var(--color-white);
+}
+.rotating-textV2  {
+	fill: var(--tertiary-color);
+}
+.herosectionV4-content {
+  color: var(--secondary-color);
+}
+.herosectionV4-content h1 {
+  color: var(--secondary-color);
+}
+.herosectionV4-right {
+  background-color: #FFE552;
+}
+.herosectionV4-formbox h2 {
+  color: var(--color-black);
+}
+.herosectionV4-input {
+  border-color: var(--color-white);
+}
+.herosectionV4-input::placeholder {
+  color: var(--color-black);
+}
+.herosectionV4-field i {
+  color: var(--primary-color);
+}
+.herosectionV4-select {
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+}
+.herosectionV4-checkinput {  
+  border: 2px solid #fff;
+  background: transparent;
+}
+.herosectionV4-checkinput:checked {
+  color: var(--primary-color);
+}
+.herosectionV4-checkinput:checked::after {
+  color: var(--primary-color);
+}
+.herosectionV4-checkbox a {
+color: var(--primary-color);
+}
+.herosectionV4-checkbox a:hover {
+  color: var(--tertiary-color) !important;
+}
+.banner-container {
+  background-color:  var(--tertiary-color);
+  border-top-color: var(--color-black);
+  border-bottom-color: var(--color-black);
+}
+.stack-section.stack-gsap-ready {
+  background-color: var(--color-white);
+}
+.stack-card .content-boxes {
+  background-color: var(--program-detail-alternate-row-bg1);
+}
+.stack-card .alternate-bg {
+  background-color: var(--program-detail-alternate-row-bg2);
+}
+.steps-section {
+  background-color: var(--color-white);
+}
+.steps-heading h2 {
+  color: var(--color-black);
+}
+.step-number {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+.step-card h3 {
+  color:var(--color-black);
+}
+.step-card p {
+  color: var(--color-black);
+}
+.steps-timeline::before {
+  background-color: var(--secondary-color);
+}
+.services-section-image {
+  background-color: #FFE552;
+}
+.services-heading {
+  color: var(--color-black);
+}
+.service-cardss::before {
+   background-color: #f2f2f280;
+}
+.service-cardss::after {
+  background-color: var(--tertiary-color);
+}
+.service-content {
+  color: var(--color-black);
+  font-weight:600 !important;
+}
+.top-line-animated{
+ color: var(--program-detail-alternate-row-bg1);
+}
+.logistic-cards-section {
+ background-color: var(--program-detail-alternate-row-bg1);
+}
+.round-heading {
+  color: var(--color-black);
+}
+.logistic-card {
+  background-color: var(--primary-color) !important;
+  border-color: var(--program-detail-alternate-row-bg1);
+  color: var(--color-white) !important;
+}
+.logistic-card:hover {
+  background-color:var(--secondary-color) !important;
+  color: var(--color-black) !important;
+}
+.logistic-card h3{
+  color: var(--color-white);
+}
+.logistic-card p{
+  color: var(--color-white);
+}
+.dark-card {
+  background-color: var(--primary-color);
+}
+.peach-card {
+  background-color: var(--secondary-color);
+}
+.light-card {
+  background-color: var(--tertiary-color);
+}
+.light-card-two {
+  background-color: #FFE552;
+}
+.small-title .dot {
+  background-color: var(--secondary-color);
+}
+/* -------------------------------------Program Detail Page Version Two Starts Here-------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------Contact Us Page Starts Here-----------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+.contact-section h1 {
+  color: var(--color-black);
+}
+.contact-section p {
+  color: var(--color-black);
+}
+.info-box {
+  background-color: var(--color-white);
+  border-color: var(--primary-color);
+}
+.info-box:hover {
+  background-color: var(--tertiary-color)DB;
+}
+.info-box h3 {
+  color: var(--primary-color);
+}
+.info-text {
+   color: var(--color-black);
+}
+.hours-list {
+   color: var(--color-black);
+}
+.social-icons a {
+  color: var(--primary-color);
+}
+.social-icons a:hover {
+  color: var(--secondary-color);
+}
+.review-link {
+  color: var(--primary-color);
+}
+.review-link:hover {
+  color: var(--secondary-color);
+}
+.contact-form-wrap h2 {
+  color: var(--color-black);
+}
+.contact-form-wrap  {
+  background-color: var(--color-white);
+  border-color: var(--primary-color);
+}
+.form-label {
+  color: var(--color-black);
+}
+/* -------------------------------------Contact Us Page Ends Here-----------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------Products Listing Page Starts Here---------------------------------
+---------------------------------------------------------------------------------------------------------- */
+/* .product-hero::after {
+  background-image: radial-gradient(ellipse at 30% 50%, var(--alternate-row-bg-four); 0%, transparent 70%);
+} */
+.product-hero {
+  background-image: var(--header-gradient);
+}
+.product-hero h1 {
+  color: var(--color-white);
+}
+.product-hero p {
+  color: var(--color-white);
+}
+.product-hero__crumbs a {
+ color: var(--color-black);
+}
+.product-hero__crumbs span:last-child {
+  color: var(--secondary-color);
+}
+.product-hero__crumbs {
+   color: var(--color-white);
+}
+.pl-toolbar {
+  background-color: var(--color-white) !important;
+  border-color: var(--primary-color) !important;
+}
+.pl-count {
+  color: var(--color-dark-grey);
+}
+.pl-sort select {
+  border-color: var(--primary-color) !important;
+  background-color: var(--alternate-row-bg-five);
+  color: var(--color-dark-grey);
+}
+.pl-product-card {
+  background-color: var(--color-white);
+  border-color:var(--alternate-row-bg-five);
+  /* box-shadow: 0 18px 45px var(--color-dark-grey); */
+}
+.pl-card-image {
+  background-color: var(--alternate-row-bg-three);
+}
+.pl-badge--discount {
+  background-color: var(--primary-color);
+  color: var(--color-white);
+}
+.pl-badge--stock {
+  background-color: var(--secondary-color);
+  color: var(--color-white);
+}
+.pl-card-body {
+  background: var(--color-white);
+}
+.pl-category {
+  color: var(--secondary-color);
+  font-size: 14px !important;
+}
+.pl-product-card h3 {
+  color: var(--primary-color) !important;
+}
+.pl-current-price {
+  color: var(--tertiary-color);
+}
+.pl-old-price {
+  color: #E63946;
+}
+.pl-page-btn {
+  border-color: var(--primary-color);
+  background-color: var(--color-white);
+  color: var(--primary-color);
+}
+.pl-page-btn.is-active, .pl-page-btn.is-active:hover {
+  background-color: var(--primary-color)!important;
+  border-color: var(--alternate-row-bg-three)!important;
+  color: var(--color-white) !important;
+}
+.pl-page-btn:hover {
+  border-color: var(--secondary-color) !important;
+  color: var(--color-white) !important;
+  background-color: var(--tertiary-color) !important;
+}
+.pl-page-btn:hover:disabled {
+    background-color: var(--color-white) !important;
+    color: var(--color-black) !important;
+	border-color: var(--primary-color) !important;
+}
+/* -------------------------------------Products Listing Page Ends Here---------------------------------
+---------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------Products Detail Page Starts Here---------------------------------
+---------------------------------------------------------------------------------------------------------- */
+.pd-breadcrumb {
+  background-color:  var(--primary-color);
+  border-bottom-color: var(--color-dark-grey);
+}
+.pd-breadcrumb .breadcrumb-item a {
+  color: var(--secondary-color);
+}
+.pd-breadcrumb .breadcrumb-item a:hover {
+  color: var(--tertiary-color);
+}
+.pd-breadcrumb .breadcrumb-item.active, .breadcrumb-item.active:hover  {
+  color: var(--secondary-color) !important;
+}
+.pd-title {
+  color: var(--primary-color);
+}
+.pd-category {
+  color: var(--secondary-color);
+  font-size: 16px!important;
+}
+.pd-price {
+  color: var(--color-black);
+}
+.pd-divider {
+  border-top-color: var(--tertiary-color);
+}
+.pd-description-text {
+  color: var(--color-dark-grey);
+}
+.pd-selector-group label, .pd-qty-group label {
+  color: var(--color-dark-grey);
+}
+.pd-select {
+  background-color: var(--color-white);
+  border-color: var(--color-dark-grey);
+  color: var(--color-black);
+  background: var(--select-arrow-icon) no-repeat right 12px center;
+}
+.btn-add-cart {
+  color: var(--color-white);
+  background-color: var(--primary-color);
+}
+.btn-add-cart:hover {
+  color: var(--color-white);
+  background-color: var(--secondary-color);
+}
+.pd-main {
+  background-color: var(--alternate-row-bg-three);
+}
+.pd-thumb {
+  border-color: var(--tertiary-color);
+  padding: 0px !important;
+}
+.pd-thumb img {
+  object-fit: none !important;
+}
+.pd-thumb.active, .pd-thumb:hover {
+  border-color: var(--secondary-color);
+}
+.pd-main-image {
+  background-color: var(--color-white);
+  padding:4px !important;
+}
+.pd-main-image img {
+  object-fit: cover!important;
+  height: 100%!important;
+  border-radius: 10px;
+}
+.pd-section-label {
+  color: var(--secondary-color);
+}
+.pd-section-title {
+  color: var(--primary-color);
+}
+.pd-section-line {
+  background-color:  var(--tertiary-color);
+}
+.pd-desc-grid {
+  background-color:var(--alternate-row-bg-three);
+  border-color: var(--primary-color);
+}
+.pd-desc-col h3, .pd-desc-list li {
+  color: var(--color-black);
+}
+.pd-desc-col p {
+  color: var(--color-dark-grey);
+}
+.pd-desc-list li::before {
+  background-color: var(--primary-color);
+}
+/* -------------------------------------Products Detail Page Ends Here---------------------------------
+-------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------Cart/Checkout Page Starts Here---------------------------------
+---------------------------------------------------------------------------------------------------------- */
+.cart-main {
+  background-color: var(--alternate-row-bg-three);
+}
+.ck-step--active {
+  background-color: var(--primary-color)!important;
+}
+.ck-step--active .ck-step-num {
+  color: var(--secondary-color)!important;
+}
+.ck-step--active .ck-step-label {
+  color: var(--color-white)!important;
+}
+.ck-step--active .ck-step-sub {
+  color: var(--alternate-row-bg-three)!important;
+}
+.ck-step {
+  background-color: var(--secondary-color);
+}
+.ck-step-num {
+  color:  var(--primary-color);
+}
+.ck-step-label {
+  color:  var(--color-black);
+}
+.ck-step-sub {
+  color: var(--tertiary-color);
+}
+.cart-card {
+  background-color: var(--color-white);
+}
+.cart-table tbody tr:hover {
+  background-color: var(--alternate-row-bg-two);
+}
+.cart-table thead tr {
+   border-bottom-color: var(--primary-color);
+}
+.cart-table tbody tr {
+  border-bottom-color: var(--primary-color);
+}
+.cart-table thead th {
+  color: var(--color-dark-grey);
+}
+.ct-name, .ct-price, .ct-total {
+  color: var(--primary-color);
+}
+.ct-cat {
+  color: var(--secondary-color);
+}
+.ct-qty {
+  border-color: var(--color-dark-grey);
+  background-color: var(--color-white);
+}
+.ct-qty input {
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+.ct-qty-btn {
+  color: var(--color-dark-grey);
+}
+.ct-qty-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--color-white);
+}
+.ct-remove-btn {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-color: var(--primary-color);
+}
+.btn-coupon, .btn-update-cart, .btn-checkout, .btn-place-order, .btn-invoice, .btn-continue {
+  background-color: var(--primary-color);
+  color: var(--color-white);
+}
+.btn-coupon:hover, .btn-update-cart:hover, .btn-checkout:hover, .btn-place-order:hover, .btn-invoice:hover, .btn-continue:hover {
+  background-color: var(--secondary-color);
+}
+.coupon-label {
+  color: var(--primary-color);
+}
+.coupon-input::placeholder {
+  color: var(--color-dark-grey);
+}
+.coupon-input {
+  border-color: (--color-dark-grey);
+  color: var(--color-black);
+}
+.cart-totals {
+  background-color: var(--color-white);
+ /*  box-shadow: 0 4px 24px var(--black-06); */
+}
+.ct-title {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+.ct-row {
+  border-bottom-color: var(--alternate-row-bg-four);
+}
+.ct-row-val small {
+  color: var(--secondary-color);
+}
+.ck-form-card {
+  background-color: var(--color-white);
+  /* box-shadow: 0 4px 24px var(--black-06); */
+}
+.ck-section-title {
+  color: var(--primary-color);
+  border-bottom-color: var(--secondary-color);;
+}
+.form-group label {
+  color: var(--color-black);
+}
+.form-group label .req {
+  color: #E63946;
+}
+.form-control-ck::placeholder {
+  color: var(--contact-placeholder-color);
+}
+.form-control-ck {
+  color: var(--color-black);
+}
+.form-group input, .form-group textarea, .ck-shipping-toggle {
+  border-color: var(--tertiary-color);
+}
+.form-control-ck {
+  border-color: var(--tertiary-color);
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+.ck-shipping-toggle span {
+  color: var(--primary-color);
+}
+.ck-shipping-toggle input[type="checkbox"] {
+  accent-color:var(--primary-color);
+}
+.ck-pay-label input[type="radio"] {
+  accent-color: var(--primary-color);
+}
+.ck-pay-icon {
+  background-color: #0055811f;
+  color: var(--primary-color);
+}
+.ck-pay-desc {
+  color: var(--color-black);
+ /*  border-top-color: var(--color-border-2);
+  background-color: var(--color-light-bg-4); */
+}
+.ck-terms input[type="checkbox"] {
+  accent-color: var(--primary-color);
+}
+.ck-terms a {
+  color: var(--primary-color);
+}
+.ck-terms a:hover {
+  color: var(--tertiary-color);
+}
+.order-summary-card {
+  background-color: var(--color-white);
+  /* box-shadow: 0 4px 24px var(--black-06); */
+}
+.success-card {
+  background-color: var(--color-white);
+  /* box-shadow: 0 4px 28px var(--black-07); */
+}
+.success-icon {
+  background-color: var(--secondary-color);
+  box-shadow: 0 1px 30px var(--secondary-color);
+}
+.success-icon i {
+  color: var(--primary-color);
+}
+.success-eyebrow {
+  color:  var(--primary-color);
+}
+.success-title {
+  color: var(--color-black);
+}
+.success-subtitle {
+  color: var(--color-dark-text);
+}
+.order-id-pill {
+  background-color: var(--transparent-bg);
+  border-color: var(--contact-placeholder-color);
+  color: var(--color-dark-text);
+}
+.si-box {
+  background-color: var(--alternate-row-bg-one);
+  border-color: var(--contact-placeholder-color);
+}
+.si-box-label {
+  color: var(--color-dark-text);
+}
+.si-box-label i {
+  color:  var(--tertiary-color);
+}
+.si-box-val {
+  color: var(--color-dark-text);
+}
+.sp-header {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+.sp-name {
+  color: var(--color-dark-text);
+}
+.sp-qty, .sp-unit {
+  color: var(--contact-placeholder-color);
+}
+.sp-sub {
+  color: var(--primary-color);
+}
+.sp-row {
+  border-bottom-color: var(--contact-placeholder-color);
+}
+.success-totals {
+  background-color: var(--color-white);
+  border-color: var(--contact-placeholder-color);
+}
+.success-products {
+ border-color: var(--contact-placeholder-color);
+}
+.st-val {
+  color: var(--color-dark-text);
+}
+.st-label {
+  color: var(--contact-placeholder-color);
+}
+.ot-step.done .ot-dot {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--color-white);
+  box-shadow: 0 4px 12px var(--contact-placeholder-color);
+}
+.order-timeline::before {
+  background-color:  var(--secondary-color);
+}
+.ot-step.active .ot-dot {
+  background-color: var(--color-white);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  box-shadow: 0 4px 12px var(--contact-placeholder-color);
+}
+.ot-dot {
+  border-color: var(--contact-placeholder-color);
+  background-color: var(--color-white);
+  color: var(--contact-placeholder-color);
+}
+.btn-invoice {
+  border-color:  transparent !important;
+}
+.btn-invoice:hover, .btn-continue:hover {
+ color:  var(--color-white);
+}
+/* -------------------------------------Cart/Checkout Page Ends Here---------------------------------
+---------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------Trial Offer Page Starts Here---------------------------------
+---------------------------------------------------------------------------------------------------------- */
+.trial-section::after {
+  background-image: var(--header-gradient);
+}
+.banner-content h1 {
+  color: var(--color-white);
+}
+.banner-content p {
+  color: var(--color-white);
+}
+.offer-content h2 {
+  color: var(--primary-color);
+}
+.offer-content p {
+  color: var(--color-black);
+}
+.heading-divider {
+  background-color: var(--secondary-color);
+}
+.plan-program h3 {
+  color: var(--primary-color);
+}
+.offer-grid-section {
+  background-color: var(--alternate-row-bg-five);
+}
+.top-card.active-card {
+  border-color: var(--secondary-color);
+  background-color: var(--color-black);
+}
+.top-card.active-card span {
+  color: var(--secondary-color);
+}
+ .top-card-inner span {
+  color: var(--primary-color);
+}
+.top-card.active-card small {
+  color: var(--color-white);
+}
+.top-card-inner small {
+  color: var(--color-black);
+}
+.top-card {
+  border-color: var(--primary-color);
+  background-color: var(--color-white);
+}
+.offer-grid-box {
+  background: var(--alternate-row-bg-two);
+}
+.offer-card {
+  border-color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+.offer-card::before, .offer-card.popular::before {
+  background: var(--secondary-color);
+}
+.offer-card h4 {
+  color: var(--color-white);
+  border-bottom-color: var(--secondary-color);
+}
+.offer-card .price {
+  color: #FFE552
+}
+.offer-list li i {
+  color: var(--secondary-color) !important;
+}
+.offer-list li {
+  color: var(--color-white);
+}
+.plan-btn {
+  background: var(--color-white) !important;
+  color: var(--primary-color) !important;
+}
+.plan-btn::after {
+  background: var(--secondary-color) !important;
+}
+.plan-btn:has(.tick:not(.empty)) {
+    background-color: var(--tertiary-color) !important;
+}
+.step-form-box {
+  background-color: var(--color-white);
+}
+.form-header {
+  border-bottom-color: var(--secondary-color);
+}
+.form-header h2 {
+ color: var(--primary-color) ;
+}
+.form-input {
+	border-color: var(--tertiary-color);
+	background-color: var(--color-white);
+}
+.total-preview {
+  border-color: var(--tertiary-color);
+  background-color: var(--alternate-row-bg-one);
+  color: var(--primary-color);
+}
+#display-total {
+  color: var(--primary-color);
+}
+.checkmark {
+  border-color:  var(--tertiary-color);
+}
+.checkbox-label input:checked + .checkmark::after + .checkmark input:checked {
+  background-color: var(--primary-color) !important;
+  border-color: var(--tertiary-color);
+  color: var(--color-white);
+}
+.checkbox-label {
+  color: var(--color-dark-text);
+}
+.checkbox-label a {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.checkbox-label a:hover {
+  color: var(--tertiary-color);
+  text-decoration: none;
+}
+/* -------------------------------------Trial Offer Page Ends Here---------------------------------
+--------------------------------------------------------------------------------------------------- */
+/* -------------------------------------Blog Listing Page Starts Here---------------------------------
+--------------------------------------------------------------------------------------------------- */
+.blog-hero {
+  background-image: var(--header-gradient);
+}
+.blog-hero h1 {
+  color: var(--color-white);
+}
+.blog-hero__crumbs a {
+  color: var(--color-black);
+}
+.blog-hero__crumbs i {
+   color: var(--color-white);
+}
+.blog-hero__crumbs span:last-child {
+  color: var(--secondary-color);
+}
+.blog-main {
+  background: var(--alternate-row-bg-three);
+}
+.blog-card {
+  background-color: var(--color-white);
+  border-color: var(--alternate-row-bg-four);
+}
+.blog-card__cat {
+  color: var(--secondary-color);
+  font-size: 13px !important;
+}
+.blog-card:hover .blog-card__title {
+  color: var(--primary-color);
+}
+.blog-card__title {
+  color: var(--color-dark-text);
+}
+.blog-card__meta i {
+  color: var(--secondary-color);
+}
+.blog-card__meta {
+  color: var(--tertiary-color);
+}
+.blog-card__excerpt {
+  color: var(--color-dark-grey);
+}
+.sidebar-widget, .archive-box{
+  background-color: var(--color-white);
+  border-color: var(--alternate-row-bg-five);
+}
+.widget-title {
+  color: var(--primary-color);
+  border-bottom-color: var(--secondary-color);
+}
+.sb-search input {
+  border-color: var(--alternate-row-bg-four);
+}
+.sb-search button {
+  color: var(--tertiary-color);
+  background-color:var(--primary-color);
+}
+.sb-cat-item:hover {
+  color: var(--primary-color);
+}
+.sb-cat-item {
+  border-bottom-color: var(--alternate-row-bg-four);
+  color: var(--color-dark-text);
+}
+.sb-cat-count {
+  color: var(--secondary-color);
+  background-color: var(--tertiary-color);
+}
+.sb-post__cat {
+  color: var(--primary-color);
+  font-size: 11px !important;
+}
+.sb-post__title   {
+  color: var(--color-dark-text);
+}
+.sb-post__date  {
+  color: var(--tertiary-color);
+}
+.sb-post__title:hover{
+  color: var(--primary-color);
+}
+.sidebar-promo__overlay {
+  background-image: linear-gradient(to top, var(--color-dark-text) 0%, var(--testimonial-bg) 55%, transparent 100%);
+}
+.sidebar-promo__tag, .sidebar-promo__btn, .sidebar-promo__btn:hover  {
+  background-color: var(--primary-color);
+  color: var(--color-white);
+}
+.sidebar-promo__title {
+  color: var(--color-white);
+}
+/* -------------------------------------Blog Listing Page Ends Here---------------------------------
+--------------------------------------------------------------------------------------------------- */
+/* -------------------------------------Blog Detail Page Starts Here---------------------------------
+--------------------------------------------------------------------------------------------------- */
+.bd-hero {
+  background-image: var(--header-gradient);
+}
+.bd-hero__title {
+  color: var(--color-white);
+}
+.bd-hero__stat {
+  color: var(--tertiary-color);
+}
+.bd-hero__stat i {
+  color: var(--secondary-color);
+}
+.blog-page {
+  background: var(--alternate-row-bg-four);
+}
+.bd-article-header, .bd-article-body{
+  background: var(--color-white);
+}
+.bd-article-header {
+  color: var(--secondary-color);
+}
+.bd-article-crumbs a  {
+  color: var(--primary-color);
+}
+.bd-article-crumbs a:hover {
+  color: var(--primary-color);
+}
+.bd-content p {
+  color: var(--color-dark-text);
+}
+.bd-tags {
+  background: var(--color-white);
+  border-top-color: var(--nav-border-bottom-color);
+  border-bottom-color: var(--nav-border-bottom-color);
+}
+.bd-share {
+  background: var(--color-white);
+}
+.bd-tags__label, .bd-share__label {
+  color: var(--primary-color);
+}
+.bd-tag:hover, .bd-share-btn:hover, .sb-tag:hover {
+  background-color: var(--secondary-color);
+  color: var(--color-white);
+  border-color: var(--tertiary-color);
+}
+.bd-tag, .bd-share-btn, .sb-tag {
+background-color: var(--primary-color);
+color: var(--color-white);
+}
+.bd-section-head::after, .bd-section-head::before {
+  background-color: var(--secondary-color);
+}
+.bd-section-head h2 {
+  color:var(--primary-color);
+}
+.bd-post-nav__item {
+  background-color: var(--color-white);
+  border-color: var(--nav-border-bottom-color);
+}
+.bd-post-nav__dir {
+  color: var(--secondary-color);
+}
+.bd-post-nav__title {
+  color: var(--color-dark-text);
+}
+.bd-post-nav__title:hover {
+  color: var(--primary-color);
+}
+/* -------------------------------------Blog Detail Page Ends Here---------------------------------
+--------------------------------------------------------------------------------------------------- */
+/* -------------------------------------Student Section Index Page Starts Here---------------------
+--------------------------------------------------------------------------------------------------- */
+.top-bar {
+  background-color: var(--primary-color);
+}
+.brand span.apex {
+  color: var(--color-white);
+}
+.top-bar-left .brand {
+  color: var(--secondary-color);
+}
+.badge-student {
+  background-color: var(--tertiary-color);
+  color:var(--color-white);
+}
+.top-bar-right {
+   color:var(--color-white);
+}
+.cart-count {
+  background-color: var(--tertiary-color);
+  border: transparent !important;
+}
+.main-nav {
+  background-color: var(--color-white);
+  border-bottom-color: var(--nav-border-bottom-color);
+}
+.nav-inner ul li a {
+  color:var(--primary-color);
+}
+.nav-inner ul li a::after {
+  background-color: var(--secondary-color);
+}
+.nav-inner ul li a:hover, .nav-inner ul li a.active {
+  color:  var(--tertiary-color);
+}
+.nav-inner ul li .dropdown-nav {
+  background-color: var(--color-white) ;
+}
+.dropdown-nav li a:hover {
+  background-color: var(--program-detail-alternate-row-bg1);
+}
+.mega-dropdown {
+  box-shadow: 0 8px 32px var(--alternate-row-bg-four);
+  border-top-color: var(--primary-color);
+  background-color: var(--color-white);
+}
+.mega-col-1 li a:hover, .mega-col-2 ul li a:hover {
+  background-color: var(--program-detail-alternate-row-bg1) !important;
+  color:  var(--tertiary-color) !important;
+}
+.mega-col-1 li a {
+  background-color: var(--primary-color) !important;
+  color:  var(--color-white)!important;
+}
+.mega-col-1 li.active-col a {
+  background-color: var(--secondary-color) !important;
+  color:  var(--color-white)!important;
+}
+.mega-col-2 {
+  background-color: var(--color-white);
+  color:  var(--tertiary-color) !important;
+  border-left-color: var(--alternate-row-bg-three);
+  border-right-color: var(--alternate-row-bg-three);
+}
+.mega-col-2 ul li a {
+  border-color: var(--color-white)!important;
+  border-bottom-color: var(--alternate-row-bg-three)!important;
+}
+.mega-col-1 li.active-col a, .mega-col-2 ul li a:hover {
+  background-color: var(--program-detail-alternate-row-bg1);
+  color:  var(--tertiary-color);
+}
+.mega-col-3 {
+  background-color: var(--color-white);
+  border: var(--color-white);
+}
+.hero {
+  background-image: var(--header-gradient);
+}
+.hero-content h1 {
+  color: var(--color-white) !important;
+}
+.hero-content p {
+  color: var(--secondary-color) !important;
+}
+.section-heading .icon {
+  background-color: var(--alternate-row-bg-three);
+  border-color: var(--nav-border-bottom-color);
+  color: var(--primary-color);
+}
+.section-heading h2 {
+  color: var(--primary-color);
+}
+.section-heading .count-badge {
+  background-color: var(--primary-color);
+  color: var(--color-white);
+}
+.section-heading {
+  border-bottom-color: var(--secondary-color);
+}
+.post-card:hover {
+  box-shadow:  0 8px 32px var(--alternate-row-bg-four);
+  border-color: var(--nav-border-bottom-color);
+}
+.post-card {
+  background-color: var(--color-white);
+  border-color: var(--alternate-row-bg-four);
+  box-shadow:  0 8px 32px var(--alternate-row-bg-four);
+}
+.btn-read-more, .btn-continue, .btn-login-submit,.btn-modal-submit, .tab-btn {
+  background-color: var(--primary-color);
+  color: var(--color-white);
+}
+.btn-read-more:hover, .btn-continue:hover, .btn-login-submit:hover, .btn-modal-submit:hover, .tab-btn.active, .tab-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--color-white);
+}
+.post-date {
+  color:  var(--primary-color);
+}
+.post-tag {
+  background-color: var(--tertiary-color);
+  color: var(--color-white);
+  border-color: var (--alternate-row-bg-four);
+}
+.post-card h3, .widget-btn, .news-post h3, .widget-list li a {
+  color: var(--color-dark-text);
+}
+.post-card p, .news-post p {
+  color: var(--color-dark-grey);
+}
+.widget-list li a i {
+  color: var(--primary-color);
+}
+.widget-list li a:hover {
+  color: var(--primary-color);
+}
+.widget-btn:hover {
+  color: var(--primary-color);
+}
+.widget-list li {
+  border-bottom-color: var(--alternate-row-bg-four);
+}
+/* -------------------------------------Student Section Index Page Ends Here---------------------
+--------------------------------------------------------------------------------------------------- */
+/* -------------------------------------Student Section News Page Starts Here---------------------
+--------------------------------------------------------------------------------------------------- */
+.hero-eyebrow {
+  background-color: var(--tertiary-color);
+  color: var(--color-white);
+}
+.section-title-deco h2 {
+  color: var(--primary-color);
+}
+.section-title-deco::before, .section-title-deco::after {
+  background-color: var(--secondary-color);
+}
+.post-date {
+  color:  var(--tertiary-color);
+}
+.news-divider {
+  border-top:  1px solid var(--alternate-row-bg-four) !important;
+}
+.portal-body {
+  background-color: var(--alternate-row-bg-three);
+}
+.archive-box h3 {
+  color: var(--primary-color) !important;
+}
+.arrow, .archive-link i {
+  background-color: var(--secondary-color);
+  color:  var(--secondary-color);
+}
+.archive-toggle:hover, .archive-link:hover {
+  color: var(--primary-color);
+}
+.archive-posts a {
+  color: var(--primary-color);
+}
+.archive-posts a:hover, .archive-link:hover { 
+  color: var(--tertiary-color);
+}
+.archive-posts, .archive-month {
+border-bottom: 1px solid var(--alternate-row-bg-four);
+}
+/* -------------------------------------Student Section News Page Ends Here---------------------
+--------------------------------------------------------------------------------------------------- */
+/* -------------------------------------Student Section Login/Login with password Page Starts Here---
+--------------------------------------------------------------------------------------------------- */
+.login-hero {
+  background: var(--header-gradient);
+}
+.login-hero-logo {
+  color: var(--secondary-color);
+}
+.login-hero h1 {
+  color: var(--color-white);
+}
+.login-hero p {
+  color: var(--color-white);
+}
+.hero-badge {
+  background-color: var(--tertiary-color);
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+}
+.hero-badge i {
+  color: var(--secondary-color);
+}
+.login-form-panel {
+    background: var(--color-white);
+}
+.login-box-header h2 {
+ color: var(--color-black);
+}
+.login-box-header h2 {
+ color: var(--color-black);
+}
+.input-group label {
+  color: var (--color-black);
+}
+.input-wrap i {
+  color: var(--primary-color);
+}
+.input-wrap input {
+  background: var(--color-white);
+  border: 1px solid var(--tertiary-color);
+}
+.input-wrap input::placeholder {
+  color: var(--alternate-row-bg-four);
+}
+.remember-me input[type="checkbox"] {
+    accent-color: var(--primary-color) !important;
+	border: 1px solid var(--tertiary-color) !important;
+}
+.forgot-link, .back-to-site a {
+  color:  var(--primary-color);
+}
+.forgot-link:hover, .back-to-site a:hover {
+  color:  var(--tertiary-color);
+}
+/* -------------------------------------Student Section Login/Login with password Page Ends Here---
+--------------------------------------------------------------------------------------------------- */
+/* -------------------------------------Student Section Forgot password Pop UP Starts Here---------
+--------------------------------------------------------------------------------------------------- */
+.modal {
+  background: var(--color-white);
+}
+.modal-close:hover {
+  background: var(--primary-color);
+  color: var(--color-white);
+}
+.modal-icon {
+  background: var(--alternate-row-bg-four);
+  border: 1px solid var(--tertiary-color) ;
+  color: var(--primary-color);
+}
+.modal h3, .modal p, .modal-success h3, .modal-success p {
+ color: var(--color-dark-text);
+}
+.modal-success .success-icon {
+  background: var(--secondary-color);
+  color: var(--color-white);
+}
+.input-wrap input::placeholder {
+  color: var(--nav-border-bottom-color);
+}
+/* -------------------------------------Student Section Forgot password Pop UP Ends Here---------
+--------------------------------------------------------------------------------------------------- */
+/* -------------------------------------Student Section Video Library Page Starts Here---------
+--------------------------------------------------------------------------------------------------- */
+.vlib-page {
+  background: var(--alternate-row-bg-three);
+}
+.vlib-filter-btn.active, .vlib-filter-btn:hover {
+  background: var(--tertiary-color);
+  color: var(--secondary-color) !important;
+  border-color: transparent !important;
+}
+.vlib-filter-btn {
+  background: var(--primary-color);
+  color: var(--color-white) !important;
+  border-color: transparent !important;
+}
+.vlib-play-btn {
+  background: var(--primary-color)!important;
+  color: var(--color-white)!important;
+}
+.vlib-info h4 {
+  color: var(--color-dark-text);
+}
+.vlib-meta {
+  color:  var(--color-dark-text);
+}
+.vlib-cat {
+  color: var(--primary-color);
+}
+.vlib-section-title {
+  color: var(--primary-color);
+}
+.vlib-pagination a:hover, .vlib-pagination span.active {
+    background: var(--primary-color);
+    color:var(--color-white);
+}
+.portal-footer {
+  margin-top: 0px !important;
+
+}
+.vlib-modal-close {
+    background: var(--primary-color); 
+    color: var(--color-white);
+}
+.vlib-modal-close:hover {
+  background: var(--secondary-color); 
+}
+.vlib-modal-player {
+    aspect-ratio: 16/9;
+    background: var(--color-black);
+    width: 100%;
+}
+/* -------------------------------------Student Section Video Library Page Ends Here---------
+--------------------------------------------------------------------------------------------- */
+/* -------------------------------------Student Section Download Page Starts Here---------
+--------------------------------------------------------------------------------------------- */
+.dl-page {
+  background-color: var(--alternate-row-bg-three);
+}
+.dl-section-label {
+  color: var(--primary-color);
+}
+.dl-card {
+  background: var(--color-white);
+  border: 1px solid  var(--alternate-row-bg-five);
+}
+.dl-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,.1); transform: translateY(-3px); 
+}
+.dl-body h4 {
+  color: var(--color-dark-text);
+}
+.dl-body p {
+  color: var(--color-dark-text);
+}
+ .btn-dl {
+    background: var(--primary-color);
+    color: #fff;
+}
+.btn-dl:hover {
+	background: var(--secondary-color);
+	color: #fff;
+}
+/* -------------------------------------Student Section Download Page Ends Here---------
+---------------------------------------------------------------------------------------- */
+/* -------------------------------------Student Section Schedule Page Starts Here---------
+---------------------------------------------------------------------------------------- */
+.schedule-note {
+  background: var(--alternate-row-bg-two);
+  color: var(--primary-color);
+  border: 1px solid  var(--primary-color);
+}
+.schedule-table {
+  background-color: var(--color-white);
+  border-color: var(--alternate-row-bg-five);
+}
+.schedule-table thead {
+  background-color:var(--alternate-row-bg-two);
+}
+.schedule-table tbody tr {
+  border-bottom-color: var(--alternate-row-bg-four);
+}
+.schedule-table tbody tr:hover {
+  background-color: var(--alternate-row-bg-one);
+}
+.badge-beginner {
+  background-color: var(--program-detail-alternate-row-bg2);
+  color: var(--color-black);
+}
+.badge-all {
+  background-color: var(--tertiary-color);
+  color: var(--color-white);
+}
+.badge-advanced {
+  background-color: var(--alternate-row-bg-four);
+  color: var(--primary-color);
+}
+/* -------------------------------------Student Section Schedule Page Ends Here---------
+---------------------------------------------------------------------------------------- */
+/* -------------------------------------Student Section Calender Page Starts Here---------
+---------------------------------------------------------------------------------------- */
+.mini-cal-nav {
+  border: 1px solid var(--alternate-row-bg-four);
+  background: var(--color-white);
+  color: var(--color-dark-grey);
+}
+.mini-cal-nav:hover { 
+  background: var(--alternate-row-bg-two);
+  border-color: var(--alternate-row-bg-four);
+}
+.mini-day.selected {
+  border: 2px solid var(--primary-color);
+  color: var(--color-dark-grey);
+  font-weight: 700;
+}
+.mini-day:hover { 
+  background: var(--alternate-row-bg-two);
+ }
+.mini-day.other-month { 
+  color: var(--contact-placeholder-color);
+}
+.mini-day.today { 
+  background: var(--primary-color); 
+  color: var(--color-white); 
+  font-weight: 700; 
+}
+.mini-day {
+  color: var(--color-dark-grey);
+}
+.mini-day-hdr {
+  color: var(--color-dark-grey);
+}
+.cal-filters-title {
+  color: var(--primary-color);
+}
+.filter-item {
+  color: var(--color-dark-grey);
+}
+.filter-check {
+  color: var(--color-white);
+}
+.cal-nav-arrow{
+  background: var(--color-white);
+  color: var(--color-dark-grey);
+  border: 1px solid var(--alternate-row-bg-four);
+}
+.cal-nav-arrow:hover {
+  background: var(--alternate-row-bg-two);
+}
+.cal-main-title {
+  color: var(--color-black); 
+}
+.cal-view-btn {
+   background: var(--color-white); 
+   color: var(--color-dark-grey);
+   border-right: 1px solid var(--primary-color) !important;
+}
+.cal-view-btn.active {
+  background: var(--primary-color);
+  color: var(--color-white);
+}
+.cal-view-btn:not(.active):hover {
+  background: var(--alternate-row-bg-two);
+  color: var(--color-dark-grey);
+}
+.cal-view-btns {   
+  border: 1px solid var(--primary-color);
+}
+ .cal-view-btn:last-child { 
+  border-right: none !important;
+}
+.cal-cell.today .cal-cell-num {
+  background: var(--alternate-row-bg-two);
+  color: var(--color-dark-grey);
+}
+.cal-cell.today { 
+  background: #f0f4ff; 
+}
+ .cal-cell:hover {
+  background-color: var(--alternate-row-bg-four);
+}
+
+/* ============================================================
+   4. MOBILE / TABLET NAV (OFFCANVAS)
+   ============================================================ */
+.hamburger {
+    border-color:  var(--tertiary-color)!important;
+	background-color: var(--primary-color);
+}
+.hamburger span {
+    background-color:  var(--secondary-color);
+}
+
+@media (max-width: 991px) {
+    nav {
+        background: var(--alternate-row-bg-two) !important;
+    }
+
+    header,
+    header.scrolled, .full-width-dropdown::after {
+        background: var(--tertiary-color) !important;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    header,
+    header.scrolled {
+        background: var(--primary-color) !important;
+    }
+
+    header nav, .full-width-dropdown::after, header .full-width-dropdown {
+        background-color: var(--tertiary-color) !important;
+        border-left-color: transparent !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .taste-text {
+        -webkit-text-fill-color: var(--color-white)!important;
+    }
+
+    .stat-label {
+        color: var(--color-white);
+    }
+    
+}
+
+
+/* === Dark theme overrides === */
+body,
+.background-header,
+.main-nav,
+.pl-card-body,
+.blog-main,
+.portal-body,
+.cart-main,
+.vlib-page,
+.dl-page,
+.blog-page{
+    background:#111418 !important;
+    color:#f2f2f2 !important;
+}
+.testimonial_card,.faq-card,.blog-card,.contact-form-wrap,.info-box,
+.cart-card,.order-summary-card,.ck-form-card,.success-card,
+.step-form-box,.login-form-panel,.sidebar-widget,.archive-box,
+.pl-product-card,.pd-main-image,.pd-desc-grid,.schedule-table{
+    background:#1b2028 !important;
+    color:#f2f2f2 !important;
+    border-color:#343b45 !important;
+}
+h1,h2,h3,h4,h5,h6,p,li,label,span,td,th,a{
+    color:inherit;
+}
+input,textarea,select,.form-control,.form-control-ck{
+    background:#242a33 !important;
+    color:#f2f2f2 !important;
+    border-color:#3c4450 !important;
+}

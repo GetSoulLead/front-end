@@ -1,0 +1,498 @@
+.product-hero {
+    position: relative;
+    min-height: 298px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-size: cover;
+    background-position: 100% center;
+    background-repeat: no-repeat;
+    padding: 130px 0 40px;
+}
+
+.product-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.product-hero__content {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    padding: 0px 0;
+}
+
+.product-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.product-hero__eyebrow::before {
+    content: "";
+    width: 42px;
+    height: 3px;
+}
+
+.product-hero h1 {
+    /* Standardized to the same site-wide hero title size: flat 50px from
+       tablet up, fluid taper below 768px. */
+    font-size: 50px;
+    line-height: 1;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 767.98px) {
+    .product-hero h1 {
+        font-size: clamp(24px, 6.7vw - 1px, 50px);
+    }
+}
+
+.product-hero p {
+    max-width: 620px;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.product-hero__crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    font-weight: 700;
+}
+
+.product-hero__crumbs a {
+    text-decoration: none;
+}
+
+.product-shop {
+    padding: 25px 0;
+}
+
+.pl-toolbar,
+.pl-empty {
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+.pl-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 18px;
+    margin-bottom: 24px;
+}
+
+.pl-count {
+    margin: 0;
+    font-weight: 800;
+}
+
+.pl-toolbar__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pl-sort select {
+    min-width: 190px;
+    padding: 11px 38px 11px 14px;
+    width: 100%;
+    border: 1px solid;
+    border-radius: 8px;
+    font-weight: 700;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.pl-products {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.pl-product-card {
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pl-product-card:hover {
+    transform: translateY(-6px);
+}
+
+.pl-card-image {
+    position: relative;
+    aspect-ratio: 1 / 0.82;
+    overflow: hidden;
+}
+
+.pl-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 26px;
+    transition: transform 0.35s ease;
+}
+
+.pl-product-card:hover .pl-card-image img {
+    transform: scale(1.06);
+}
+
+.pl-badge-row {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    right: 84px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.pl-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 28px;
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.pl-card-hover-actions {
+    position: absolute;
+    right: 14px;
+    top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 2;
+}
+
+.pl-hover-action {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 50% !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transform: translateX(14px);
+    transition: opacity 0.25s ease, transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.pl-hover-action::after {
+    display: none;
+}
+
+.pl-hover-action i {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.pl-product-card:hover .pl-hover-action,
+.pl-product-card:focus-within .pl-hover-action {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.pl-product-card:hover .pl-hover-action:nth-child(2),
+.pl-product-card:focus-within .pl-hover-action:nth-child(2) {
+    transition-delay: 0.05s;
+}
+
+.pl-card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.pl-category {
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.pl-product-card h3 {
+    margin: 7px 0 10px;
+    font-size: 19px;
+    line-height: 1.25;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.pl-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 9px;
+    margin-bottom: 16px;
+}
+
+.pl-current-price {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.pl-old-price {
+    text-decoration: line-through;
+    font-weight: 700;
+}
+
+.pl-card-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pl-card-actions .btn {
+    flex: 0 0 auto;
+    width: auto;
+    padding-inline: 14px;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 11px;
+    padding: 10px 20px;
+}
+
+.pl-empty {
+    display: none;
+    text-align: center;
+    padding: 58px 26px;
+}
+
+.pl-empty.is-visible {
+    display: block;
+}
+
+.pl-empty i {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.pl-empty h3 {
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.pl-empty p {
+    margin: 0;
+}
+
+.pl-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    /* Reset properties leaking in from the generic mobile "nav { position: absolute; ... }"
+       rule in responsive-fixes.css (max-width: 991px), which unintentionally targets this
+       <nav class="pl-pagination"> element too since that selector isn't scoped to "header nav". */
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    max-height: none;
+    overflow-y: visible;
+    flex-direction: row;
+    padding: 0;
+    border-top: 0;
+    z-index: auto;
+    /* Also cancel the generic "nav { background: ... !important }" mobile-nav
+       rule (yellow-theme-dark.css, max-width: 991px) that fills any <nav> with
+       a solid panel color. */
+    background: transparent !important;
+}
+
+.pl-page-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+    padding: 0;
+    margin-top: 0;
+    line-height: normal;
+    border: 1px solid;
+    border-radius: 8px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s ease;
+    overflow: visible;
+}
+
+.pl-page-btn::after {
+    display: none;
+}
+
+.pl-page-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+@media (min-width: 1500px) {
+    .pl-products {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 1199px) {
+    .pl-products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 991px) {
+    .product-hero {
+        min-height: 360px;
+    }
+
+    .product-shop {
+        padding: 65px 0;
+    }
+
+    .product-shop .container-fluid {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .pl-products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 767px) {
+    .product-hero {
+        min-height: auto;
+    }
+
+    .product-hero__content {
+        padding: 64px 0;
+    }
+
+    .product-hero p {
+        font-size: 16px;
+    }
+
+    .pl-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .pl-toolbar__actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .pl-sort select {
+        min-width: 0;
+    }
+
+    .pl-view-toggle {
+        width: 100%;
+    }
+
+    .pl-view-btn {
+        flex: 1;
+    }
+
+    .pl-products,
+    .pl-products.is-list {
+        grid-template-columns: 1fr;
+    }
+
+    .pl-products.is-list .pl-product-card {
+        display: block;
+    }
+
+    .pl-products.is-list .pl-card-image {
+        min-height: 0;
+        aspect-ratio: 1 / 0.82;
+    }
+
+    .pl-products.is-list .pl-card-body {
+        padding: 20px;
+    }
+
+    .pl-products.is-list .pl-product-card h3 {
+        font-size: 21px;
+    }
+
+    .pl-card-actions {
+        flex-direction: column;
+    }
+
+    .pl-card-actions .btn {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 575px) {
+    .product-shop {
+        padding: 48px 0;
+    }
+
+    .product-shop .container-fluid {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .pl-filter-card,
+    .pl-toolbar,
+    .pl-card-body,
+    .pl-products.is-list .pl-card-body {
+        padding: 16px;
+    }
+
+    .pl-filter-head {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .pl-filter-head .btn {
+        width: 100%;
+    }
+
+    .pl-price-row {
+        grid-template-columns: 1fr;
+    }
+
+    .pl-card-image,
+    .pl-products.is-list .pl-card-image {
+        aspect-ratio: 1 / 0.78;
+    }
+
+}

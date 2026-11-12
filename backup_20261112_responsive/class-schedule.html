@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Schedule — Apex Martial Arts Student Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/portal.css">
+    <link rel="stylesheet" href="assets/css/yellow-theme-dark.css">
+    
+   
+    <style>
+        .schedule-tabs { display:flex; gap:8px; margin-bottom:28px; flex-wrap:wrap; }
+        .tab-btn {
+            padding:9px 20px; border-radius:6px; font-size:.78rem; font-weight:700;
+            letter-spacing:.5px; text-transform:uppercase; cursor:pointer; transition:all .25s;
+            font-family:var(--font);
+        }
+        .schedule-section { display:none; }
+        .schedule-section.active { display:block; }
+        .schedule-note {
+            border-radius:8px; padding:14px 18px; margin-bottom:20px;
+            font-size:.82rem; 
+            display:flex; align-items:flex-start; gap:10px;
+        }
+        .schedule-note i { margin-top:2px; flex-shrink:0; }
+    </style>
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="top-bar-left">
+            <div class="brand"><span class="apex">Apex</span> Martial Arts<span class="badge-student">Student Area</span></div>
+        </div>
+        <div class="top-bar-right">
+            <div class="cart-wrap"><a href="product-listing.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a></div>
+            <div class="top-bar-divider"></div>
+            <a href="index.html" class="btn-main-site"><i class="fas fa-globe"></i> Main Site</a>
+            <a href="#" class="btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-inner">
+            <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            <ul>
+                <li><a href="Stindex.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li class="has-dropdown">
+                    <a href="class-schedule.html" class="active">Class Schedule <i class="fas fa-chevron-down" style="font-size:.6rem;margin-left:4px;"></i></a>
+                    <ul class="dropdown-nav">
+                        <li><a href="#adults">Adult Classes</a></li>
+                        <li><a href="#kids">Kids Classes</a></li>
+                        <li><a href="#advanced">Advanced / Black Belt</a></li>
+                        <li><a href="#open-mat">Open Mat</a></li>
+                    </ul>
+                </li>
+                <li><a href="8-week-plans.html">8 Week Plans</a></li>
+                <li class="has-dropdown has-mega">
+                    <a href="video-library.html">Video Training Library <i class="fas fa-chevron-down" style="font-size:.6rem;margin-left:4px;"></i></a>
+                    <div class="mega-dropdown">
+                        <ul class="mega-col-1">
+                            <li><a href="#" data-l1="beginner">Beginner <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="intermediate">Intermediate <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="advanced">Advanced <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="kata">Kata Series <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="sparring">Sparring <i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                        <div class="mega-col-2" data-panel="beginner"><ul>
+                            <li><a href="#" data-l2="fundamentals">Fundamentals <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="kicking">Kicking Drills <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="selfdefense">Self Defense <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-2" data-panel="intermediate"><ul>
+                            <li><a href="#" data-l2="sparring-basics">Sparring Basics <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="combos">Combo Drills <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="kata-mid">Kata Vol. 1–2 <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-2" data-panel="advanced"><ul>
+                            <li><a href="#" data-l2="blackbelt">Black Belt Prep <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="competition">Competition Training <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="weapons">Weapons Kata <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-2" data-panel="kata"><ul>
+                            <li><a href="#" data-l2="heian">Heian Series <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="nidan">Nidan Series <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="kata-adv">Advanced Kata <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-2" data-panel="sparring"><ul>
+                            <li><a href="#" data-l2="counters">Counter Combos <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="point">Point Sparring <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="comp-spar">Competition Sparring <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-3" data-panel="fundamentals"><ul><li><a href="video-library.html">Stances & Blocks — 12:30</a></li><li><a href="video-library.html">Basic Punching Form — 8:15</a></li><li><a href="video-library.html">Dojo Test Walkthrough — 18:42</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="kicking"><ul><li><a href="video-library.html">Kicking Drills — Power & Accuracy — 11:55</a></li><li><a href="video-library.html">Roundhouse & Side Kick — 9:40</a></li><li><a href="video-library.html">Jump Kick Techniques — 7:20</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="selfdefense"><ul><li><a href="video-library.html">Real-World Self Defense — 28:40</a></li><li><a href="video-library.html">Wrist & Grab Escapes — 14:10</a></li><li><a href="video-library.html">Ground Defence Essentials — 19:45</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="sparring-basics"><ul><li><a href="video-library.html">Sparring Tips & Counters — 15:30</a></li><li><a href="video-library.html">Footwork & Distance — 10:05</a></li><li><a href="video-library.html">Blocking & Counter Strikes — 22:10</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="combos"><ul><li><a href="video-library.html">3-Strike Combo Drill — 13:20</a></li><li><a href="video-library.html">Kick-Punch Combinations — 16:00</a></li><li><a href="video-library.html">Speed & Timing Drills — 11:30</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="kata-mid"><ul><li><a href="video-library.html">Kata Series Vol. 1 — Heian Shodan — 32:08</a></li><li><a href="video-library.html">Kata Series Vol. 2 — Heian Nidan — 28:55</a></li><li><a href="video-library.html">Kata Breakdown & Bunkai — 25:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="blackbelt"><ul><li><a href="video-library.html">Black Belt Conditioning Drills — 35:00</a></li><li><a href="video-library.html">1st Dan Requirements — 40:15</a></li><li><a href="video-library.html">Dojo Etiquette & Leadership — 20:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="competition"><ul><li><a href="video-library.html">Competition Sparring Tactics — 30:10</a></li><li><a href="video-library.html">Tournament Preparation — 22:45</a></li><li><a href="video-library.html">Judge Scoring Criteria — 15:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="weapons"><ul><li><a href="video-library.html">Bo Staff Kata — 38:20</a></li><li><a href="video-library.html">Nunchaku Basics — 24:00</a></li><li><a href="video-library.html">Sai Kata Introduction — 18:30</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="heian"><ul><li><a href="video-library.html">Heian Shodan Full — 32:08</a></li><li><a href="video-library.html">Heian Nidan Full — 28:55</a></li><li><a href="video-library.html">Heian Sandan Full — 30:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="nidan"><ul><li><a href="video-library.html">Nidan Kata Breakdown — 35:10</a></li><li><a href="video-library.html">Nidan Bunkai Applications — 27:40</a></li><li><a href="video-library.html">Nidan Speed Drills — 18:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="kata-adv"><ul><li><a href="video-library.html">Advanced Kata — Kanku Dai — 41:20</a></li><li><a href="video-library.html">Bassai Dai Full — 36:00</a></li><li><a href="video-library.html">Empi Kata — 29:15</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="counters"><ul><li><a href="video-library.html">Sparring Tips & Counter Combos — 15:30</a></li><li><a href="video-library.html">Sweep & Counter Drill — 12:00</a></li><li><a href="video-library.html">Jab-Cross-Hook Counter — 10:45</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="point"><ul><li><a href="video-library.html">Point Scoring System — 14:00</a></li><li><a href="video-library.html">Speed Point Sparring — 20:30</a></li><li><a href="video-library.html">Distance Management — 11:15</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="comp-spar"><ul><li><a href="video-library.html">Competition Sparring Tactics — 30:10</a></li><li><a href="video-library.html">Reading Your Opponent — 18:50</a></li><li><a href="video-library.html">Finals Strategy — 22:00</a></li></ul></div>
+                    </div>
+                </li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="Stcontact.html">Contact</a></li>
+                <li><a href="product-listing.html">Shop</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-noise"></div>
+        <div class="hero-content">
+            <span class="hero-eyebrow">Class Schedule</span>
+            <h1>Anyone Can Begin Martial Arts.<br>Any Age, Any Fitness Level.</h1>
+            <p>Browse all adult, kids, advanced, and open mat class times — find the perfect session for you.</p>
+        </div>
+    </section>
+
+    <div class="portal-body">
+        <main class="portal-main">
+
+            <div class="schedule-tabs">
+                <button class="tab-btn active" onclick="showTab('adults')">Adult Classes</button>
+                <button class="tab-btn" onclick="showTab('kids')">Kids Classes</button>
+                <button class="tab-btn" onclick="showTab('advanced')">Advanced / Black Belt</button>
+                <button class="tab-btn" onclick="showTab('open-mat')">Open Mat</button>
+            </div>
+
+            <!-- ADULTS -->
+            <div class="schedule-section active" id="adults">
+                <div class="section-heading">
+                    <div class="icon"><i class="fas fa-user"></i></div>
+                    <h2>Adult Classes</h2>
+                    <span class="count-badge">Ages 16+</span>
+                </div>
+                <div class="schedule-note">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Adult classes are open to all fitness levels. First class is always free for new students.</span>
+                </div>
+                <div style="overflow-x:auto;">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Monday</td><td>6:00 PM – 7:00 PM</td><td>Karate Fundamentals</td><td>Sensei Mike</td><td><span class="class-badge badge-beginner">Beginner</span></td><td>60 min</td></tr>
+                        <tr><td>Monday</td><td>7:00 PM – 8:00 PM</td><td>Intermediate Karate</td><td>Sensei Mike</td><td><span class="class-badge badge-advanced">Intermediate</span></td><td>60 min</td></tr>
+                        <tr><td>Tuesday</td><td>6:30 PM – 7:30 PM</td><td>Self Defense</td><td>Sensei Lisa</td><td><span class="class-badge badge-all">All Levels</span></td><td>60 min</td></tr>
+                        <tr><td>Wednesday</td><td>6:00 PM – 7:00 PM</td><td>Karate Fundamentals</td><td>Sensei Mike</td><td><span class="class-badge badge-beginner">Beginner</span></td><td>60 min</td></tr>
+                        <tr><td>Thursday</td><td>6:30 PM – 7:30 PM</td><td>Kickboxing Cardio</td><td>Coach Alex</td><td><span class="class-badge badge-all">All Levels</span></td><td>60 min</td></tr>
+                        <tr><td>Saturday</td><td>10:00 AM – 11:30 AM</td><td>Weekend Warriors</td><td>Sensei Mike</td><td><span class="class-badge badge-all">All Levels</span></td><td>90 min</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- KIDS -->
+            <div class="schedule-section" id="kids">
+                <div class="section-heading">
+                    <div class="icon"><i class="fas fa-child"></i></div>
+                    <h2>Kids Classes</h2>
+                    <span class="count-badge">Ages 5–15</span>
+                </div>
+                <div class="schedule-note">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Children's classes build discipline, confidence, and coordination in a safe and fun environment.</span>
+                </div>
+                <div style="overflow-x:auto;">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th><th>Time</th><th>Class</th><th>Instructor</th><th>Age Group</th><th>Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Monday</td><td>4:30 PM – 5:15 PM</td><td>Little Dragons</td><td>Sensei Lisa</td><td><span class="class-badge badge-beginner">Ages 5–7</span></td><td>45 min</td></tr>
+                        <tr><td>Monday</td><td>5:15 PM – 6:00 PM</td><td>Junior Karate</td><td>Sensei Lisa</td><td><span class="class-badge badge-advanced">Ages 8–12</span></td><td>45 min</td></tr>
+                        <tr><td>Wednesday</td><td>4:30 PM – 5:15 PM</td><td>Little Dragons</td><td>Coach Sarah</td><td><span class="class-badge badge-beginner">Ages 5–7</span></td><td>45 min</td></tr>
+                        <tr><td>Wednesday</td><td>5:15 PM – 6:00 PM</td><td>Junior Karate</td><td>Coach Sarah</td><td><span class="class-badge badge-advanced">Ages 8–12</span></td><td>45 min</td></tr>
+                        <tr><td>Thursday</td><td>5:00 PM – 5:45 PM</td><td>Teen Martial Arts</td><td>Sensei Mike</td><td><span class="class-badge badge-all">Ages 13–15</span></td><td>45 min</td></tr>
+                        <tr><td>Saturday</td><td>9:00 AM – 9:45 AM</td><td>Little Dragons</td><td>Sensei Lisa</td><td><span class="class-badge badge-beginner">Ages 5–7</span></td><td>45 min</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- ADVANCED -->
+            <div class="schedule-section" id="advanced">
+                <div class="section-heading">
+                    <div class="icon"><i class="fas fa-star"></i></div>
+                    <h2>Advanced / Black Belt Classes</h2>
+                    <span class="count-badge">By Invitation</span>
+                </div>
+                <div class="schedule-note">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Advanced classes are by instructor invitation only. Students must hold a minimum green belt.</span>
+                </div>
+                <div style="overflow-x:auto;">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th><th>Time</th><th>Class</th><th>Instructor</th><th>Requirement</th><th>Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Tuesday</td><td>7:30 PM – 9:00 PM</td><td>Advanced Kata</td><td>Sensei Mike</td><td><span class="class-badge badge-advanced">Green Belt+</span></td><td>90 min</td></tr>
+                        <tr><td>Thursday</td><td>7:30 PM – 9:00 PM</td><td>Kumite Sparring</td><td>Sensei Mike</td><td><span class="class-badge badge-advanced">Brown Belt+</span></td><td>90 min</td></tr>
+                        <tr><td>Saturday</td><td>11:30 AM – 1:00 PM</td><td>Black Belt Club</td><td>Sensei Mike</td><td><span class="class-badge badge-advanced">Black Belt</span></td><td>90 min</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- OPEN MAT -->
+            <div class="schedule-section" id="open-mat">
+                <div class="section-heading">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                    <h2>Open Mat Sessions</h2>
+                    <span class="count-badge">All Members</span>
+                </div>
+                <div class="schedule-note">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Open Mat is available to all active members. Use the time to drill, practice, or get extra reps in.</span>
+                </div>
+                <div style="overflow-x:auto;">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th><th>Time</th><th>Description</th><th>Supervision</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Friday</td><td>7:00 PM – 9:00 PM</td><td>Free practice / drilling / sparring</td><td>Assistant Instructor</td></tr>
+                        <tr><td>Sunday</td><td>11:00 AM – 1:00 PM</td><td>Family open mat — all ages welcome</td><td>Sensei Lisa</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+        </main>
+
+        <aside class="portal-sidebar">
+            <div class="sidebar-widget">
+                <div class="widget-title">Jump To</div>
+                <ul class="widget-list">
+                    <li><a href="#" onclick="showTab('adults')"><i class="fas fa-chevron-right"></i> Adult Classes</a></li>
+                    <li><a href="#" onclick="showTab('kids')"><i class="fas fa-chevron-right"></i> Kids Classes</a></li>
+                    <li><a href="#" onclick="showTab('advanced')"><i class="fas fa-chevron-right"></i> Advanced / Black Belt</a></li>
+                    <li><a href="#" onclick="showTab('open-mat')"><i class="fas fa-chevron-right"></i> Open Mat</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-widget">
+                <div class="widget-title">Need Help?</div>
+                <ul class="widget-list">
+                    <li><a href="Stcontact.html"><i class="fas fa-envelope"></i> Contact Instructor</a></li>
+                    <li><a href="calendar.html"><i class="fas fa-calendar"></i> View Full Calendar</a></li>
+                    <li><a href="downloads.html"><i class="fas fa-file-pdf"></i> Download Schedule PDF</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="portal-footer">
+        <span>© 2025 Apex Martial Arts. All rights reserved.</span>
+        <div class="footer-links"><a href="Stcontact.html">Contact</a><a href="index.html">Main Site</a></div>
+    </footer>
+
+    <script src="assets/js/portal.js"></script>
+    <script>
+        function showTab(id) {
+            document.querySelectorAll('.schedule-section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            const idx = ['adults','kids','advanced','open-mat'].indexOf(id);
+            document.querySelectorAll('.tab-btn')[idx].classList.add('active');
+        }
+        // Handle anchor links
+        const hash = location.hash.replace('#','');
+        if (hash && ['adults','kids','advanced','open-mat'].includes(hash)) showTab(hash);
+    </script>
+</body>
+</html>

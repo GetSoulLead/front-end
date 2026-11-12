@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Grid - Martial Arts & Self Defense</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.css?v=3">
+    <link rel="stylesheet" href="assets/css/blog-grid.css">
+    <link rel="stylesheet" href="assets/css/yellow-theme-dark.css">
+   
+</head>
+
+<body class="blog-page">
+
+    <!-- ===== TOP HEADER ===== -->
+    <div class="top-header">
+        <div class="top-header-left">
+            <a href="mailto:info@example.com">Self Defense, Adult &amp; Children Martial Arts Classes in Memphis</a>
+        </div>
+        <div class="top-header-right">
+            <a href="tel:+19087319123"><i class="bi bi-telephone me-2"></i> (908) 763-9123</a>
+            <a href="Stindex.html"><i class="bi bi-person me-2"></i> Student Portal</a>
+            <div class="cart-container position-relative">
+                <a href="#" class="position-relative cart">
+                    <i class="bi bi-cart3"></i>
+                    <span class="cart-count">3</span>
+                </a>
+                <div class="cart-dropdown" id="cartDropdown">
+                    <div class="cart-item gap-3">
+                        <span class="item-remove"></span>
+                        <img src="assets/images/f1.png" class="item-image" alt="">
+                        <div class="item-details flex-grow-1">
+                            <h6>Strike Gloves</h6>
+                            <div class="item-qty-price">2x $64.00</div>
+                        </div>
+                    </div>
+                    <div class="cart-item gap-3">
+                        <span class="item-remove"></span>
+                        <img src="assets/images/f2.png" class="item-image" alt="">
+                        <div class="item-details flex-grow-1">
+                            <h6>Training Pads</h6>
+                            <div class="item-qty-price">1x $52.00</div>
+                        </div>
+                    </div>
+                    <div class="cart-total">
+                        <div class="total-row">
+                            <span>Total</span>
+                            <span class="total-price">$180.00</span>
+                        </div>
+                        <button class="btn w-100 bg-white">Cart</button>
+                        <button class="btn btn-theme w-100">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER / NAV ===== -->
+    <header class="background-header">
+        <a href="Index.html" class="logo">
+            <img src="assets/images/logo-2.png" alt="Logo">
+        </a>        <nav>
+            <a href="Index.html" class="main-menu" id="home-link">Home</a>
+
+            <div class="nav-item-dropdown">
+                <a href="aboutus.html" class="main-menu">About Us <i class="bi bi-chevron-down"></i></a>
+                <div class="full-width-dropdown">
+                    <div class="dropdown-content-align mega-grid about-dropdownGrid aboutus-dropdown">
+                        <div class="simple-list mega-col">
+                            <h6>About Us</h6>
+                            <ul>
+                                <li><a href="aboutus.html">Our School</a></li>
+                                <li><a href="#">Reviews &#128077;</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xxl-3 col-xl-3 d-none d-xxl-block">
+                            <div class="tp-megamenu-portfolio-text">
+                                <h4>50+</h4><span>Martial arts training programs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item-dropdown">
+                <a href="program-category.html" class="main-menu">Our Programs <i class="bi bi-chevron-down"></i></a>
+                <div class="full-width-dropdown">
+                    <div class="dropdown-content-align">
+                        <div class="mega-grid">
+                            <div class="mega-col">
+                                <h6><a href="program-category.html">Children's Programs</a></h6>
+                                <span class="age">Age 4-12</span>
+                                <ul>
+                                    <li><a href="program-category.html">Little Dragons</a></li>
+                                    <li><a href="program-category.html">Juniors</a></li>
+                                    <li><a href="program-category.html">Leadership</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h6><a href="programs-details.html">Adult Programs</a></h6>
+                                <span class="age">Age 18+</span>
+                                <ul>
+                                    <li><a href="programs-details.html">Jeet Kune Do</a></li>
+                                    <li><a href="programs-details.html">Kali</a></li>
+                                    <li><a href="programs-details.html">Kung Fu</a></li>
+                                    <li><a href="programs-details.html">Tai Chi</a></li>
+                                    <li><a href="programs-details.html">Qi Gong</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h6><a href="program-category.html">Just 4 Kids</a></h6>
+                                <span class="age">Age 20+</span>
+                                <ul>
+                                    <li><a href="program-category.html">Parent's Night Out</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 d-none d-xxl-block">
+                                <div class="tp-megamenu-portfolio-text">
+                                    <h4>50+</h4><span>Martial arts training programs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="trial-offer.html" class="main-menu">Trial Offer</a>
+            <a href="product-listing.html" class="main-menu">Shop</a>
+            <a href="blog-grid.html" class="main-menu active">Blog</a>
+
+            <div class="nav-item-dropdown contact-nav-item-dropdown">
+                <a href="contact.html" class="main-menu">Contact Us <i class="bi bi-chevron-down"></i></a>
+                <div class="full-width-dropdown contact-full-width-dropdown">
+                    <div class="dropdown-content-align contact-dropdown-grid contactus-dropdown">
+                        <div class="contact-simple-list contact-mega-col">
+                            <h6>Contact Us</h6>
+                            <ul>
+                                <li><a href="contact.html">Send a Message</a></li>
+                                <li><a href="contact.html#contact">Visit Our School</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xxl-3 col-xl-3 d-none d-xxl-block contact-dropdown-stat">
+                            <div class="contact-megamenu-portfolio-text">
+                                <h4>24h</h4><span>quick response for trial class questions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+<a class="btn btn-theme d-lg-block d-none header-btn" href="contact.html">Try a Class for FREE!</a>
+
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="blog-hero__content">
+                <!-- <div class="blog-hero__eyebrow">Our Blog</div> -->
+                <h1>Blog — Grid</h1>
+                <nav class="blog-hero__crumbs" aria-label="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="bi bi-chevron-right"></i>
+                    <span>Blog Grid</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="blog-main">
+        <div class="container">
+            <div class="blog-layout">
+
+                <!-- ===== BLOG GRID ===== -->
+                <div>
+                    <div class="blog-grid">
+
+                        <!-- Card 1 -->
+                        <article class="blog-card">
+                            <a href="#">
+                                <div class="blog-card__img">
+                                    <img
+                                        src="assets/images/post-1.jpg"
+                                        alt="Self Defense Techniques">
+                                </div>
+                                <div class="blog-card__body">
+                                    <span class="blog-card__cat">Self Defense</span>
+                                    <h2 class="blog-card__title">Essential Self-Defense Techniques Every Beginner Should Learn</h2>
+                                    <div class="blog-card__meta">
+                                        <span><i class="bi bi-calendar3"></i>Sep 18, 2025</span>
+                                        <span><i class="bi bi-chat-dots"></i>0 Comments</span>
+                                    </div>
+                                    <p class="blog-card__excerpt">Donec id blandit felis. Aenean placerat sodales commodo. In sed odio at lorem cursus dignissim. Curabitur vel auctor elit.</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="blog-card">
+                            <a href="#">
+                                <div class="blog-card__img">
+                                    <img
+                                        src="assets/images/program/bx1.jpg"
+                                        alt="MMA Training">
+                                </div>
+                                <div class="blog-card__body">
+                                    <span class="blog-card__cat">MMA Techniques</span>
+                                    <h2 class="blog-card__title">How MMA Training Improves Physical and Mental Strength</h2>
+                                    <div class="blog-card__meta">
+                                        <span><i class="bi bi-calendar3"></i>Sep 18, 2025</span>
+                                        <span><i class="bi bi-chat-dots"></i>2 Comments</span>
+                                    </div>
+                                    <p class="blog-card__excerpt">Maecenas facilisis egestas lacus, eu pulvinar nunc varius dapibus. Nunc velit nulla, iaculis nec dictum eget, fringilla et orci.</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="blog-card">
+                            <a href="#">
+                                <div class="blog-card__img">
+                                    <img
+                                        src="assets/images/about/aboutside.jpg"
+                                        alt="Martial Arts for Kids">
+                                </div>
+                                <div class="blog-card__body">
+                                    <span class="blog-card__cat">Martial Arts Training</span>
+                                    <h2 class="blog-card__title">The Role of Counseling in Navigating Life Transitions</h2>
+                                    <div class="blog-card__meta">
+                                        <span><i class="bi bi-calendar3"></i>Sep 18, 2025</span>
+                                        <span><i class="bi bi-chat-dots"></i>0 Comments</span>
+                                    </div>
+                                    <p class="blog-card__excerpt">Sed ut mauris turpis. Etiam tortor sapien, vestibulum nec nulla sit, malesuada vel dolor. Integer consequat felis sed sapien mollis.</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="blog-card">
+                            <a href="#">
+                                <div class="blog-card__img">
+                                    <img
+                                        src="assets/images/landscape-1.jpg"
+                                        alt="Mental Wellness in Martial Arts">
+                                </div>
+                                <div class="blog-card__body">
+                                    <span class="blog-card__cat">Fitness &amp; Conditioning</span>
+                                    <h2 class="blog-card__title">Unlocking Self-Awareness Through Psychological Techniques</h2>
+                                    <div class="blog-card__meta">
+                                        <span><i class="bi bi-calendar3"></i>Sep 18, 2025</span>
+                                        <span><i class="bi bi-chat-dots"></i>2 Comments</span>
+                                    </div>
+                                    <p class="blog-card__excerpt">Aenean arcu metus, suscipit ac sagittis vel, varius vulputate purus. Vestibulum eget libero consequat, finibus urna id, consequat mi.</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <!-- Card 5 -->
+                        <article class="blog-card">
+                            <a href="#">
+                                <div class="blog-card__img">
+                                    <img
+                                        src="assets/images/program/bx4.jpg"
+                                        alt="Kickboxing Training">
+                                </div>
+                                <div class="blog-card__body">
+                                    <span class="blog-card__cat">Kickboxing</span>
+                                    <h2 class="blog-card__title">How to Choose the Right Therapist for Your Needs</h2>
+                                    <div class="blog-card__meta">
+                                        <span><i class="bi bi-calendar3"></i>Sep 18, 2025</span>
+                                        <span><i class="bi bi-chat-dots"></i>0 Comments</span>
+                                    </div>
+                                    <p class="blog-card__excerpt">Sed ut mauris turpis. Etiam tortor sapien, vestibulum nec nulla sit, malesuada vel dolor. Nunc consequat urna id purus aliquam.</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <!-- Card 6 -->
+                        <article class="blog-card">
+                            <a href="#">
+                                <div class="blog-card__img">
+                                    <img
+                                        src="assets/images/post-3.jpg"
+                                        alt="Karate Training">
+                                </div>
+                                <div class="blog-card__body">
+                                    <span class="blog-card__cat">Karate Training</span>
+                                    <h2 class="blog-card__title">Breaking the Stigma Around Counseling and Mental Health</h2>
+                                    <div class="blog-card__meta">
+                                        <span><i class="bi bi-calendar3"></i>Sep 18, 2025</span>
+                                        <span><i class="bi bi-chat-dots"></i>2 Comments</span>
+                                    </div>
+                                    <p class="blog-card__excerpt">Donec rutrum nibh quis molestie blandit. Suspendisse id nisl at enim imperdiet sodales vel vel sem. Proin aliquet neque in diam.</p>
+                                </div>
+                            </a>
+                        </article>
+
+                    </div><!-- /blog-grid -->
+
+                    <!-- ===== PAGINATION ===== -->
+                    <nav class="blog-pagination" aria-label="Blog pagination">
+                        <a href="#" class="pg-btn pg-arrow" aria-label="Previous">
+                            <i class="bi bi-chevron-left"></i>
+                        </a>
+                        <a href="#" class="pg-btn active">1</a>
+                        <a href="#" class="pg-btn">2</a>
+                        <a href="#" class="pg-btn pg-arrow" aria-label="Next">
+                            <i class="bi bi-chevron-right"></i>
+                        </a>
+                    </nav>
+
+                </div><!-- /blog content -->
+
+                <!-- ===== SIDEBAR ===== -->
+                <aside class="blog-sidebar">
+
+                    <!-- Search -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Search</h3>
+                        <div class="sb-search">
+                            <input type="text" placeholder="Search posts...">
+                            <button type="button" aria-label="Search">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Categories</h3>
+                        <div class="sb-categories">
+                            <a href="#" class="sb-cat-item">
+                                MMA Training
+                                <span class="sb-cat-count">8</span>
+                            </a>
+                            <a href="#" class="sb-cat-item">
+                                Karate
+                                <span class="sb-cat-count">5</span>
+                            </a>
+                            <a href="#" class="sb-cat-item">
+                                Kickboxing
+                                <span class="sb-cat-count">6</span>
+                            </a>
+                            <a href="#" class="sb-cat-item">
+                                Self Defense
+                                <span class="sb-cat-count">9</span>
+                            </a>
+                            <a href="#" class="sb-cat-item">
+                                Fitness &amp; Conditioning
+                                <span class="sb-cat-count">4</span>
+                            </a>
+                            <a href="#" class="sb-cat-item">
+                                Martial Arts Tips
+                                <span class="sb-cat-count">7</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Recent Posts -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Recent Posts</h3>
+                        <div class="sb-recent-posts">
+                            <a href="#" class="sb-post">
+                                <div class="sb-post__thumb">
+                                    <img src="assets/images/post-1.jpg" alt="Self Defense">
+                                </div>
+                                <div class="sb-post__info">
+                                    <span class="sb-post__cat">Self Defense</span>
+                                    <span class="sb-post__title">Essential Self-Defense Techniques Every Beginner Should Learn</span>
+                                    <span class="sb-post__date">Sep 18, 2025</span>
+                                </div>
+                            </a>
+                            <a href="#" class="sb-post">
+                                <div class="sb-post__thumb">
+                                    <img src="assets/images/program/bx1.jpg" alt="MMA Training">
+                                </div>
+                                <div class="sb-post__info">
+                                    <span class="sb-post__cat">MMA Techniques</span>
+                                    <span class="sb-post__title">How MMA Training Improves Physical and Mental Strength</span>
+                                    <span class="sb-post__date">Sep 18, 2025</span>
+                                </div>
+                            </a>
+                            <a href="#" class="sb-post">
+                                <div class="sb-post__thumb">
+                                    <img src="assets/images/post-3.jpg" alt="Karate">
+                                </div>
+                                <div class="sb-post__info">
+                                    <span class="sb-post__cat">Karate Training</span>
+                                    <span class="sb-post__title">Benefits of Karate for Children and Adults of All Ages</span>
+                                    <span class="sb-post__date">Sep 18, 2025</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Promo Card -->
+                    <div class="sidebar-promo">
+                        <img
+                            src="assets/images/cta-bg.jpg"
+                            alt="Train With Us"
+                            class="sidebar-promo__img">
+                        <div class="sidebar-promo__overlay"></div>
+                        <div class="sidebar-promo__body">
+                            <span class="sidebar-promo__tag">Free Trial</span>
+                            <div class="sidebar-promo__title">Start Your<br>Martial Arts<br>Journey Today</div>
+                            <a href="trial-offer.html" class="sidebar-promo__btn">
+                                Book Free Class <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </aside>
+
+            </div><!-- /blog-layout -->
+        </div><!-- /container -->
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="ma-footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-6 flex-div-footer">
+                    <div class="footer-brand mb-3">
+                        <img src="assets/images/logo-2.png" alt="Logo" class="footer-logo" width="100" height="100">
+                    </div>
+                    <div class="social-links mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Explore</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Instructors</a></li>
+                        <li><a href="#">Class Schedule</a></li>
+                        <li><a href="#">Pricing Plan</a></li>
+                        <li><a href="#">Latest Blogs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Programs</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Kids Karate</a></li>
+                        <li><a href="#">Krav Maga</a></li>
+                        <li><a href="#">Brazilian Jiu-Jitsu</a></li>
+                        <li><a href="#">Muay Thai</a></li>
+                        <li><a href="#">Private Lessons</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Get In Touch</h5>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>1819 Pleasant Blvd, Memphis, TN 38134</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+47 333 78901</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@usakarate.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="copyright">© Copyright 2026 USA Karate. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="footer-bottom-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js?v=3"></script>
+
+</body>
+</html>
+
+
+
+                                                             

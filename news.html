@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News — Apex Martial Arts Student Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/portal.css">
+    <link rel="stylesheet" href="assets/css/yellow-theme-dark.css">
+
+   
+    <style>
+        /* ── News-specific overrides ── */
+        .news-post {
+            padding: 0 0 28px 0;
+            margin-bottom: 0;
+        }
+        .news-post h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+            letter-spacing: -.1px;
+            line-height: 1.3;
+        }
+        .news-post .post-date {
+            font-size: .84rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .news-post p {
+            font-size: .92rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .btn-continue {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .3px;
+            padding: 9px 20px;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+        
+
+        .news-divider {
+            border: none;
+            margin: 28px 0;
+        }
+
+        /* Older post button */
+        .btn-older-post {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--red);
+            color: #fff;
+            font-size: .78rem;
+            font-weight: 800;
+            letter-spacing: .4px;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: var(--transition);
+            margin-top: 8px;
+        }
+        .btn-older-post:hover { background: var(--red-dark); }
+
+        /* Archive sidebar */
+        .archive-box {
+            border-radius: 10px;
+            padding: 18px 20px;
+            margin-bottom: 20px;
+        }
+        .archive-box h3 {
+            font-size: 1rem;
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+        .archive-link {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 0;
+            font-size: .88rem;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .archive-link:last-child { border-bottom: none; }
+        .archive-link:hover { padding-left: 4px; }
+        .archive-link i { font-size: .6rem; }
+
+        /* Archive accordion */
+        .archive-month:last-child { border-bottom: none; }
+
+        .archive-toggle {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 9px 0;
+            font-size: .88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            user-select: none;
+        }
+        .archive-toggle .arrow {
+            font-size: .6rem;
+            transition: transform .22s ease;
+            flex-shrink: 0;
+        }
+        .archive-month.open .archive-toggle .arrow {
+            transform: rotate(90deg);
+        }
+        .archive-toggle .month-label { flex: 1; }
+
+        .archive-posts {
+            display: none;
+            padding: 2px 0 10px 20px;
+        }
+        .archive-month.open .archive-posts { display: block; }
+        .archive-posts a {
+            display: block;
+            font-size: .82rem;
+            font-weight: 500;
+            padding: 4px 0;
+            transition: var(--transition);
+            line-height: 1.4;
+        }
+        .archive-posts a:hover { padding-left: 4px; }
+
+        /* Main site link — sidebar style */
+        .main-site-link {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: .82rem;
+            font-weight: 700;
+            color: var(--text-2);
+            margin-bottom: 20px;
+            padding: 10px 14px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+        .main-site-link i { font-size: .75rem; }
+    </style>
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="top-bar-left">
+            <div class="brand"><span class="apex">Apex</span> Martial Arts <span class="badge-student">Student Area</span></div>
+        </div>
+        <div class="top-bar-right">
+            <div class="cart-wrap"><a href="product-listing.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a></div>
+            <div class="top-bar-divider"></div>
+            <a href="index.html" class="btn-main-site"><i class="fas fa-globe"></i> Main Site</a>
+            <a href="#" class="btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-inner">
+            <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            <ul>
+                <li><a href="Stindex.html">Home</a></li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li class="has-dropdown">
+                    <a href="class-schedule.html">Class Schedule <i class="fas fa-chevron-down" style="font-size:.55rem;margin-left:3px;"></i></a>
+                    <ul class="dropdown-nav">
+                        <li><a href="class-schedule.html#adults">Adult Classes</a></li>
+                        <li><a href="class-schedule.html#kids">Kids Classes</a></li>
+                        <li><a href="class-schedule.html#advanced">Advanced / Black Belt</a></li>
+                        <li><a href="class-schedule.html#open-mat">Open Mat</a></li>
+                    </ul>
+                </li>
+                <li><a href="8-week-plans.html">8 Week Plans</a></li>
+                <li class="has-dropdown has-mega">
+                    <a href="video-library.html">Video Training Library <i class="fas fa-chevron-down" style="font-size:.6rem;margin-left:4px;"></i></a>
+                    <div class="mega-dropdown">
+                        <ul class="mega-col-1">
+                            <li><a href="#" data-l1="beginner">Beginner <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="intermediate">Intermediate <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="advanced">Advanced <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="kata">Kata Series <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="sparring">Sparring <i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                        <div class="mega-col-2" data-panel="beginner"><ul>
+                            <li><a href="#" data-l2="fundamentals">Fundamentals <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="kicking">Kicking Drills <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="selfdefense">Self Defense <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-2" data-panel="intermediate"><ul>
+                            <li><a href="#" data-l2="sparring-basics">Sparring Basics <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="combos">Combo Drills <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="kata-mid">Kata Vol. 1–2 <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-2" data-panel="advanced"><ul>
+                            <li><a href="#" data-l2="blackbelt">Black Belt Prep <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="competition">Competition Training <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="weapons">Weapons Kata <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-2" data-panel="kata"><ul>
+                            <li><a href="#" data-l2="heian">Heian Series <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="nidan">Nidan Series <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="kata-adv">Advanced Kata <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-2" data-panel="sparring"><ul>
+                            <li><a href="#" data-l2="counters">Counter Combos <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="point">Point Sparring <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="comp-spar">Competition Sparring <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-3" data-panel="fundamentals"><ul><li><a href="video-library.html">Stances & Blocks — 12:30</a></li><li><a href="video-library.html">Basic Punching Form — 8:15</a></li><li><a href="video-library.html">Dojo Test Walkthrough — 18:42</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="kicking"><ul><li><a href="video-library.html">Kicking Drills — Power & Accuracy — 11:55</a></li><li><a href="video-library.html">Roundhouse & Side Kick — 9:40</a></li><li><a href="video-library.html">Jump Kick Techniques — 7:20</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="selfdefense"><ul><li><a href="video-library.html">Real-World Self Defense — 28:40</a></li><li><a href="video-library.html">Wrist & Grab Escapes — 14:10</a></li><li><a href="video-library.html">Ground Defence Essentials — 19:45</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="sparring-basics"><ul><li><a href="video-library.html">Sparring Tips & Counters — 15:30</a></li><li><a href="video-library.html">Footwork & Distance — 10:05</a></li><li><a href="video-library.html">Blocking & Counter Strikes — 22:10</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="combos"><ul><li><a href="video-library.html">3-Strike Combo Drill — 13:20</a></li><li><a href="video-library.html">Kick-Punch Combinations — 16:00</a></li><li><a href="video-library.html">Speed & Timing Drills — 11:30</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="kata-mid"><ul><li><a href="video-library.html">Kata Series Vol. 1 — Heian Shodan — 32:08</a></li><li><a href="video-library.html">Kata Series Vol. 2 — Heian Nidan — 28:55</a></li><li><a href="video-library.html">Kata Breakdown & Bunkai — 25:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="blackbelt"><ul><li><a href="video-library.html">Black Belt Conditioning Drills — 35:00</a></li><li><a href="video-library.html">1st Dan Requirements — 40:15</a></li><li><a href="video-library.html">Dojo Etiquette & Leadership — 20:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="competition"><ul><li><a href="video-library.html">Competition Sparring Tactics — 30:10</a></li><li><a href="video-library.html">Tournament Preparation — 22:45</a></li><li><a href="video-library.html">Judge Scoring Criteria — 15:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="weapons"><ul><li><a href="video-library.html">Bo Staff Kata — 38:20</a></li><li><a href="video-library.html">Nunchaku Basics — 24:00</a></li><li><a href="video-library.html">Sai Kata Introduction — 18:30</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="heian"><ul><li><a href="video-library.html">Heian Shodan Full — 32:08</a></li><li><a href="video-library.html">Heian Nidan Full — 28:55</a></li><li><a href="video-library.html">Heian Sandan Full — 30:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="nidan"><ul><li><a href="video-library.html">Nidan Kata Breakdown — 35:10</a></li><li><a href="video-library.html">Nidan Bunkai Applications — 27:40</a></li><li><a href="video-library.html">Nidan Speed Drills — 18:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="kata-adv"><ul><li><a href="video-library.html">Advanced Kata — Kanku Dai — 41:20</a></li><li><a href="video-library.html">Bassai Dai Full — 36:00</a></li><li><a href="video-library.html">Empi Kata — 29:15</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="counters"><ul><li><a href="video-library.html">Sparring Tips & Counter Combos — 15:30</a></li><li><a href="video-library.html">Sweep & Counter Drill — 12:00</a></li><li><a href="video-library.html">Jab-Cross-Hook Counter — 10:45</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="point"><ul><li><a href="video-library.html">Point Scoring System — 14:00</a></li><li><a href="video-library.html">Speed Point Sparring — 20:30</a></li><li><a href="video-library.html">Distance Management — 11:15</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="comp-spar"><ul><li><a href="video-library.html">Competition Sparring Tactics — 30:10</a></li><li><a href="video-library.html">Reading Your Opponent — 18:50</a></li><li><a href="video-library.html">Finals Strategy — 22:00</a></li></ul></div>
+                    </div>
+                </li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="Stcontact.html">Contact</a></li>
+                <li><a href="product-listing.html">Shop</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO — same as home -->
+    <section class="hero">
+        <div class="hero-noise"></div>
+        <div class="hero-content">
+            <span class="hero-eyebrow">Student News</span>
+            <h1>Anyone Can Begin Martial Arts.<br>Any Age, Any Fitness Level.</h1>
+            <p>Stay up to date with the latest dojo news, events, and special announcements.</p>
+        </div>
+    </section>
+
+    <div class="portal-body" style="padding-top:36px; padding-bottom:48px;">
+
+        <!-- MAIN POSTS -->
+        <main class="portal-main">
+
+            <div class="section-title-deco" style="margin-bottom:32px;">
+                <h2>Student News</h2>
+            </div>
+
+            <!-- Post 1 -->
+            <div class="news-post">
+                <h3>New Training Schedule for Fall 2025</h3>
+                <span class="post-date">Posted: August 18, 2025</span>
+                <p>We're excited to announce our updated class schedule for the fall season. New beginner sessions have been added on Tuesday and Thursday evenings from 6:30 PM to 7:30 PM. Don't miss out — spots are limited and filling fast!</p>
+                <a href="#" class="btn-continue">Continue Reading</a>
+            </div>
+
+            <hr class="news-divider">
+
+            <!-- Post 2 -->
+            <div class="news-post">
+                <h3>Summer Belt Testing Results — Congratulations!</h3>
+                <span class="post-date">Posted: August 18, 2025</span>
+                <p>Congratulations to all students who participated in our summer belt testing ceremony! Your dedication and hard work are truly commendable. Check the full results list and see who advanced to the next level.</p>
+                <a href="#" class="btn-continue">Continue Reading</a>
+            </div>
+
+            <hr class="news-divider">
+
+            <!-- Post 3 -->
+            <div class="news-post">
+                <h3>Annual Tournament — Registration Now Open</h3>
+                <span class="post-date">Posted: July 30, 2025</span>
+                <p>Our annual tournament is just around the corner! Register early to secure your spot and take advantage of the early-bird discount. Categories available for all ages and belt levels.</p>
+                <a href="#" class="btn-continue">Continue Reading</a>
+            </div>
+
+            <hr class="news-divider">
+
+            <!-- Post 4 -->
+            <div class="news-post">
+                <h3>New Self-Defense Workshop Added — Limited Spots</h3>
+                <span class="post-date">Posted: July 10, 2025</span>
+                <p>We're introducing a dedicated self-defense workshop this month, open to all current students. The 4-hour intensive covers real-world scenarios, situational awareness, and practical defense techniques.</p>
+                <a href="#" class="btn-continue">Continue Reading</a>
+            </div>
+
+            <hr class="news-divider">
+
+            <!-- Post 5 -->
+            <div class="news-post">
+                <h3>Holiday Class Schedule — July 4th Week</h3>
+                <span class="post-date">Posted: June 22, 2025</span>
+                <p>Please note that the dojo will have a modified schedule during the July 4th holiday week. All morning classes will run as normal; evening classes will be cancelled July 4th and 5th only.</p>
+                <a href="#" class="btn-continue">Continue Reading</a>
+            </div>
+
+            <hr class="news-divider">
+
+            <!-- Post 6 -->
+            <div class="news-post">
+                <h3>Open Mat Sessions Now Every Friday</h3>
+                <span class="post-date">Posted: June 5, 2025</span>
+                <p>Starting this month, we're offering open mat every Friday evening from 7 PM to 9 PM. Open to all members, this is your chance to drill, spar, and sharpen your skills with fellow students.</p>
+                <a href="#" class="btn-continue">Continue Reading</a>
+            </div>
+
+            <hr class="news-divider" style="margin-bottom:20px;">
+
+            <a href="#" class="btn-older-post"><i class="fas fa-angle-double-left"></i> Older Post</a>
+
+        </main>
+
+        <!-- SIDEBAR -->
+        <aside class="portal-sidebar">
+
+            <!-- Main Site link — styled like original sidebar link -->
+            <!-- Archive accordion -->
+            <div class="archive-box">
+                <h3>Archive</h3>
+
+                <div class="archive-month open">
+                    <div class="archive-toggle" onclick="toggleArchive(this)">
+                        <i class="fas fa-caret-right arrow"></i>
+                        <span class="month-label">Aug 2025</span>
+                    </div>
+                    <div class="archive-posts">
+                        <a href="#">New Training Schedule for Fall 2025</a>
+                        <a href="#">Summer Belt Testing Results</a>
+                        <a href="#">Open Mat Every Friday</a>
+                        <a href="#">Kids Class Update</a>
+                        <a href="#">Annual Tournament Registration</a>
+                    </div>
+                </div>
+
+                <div class="archive-month">
+                    <div class="archive-toggle" onclick="toggleArchive(this)">
+                        <i class="fas fa-caret-right arrow"></i>
+                        <span class="month-label">Jul 2025</span>
+                    </div>
+                    <div class="archive-posts">
+                        <a href="#">Tournament Registration Open</a>
+                        <a href="#">Self-Defense Workshop</a>
+                        <a href="#">Holiday Class Schedule</a>
+                    </div>
+                </div>
+
+                <div class="archive-month">
+                    <div class="archive-toggle" onclick="toggleArchive(this)">
+                        <i class="fas fa-caret-right arrow"></i>
+                        <span class="month-label">Jun 2025</span>
+                    </div>
+                    <div class="archive-posts">
+                        <a href="#">Open Mat Sessions Every Friday</a>
+                        <a href="#">Holiday Schedule Notice</a>
+                    </div>
+                </div>
+
+                <div class="archive-month">
+                    <div class="archive-toggle" onclick="toggleArchive(this)">
+                        <i class="fas fa-caret-right arrow"></i>
+                        <span class="month-label">May 2025</span>
+                    </div>
+                    <div class="archive-posts">
+                        <a href="#">Spring Belt Testing Results</a>
+                        <a href="#">New Instructor Announcement</a>
+                    </div>
+                </div>
+
+                <div class="archive-month">
+                    <div class="archive-toggle" onclick="toggleArchive(this)">
+                        <i class="fas fa-caret-right arrow"></i>
+                        <span class="month-label">Apr 2025</span>
+                    </div>
+                    <div class="archive-posts">
+                        <a href="#">April Schedule Changes</a>
+                        <a href="#">Black Belt Ceremony</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Categories -->
+            <div class="archive-box">
+                <h3>Categories</h3>
+                <div class="archive-link"><i class="fas fa-caret-right"></i> Announcements (3)</div>
+                <div class="archive-link"><i class="fas fa-caret-right"></i> Events (2)</div>
+                <div class="archive-link"><i class="fas fa-caret-right"></i> Training (4)</div>
+                <div class="archive-link"><i class="fas fa-caret-right"></i> Achievements (2)</div>
+                <div class="archive-link"><i class="fas fa-caret-right"></i> Community (1)</div>
+            </div>
+
+        </aside>
+    </div>
+
+    <footer class="portal-footer">
+        <span>© 2025 Apex Martial Arts. All rights reserved.</span>
+        <div class="footer-links"><a href="Stcontact.html">Contact</a><a href="index.html">Main Site</a></div>
+    </footer>
+    <script src="assets/js/portal.js"></script>
+    <script>
+        function toggleArchive(el) {
+            const month = el.closest('.archive-month');
+            month.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+                                                   

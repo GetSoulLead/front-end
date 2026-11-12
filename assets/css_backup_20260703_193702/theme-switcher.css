@@ -1,0 +1,389 @@
+/* ============================================================
+   THEME-SWITCHER.CSS  —  Default / Red Theme
+   Defines ALL CSS variables used by style.css.
+   Load this file instead of SummerSky.css for the red theme.
+   Load SummerSky.css instead of this for the blue theme.
+   ============================================================ */
+
+:root {
+    /* ── Core primary palette ──────────────────────────────── */
+    --primary-color:   #eb0029;
+    --primary-dark:    #b5001f;
+    --primary-light:   #FF6B6B;
+    --primary-bg:      rgba(235, 0, 41, 0.07);
+    --primary-border:  rgba(235, 0, 41, 0.20);
+    --primary-glow:    rgba(235, 0, 41, 0.60);
+    --theme-gradient:  linear-gradient(135deg, #b5001f 0%, #eb0029 100%);
+
+    --accent-color:    var(--primary-color);
+    --accent-light:    var(--primary-light);
+    --accent-dark:     var(--primary-dark);
+    --accent-text:     #ffffff;
+    --accent-gradient: var(--theme-gradient);
+
+    --brand-color:     var(--primary-color);
+    --highlight:       var(--primary-light);
+    --red-color:       var(--primary-color);
+    --f-red:           var(--primary-color);
+    --dark:            var(--primary-dark);
+    --dojo-black:      var(--primary-dark);
+    --dojo-gray:       #8f0017;
+
+    /* ── SummerSky-compatible aliases → red ───────────────── */
+    --ss-darknavy:   var(--primary-dark);
+    --ss-blue:       var(--primary-color);
+    --ss-lightblue:  var(--primary-light);
+    --ss-offwhite:   #ffffff;
+    --ss-navy-trans: rgba(181, 0, 31, 0.90);
+    --ss-blue-trans: rgba(235, 0, 41, 0.12);
+
+    /* ── Semantic rgba (red-derived) ─────────────────────── */
+    --nav-bg:             rgba(181, 0, 31, 0.92);
+    --nav-bg-mobile:      rgba(181, 0, 31, 0.98);
+    --shadow-md:          rgba(181, 0, 31, 0.35);
+    --shadow-color:       rgba(181, 0, 31, 0.18);
+    --dark-trans-30:      rgba(181, 0, 31, 0.30);
+    --dark-trans-55:      rgba(181, 0, 31, 0.55);
+    --dark-trans-88:      rgba(181, 0, 31, 0.88);
+    --feature-card-bg:    rgba(181, 0, 31, 0.55);
+    --feature-card-hover: rgba(181, 0, 31, 0.75);
+    --sidebar-active:     rgba(235, 0, 41, 0.14);
+    --sidebar-hover:      rgba(235, 0, 41, 0.08);
+    --primary-color-12:   rgba(235, 0, 41, 0.12);
+    --tag-bg:             rgba(235, 0, 41, 0.25);
+    --focus-ring:         rgba(235, 0, 41, 0.18);
+    --glass-bg:           rgba(235, 0, 41, 0.10);
+    --light-border-15:    rgba(235, 0, 41, 0.15);
+    --border-light:       rgba(235, 0, 41, 0.20);
+    --offwhite-fade:      rgba(235, 0, 41, 0.30);
+
+    /* ── Neutral color scale ─────────────────────────────── */
+    --color-white:        #ffffff;
+    --color-black:        #000000;
+    --color-dark-text:    #1e1e1e;
+    --color-gray-text:    #575758;
+    --color-muted:        #8e94a5;
+    --color-border:       #e0e0e0;
+    --color-border-2:     #f0f0f0;
+    --color-light-bg:     #f8f9fa;
+    --color-light-bg-2:   #f4f7f6;
+    --color-section-bg:   #f5f5f5;
+    --color-overlay:      rgba(0, 0, 0, 0.5);
+    --color-overlay-dark: rgba(0, 0, 0, 0.7);
+    --color-shadow-soft:  rgba(149, 157, 165, 0.2);
+
+    --color-near-black:  #111111;
+    --color-dark-1:      #1a1a1a;
+    --color-dark-2:      #222222;
+    --center-card-bg:    #222222;
+    --color-dark-3:      #333333;
+    --color-dark-4:      #444444;
+    --color-mid-dark:    #555555;
+    --color-mid:         #666666;
+    --color-gray-1:      #777777;
+    --color-gray-2:      #888888;
+    --color-gray-3:      #999999;
+    --color-gray-4:      #aaaaaa;
+    --color-gray-5:      #bbbbbb;
+    --color-gray-6:      #cccccc;
+    --color-light-1:     #dddddd;
+    --color-light-2:     #eeeeee;
+    --color-light-bg-3:  #f4f4f4;
+    --color-light-bg-4:  #fafafa;
+
+    /* ── Nav dark overlay variants ───────────────────────── */
+    --nav-dark-1:   rgba(31, 41, 55, 0.85);
+    --nav-dark-2:   rgba(31, 41, 55, 0.92);
+    --nav-dark-3:   rgba(12, 17, 29, 0.98);
+    --nav-dark-4:   rgba(7, 10, 18, 0.58);
+    --nav-dark-5:   rgba(17, 24, 39, 0.96);
+    --black-40:     rgba(0, 0, 0, 0.40);
+
+    /* ── White opacity variants ───────────────────────────── */
+    --white-06:  rgba(255, 255, 255, 0.06);
+    --white-08:  rgba(255, 255, 255, 0.08);
+    --white-10:  rgba(255, 255, 255, 0.10);
+    --white-15:  rgba(255, 255, 255, 0.15);
+    --white-18:  rgba(255, 255, 255, 0.18);
+    --white-20:  rgba(255, 255, 255, 0.20);
+    --white-25:  rgba(255, 255, 255, 0.25);
+    --white-30:  rgba(255, 255, 255, 0.30);
+    --white-35:  rgba(255, 255, 255, 0.35);
+    --white-40:  rgba(255, 255, 255, 0.40);
+    --white-45:  rgba(255, 255, 255, 0.45);
+    --white-50:  rgba(255, 255, 255, 0.50);
+    --white-55:  rgba(255, 255, 255, 0.55);
+    --white-60:  rgba(255, 255, 255, 0.60);
+    --white-65:  rgba(255, 255, 255, 0.65);
+    --white-70:  rgba(255, 255, 255, 0.70);
+    --white-75:  rgba(255, 255, 255, 0.75);
+    --white-78:  rgba(255, 255, 255, 0.78);
+    --white-80:  rgba(255, 255, 255, 0.80);
+    --white-82:  rgba(255, 255, 255, 0.82);
+    --white-85:  rgba(255, 255, 255, 0.85);
+    --white-90:  rgba(255, 255, 255, 0.90);
+    --white-95:  rgba(255, 255, 255, 0.95);
+
+    /* ── Black opacity variants ───────────────────────────── */
+    --black-05:  rgba(0, 0, 0, 0.05);
+    --black-06:  rgba(0, 0, 0, 0.06);
+    --black-07:  rgba(0, 0, 0, 0.07);
+    --black-08:  rgba(0, 0, 0, 0.08);
+    --black-10:  rgba(0, 0, 0, 0.10);
+    --black-12:  rgba(0, 0, 0, 0.12);
+    --black-15:  rgba(0, 0, 0, 0.15);
+    --black-16:  rgba(0, 0, 0, 0.16);
+    --black-18:  rgba(0, 0, 0, 0.18);
+    --black-20:  rgba(0, 0, 0, 0.20);
+    --black-22:  rgba(0, 0, 0, 0.22);
+    --black-25:  rgba(0, 0, 0, 0.25);
+    --black-28:  rgba(0, 0, 0, 0.28);
+    --black-30:  rgba(0, 0, 0, 0.30);
+    --black-32:  rgba(0, 0, 0, 0.32);
+    --black-34:  rgba(0, 0, 0, 0.34);
+    --black-45:  rgba(0, 0, 0, 0.45);
+    --black-50:  rgba(0, 0, 0, 0.50);
+    --black-52:  rgba(0, 0, 0, 0.52);
+    --black-55:  rgba(0, 0, 0, 0.55);
+    --black-60:  rgba(0, 0, 0, 0.60);
+    --black-70:  rgba(0, 0, 0, 0.70);
+    --black-75:  rgba(0, 0, 0, 0.75);
+    --black-80:  rgba(0, 0, 0, 0.80);
+    --black-85:  rgba(0, 0, 0, 0.85);
+    --black-87:  rgba(0, 0, 0, 0.87);
+    --black-90:  rgba(0, 0, 0, 0.90);
+    --black-95:  rgba(0, 0, 0, 0.95);
+
+    /* ── Status / component colors ───────────────────────── */
+    --status-success:    #22c55e;
+    --status-warning:    #f59e0b;
+    --status-star:       #f5a623;
+    --status-error:      var(--primary-color);
+
+    /* ── Navigation ─────────────────────────────────────── */
+    --top-header-bg:      linear-gradient(135deg, #000000 0%, #111827 100%);
+    --nav-link-color:     #000000;
+    --nav-mobile-bg:      #111827;
+    --nav-offcanvas-bg:   #101827;
+    --dropdown-bg:        #ffffff;
+    --mega-h6-border:     rgba(58, 57, 54, 0.10);
+    --text-stroke-color:  #19191a;
+    --text-stroke-trans:  #19191a66;
+    --header-border-color: #cccccc;
+    --nav-scrolled-bg:    rgba(31, 41, 55, 0.85);
+
+    /* ── Cart ────────────────────────────────────────────── */
+    --cart-hover-bg:    #d9d9d9;
+    --cart-dropdown-bg: #f2f2f2;
+    --item-h6-color:    #0c2b2e;
+
+    /* ── Hero / forms ────────────────────────────────────── */
+    --hero-overlay:      linear-gradient(180deg, #ffffff63 29.29%, #ffffffcc 85.86%);
+    --form-card-bg:      rgba(255, 255, 255, 0.95);
+    --form-card-border:  rgba(255, 255, 255, 0.20);
+    --form-control-bg:   #ffffff;
+    --placeholder-color: #adb5bd;
+
+    /* ── Section backgrounds ─────────────────────────────── */
+    --section-bg-light:       #f8f8f8;
+    --discover-menu-bg:       linear-gradient(135deg, #f8f8f8 0%, #e9ecef 100%);
+    --section-bg-white:       linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    --taste-text-gradient:    linear-gradient(135deg, #000000 0%, #333333 100%);
+    --section-title-gradient: linear-gradient(135deg, #333333 0%, #666666 100%);
+
+    /* ── Typography ──────────────────────────────────────── */
+    --small-title-color: #333333;
+    --desc-color:        #666666;
+    --testi-text-color:  #4a4a4a;
+
+    /* ── Flip card overlays ──────────────────────────────── */
+    --flip-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(255, 255, 255, 0.60) 100%);
+
+    /* ── Program / feature card hovers ──────────────────── */
+    --card-hover-white: linear-gradient(135deg, #ffffff 0%, #ffffff 50%, rgba(26, 26, 26, 0.90) 100%);
+    --card-hover-warm:  linear-gradient(135deg, #ff8e53 0%, #ffb347 50%, rgba(255, 142, 83, 0.90) 100%);
+    --card-hover-dark:  linear-gradient(135deg, #333333 0%, #4a4a4a 50%, rgba(51, 51, 51, 0.95) 100%);
+
+    /* ── Testimonials (old section) ──────────────────────── */
+    --testimonial-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 29.29%, rgba(0, 0, 0, 0.86) 85.86%);
+
+    /* ── Blog ────────────────────────────────────────────── */
+    --blog-badge-gradient:  linear-gradient(135deg, #ff6b35, #f7931e);
+    --blog-avatar-border:   #ff6b35;
+    --blog-read-more:       #ff6b35;
+    --blog-read-more-hover: #e55a2b;
+
+    /* ── Dojo / Locations ────────────────────────────────── */
+    --dojo-overlay: linear-gradient(to top, rgba(0, 0, 0, 0.90), transparent);
+
+    /* ── CTA ─────────────────────────────────────────────── */
+    --cta-bg:      #000000;
+    --cta-overlay: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.16));
+
+    /* ── Flowchart ───────────────────────────────────────── */
+    --flow-bg:          #fdfdfd;
+    --flow-step-bg:     #f1f1f1;
+    --flow-inactive-bg: #dfdfdf;
+
+    /* ── "How it works" section ──────────────────────────── */
+    --how-subtitle:          #1c1d3e;
+    --how-step-transparent:  #ffffff00;
+    --how-step-trans-border: #fafaff00;
+    --how-step-cyan:         #cdf3f6;
+    --how-step-green:        #d4f8e6;
+    --how-link-color:        #2575fc;
+
+    /* ── New testimonial section ─────────────────────────── */
+    --testi-card-bg:       #ffffff;
+    --testi-border:        #e5e7eb;
+    --testi-meta-color:    #6b7280;
+    --testi-card2-bg:      linear-gradient(180deg, #ffffff, #f9fbff);
+    --testi-card2-border:  #e6ebf5;
+    --testi-heading-color: #111827;
+
+    /* ── Step-form section ───────────────────────────────── */
+    --step-form-bg:      #000000;
+    --step-right-bg:     #e9e9ef;
+    --step-muted-color:  #8c8c8c;
+    --step-subtext-color:#5c5c5c;
+
+    /* ── Brand / about section ───────────────────────────── */
+    --brand-subtitle-color: #071a36;
+    --program-curve-color:  #eb0029;          /* program-section dome edge: red   */
+
+    /* ── programV3 scroll-section (wedding-scroll) ────────── */
+    --v3-dark-green-4:   #0d0d0d;          /* initial bg + bg-one: near-black */
+    --v3-scroll-two:     #6b0015;          /* bg-two: deep crimson             */
+    --v3-green-light:    #ffffff;          /* heading text — always white      */
+    --v3-green-pale:     rgba(255,255,255,0.82); /* paragraph text            */
+
+    /* ── programV3 component palette (red theme mappings) ─── */
+    --v3-purple-light:   rgba(235, 0, 41, 0.12);
+    --v3-stone-1:        #f0f0f0;
+    --v3-stone-2:        #d8d8d8;
+    --v3-stone-3:        #e8e8e8;
+    --v3-stone-4:        #f8f8f8;
+    --v3-navy:           #1a1a2e;
+    --v3-dark-navy:      #0d0d1a;
+    --v3-orange:         #eb0029;
+    --v3-teal-light:     rgba(235, 0, 41, 0.08);
+    --v3-teal-light-2:   rgba(235, 0, 41, 0.05);
+    --v3-dark-green-1:   #111111;
+    --v3-dark-green-2:   #1a1a1a;
+    --v3-dark-green-3:   #222222;
+    --v3-dark-green-5:   #050505;
+    --v3-gray-green-1:   #666666;
+    --v3-gray-green-2:   #888888;
+    --v3-lavender:       rgba(235, 0, 41, 0.06);
+    --v3-cream:          #fff9f9;
+    --v3-lime-1:         #ffffff;
+    --v3-lime-2:         rgba(235, 0, 41, 0.10);
+    --v3-lime-3:         rgba(235, 0, 41, 0.08);
+    --v3-terracotta:     #eb0029;
+    --v3-rust:           #c40020;
+    --v3-mustard:        #f5a623;
+    --v3-beige:          #e8e8e8;
+    --v3-blue-light:     rgba(235, 0, 41, 0.10);
+    --v3-pink-light:     rgba(255, 107, 107, 0.15);
+    --v3-gray-green-1:   #666666;
+    --v3-gray-green-2:   #888888;
+
+    /* ── program-category.css --pc-* palette (red theme) ─────── */
+    --pc-terracotta-3:   #1a1a1a;          /* dark-card bg: near-black          */
+    --pc-terracotta-4:   #b5001f;          /* peach-card bg: deep crimson       */
+    --pc-terracotta-5:   #6b0015;          /* light-card bg: dark red           */
+    --pc-terracotta-1:   #8b0000;          /* text-card bg (commented blocks)   */
+    --pc-terracotta-2:   #600010;          /* light-card alt (commented blocks) */
+    --pc-lime:           #eb0029;          /* marquee strip                     */
+    --pc-dark-purple:    #111111;          /* marquee heading text              */
+    --pc-warm-white:     rgba(255,255,255,0.90); /* steps paragraph            */
+    --pc-red-light:      rgba(235, 0, 41, 0.12); /* form section center bg     */
+    --pc-rust:           #eb0029;          /* rotating text color               */
+    --pc-dark-overlay:   rgba(0, 0, 0, 0.70);
+    --pc-purple-light:   rgba(235, 0, 41, 0.10);
+    --pc-yellow-green:   rgba(235, 0, 41, 0.08);
+    --pc-gold:           #f5a623;
+}
+
+/* ── Feature card icons: keep red as-is ─────────────────── */
+.feature-cards .icon-box img {
+    filter: none !important;
+}
+
+/* ── #mission conic gradient  (red: #B5001F → #EB0029 → #FF6B6B → #B5001F) ── */
+#mission {
+    background: conic-gradient(from 15deg,
+        #B5001F 0.000deg,
+        #B5001F 10.588deg,
+        #B90020 calc(10.588deg + 0.1deg),
+        #B90020 21.176deg,
+        #BD0021 calc(21.176deg + 0.1deg),
+        #BD0021 31.765deg,
+        #C10021 calc(31.765deg + 0.1deg),
+        #C10021 42.353deg,
+        #C60022 calc(42.353deg + 0.1deg),
+        #C60022 52.941deg,
+        #CA0023 calc(52.941deg + 0.1deg),
+        #CA0023 63.529deg,
+        #CE0024 calc(63.529deg + 0.1deg),
+        #CE0024 74.118deg,
+        #D20024 calc(74.118deg + 0.1deg),
+        #D20024 84.706deg,
+        #D60025 calc(84.706deg + 0.1deg),
+        #D60025 95.294deg,
+        #DA0026 calc(95.294deg + 0.1deg),
+        #DA0026 105.882deg,
+        #DF0027 calc(105.882deg + 0.1deg),
+        #DF0027 116.471deg,
+        #E30027 calc(116.471deg + 0.1deg),
+        #E30027 127.059deg,
+        #E70028 calc(127.059deg + 0.1deg),
+        #E70028 137.647deg,
+        #EB0029 calc(137.647deg + 0.1deg),
+        #EB0029 148.235deg,
+        #ED0B30 calc(148.235deg + 0.1deg),
+        #ED0B30 158.824deg,
+        #EF1536 calc(158.824deg + 0.1deg),
+        #EF1536 169.412deg,
+        #F1203D calc(169.412deg + 0.1deg),
+        #F1203D 180.000deg,
+        #F32B43 calc(180.000deg + 0.1deg),
+        #F32B43 190.588deg,
+        #F5364A calc(190.588deg + 0.1deg),
+        #F5364A 201.176deg,
+        #F74051 calc(201.176deg + 0.1deg),
+        #F74051 211.765deg,
+        #F94B57 calc(211.765deg + 0.1deg),
+        #F94B57 222.353deg,
+        #FB565E calc(222.353deg + 0.1deg),
+        #FB565E 232.941deg,
+        #FD6064 calc(232.941deg + 0.1deg),
+        #FD6064 243.529deg,
+        #FF6B6B calc(243.529deg + 0.1deg),
+        #FF6B6B 254.118deg,
+        #F86063 calc(254.118deg + 0.1deg),
+        #F86063 264.706deg,
+        #F0565C calc(264.706deg + 0.1deg),
+        #F0565C 275.294deg,
+        #E94B54 calc(275.294deg + 0.1deg),
+        #E94B54 285.882deg,
+        #E1404D calc(285.882deg + 0.1deg),
+        #E1404D 296.471deg,
+        #DA3645 calc(296.471deg + 0.1deg),
+        #DA3645 307.059deg,
+        #D32B3D calc(307.059deg + 0.1deg),
+        #D32B3D 317.647deg,
+        #CB2036 calc(317.647deg + 0.1deg),
+        #CB2036 328.235deg,
+        #C4152E calc(328.235deg + 0.1deg),
+        #C4152E 338.824deg,
+        #BC0B27 calc(338.824deg + 0.1deg),
+        #BC0B27 349.412deg,
+        #B5001F calc(349.412deg + 0.1deg) 360deg
+    ) !important;
+}
+
+button {
+    cursor: pointer;
+    position: relative;
+}

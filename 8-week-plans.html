@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 Week Plans — Apex Martial Arts Student Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/portal.css">
+    <link rel="stylesheet" href="assets/css/yellow-theme-new.css">
+   
+    <style>
+        /* Tabs */
+        .cycle-tabs { display:flex; gap:8px; margin-bottom:28px; flex-wrap:wrap; }
+        .cycle-btn {
+            padding:9px 22px; border-radius:5px; font-size:.78rem; font-weight:700;
+            letter-spacing:.4px; text-transform:uppercase; cursor:pointer; transition:all .24s;
+            font-family:var(--font);
+        }
+        <!-- .cycle-btn.active, .cycle-btn:hover { background:var(--red); color:#fff; border-color:var(--red); } -->
+        .cycle-section { display:none; }
+        .cycle-section.active { display:block; }
+
+        /* Intro text */
+        .plan-intro {
+            font-size: .93rem;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px 20px;
+        }
+
+        /* Album grid */
+        .album-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        @media (max-width: 900px) { .album-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 500px) { .album-grid { grid-template-columns: 1fr; } }
+
+        /* Card — image top, info bottom */
+        .album-card {
+            display: block;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: box-shadow .22s, transform .22s;
+        }
+        .album-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.1); transform: translateY(-3px); }
+
+        .album-thumb {
+            width: 100%;
+            height: 140px;
+            overflow: hidden;
+            position: relative;
+        }
+        .album-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .4s;
+        }
+        .album-card:hover .album-thumb img { transform: scale(1.05); }
+
+        /* Play overlay */
+        .album-thumb::after {
+            content: '\f144';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: rgba(255,255,255,.85);
+            background: rgba(0,0,0,.25);
+            opacity: 0;
+            transition: opacity .22s;
+        }
+        .album-card:hover .album-thumb::after { opacity: 1; }
+
+        .album-info {
+            padding: 14px 14px 16px;
+        }
+        .album-info h4 {
+            font-size: .92rem;
+            font-weight: 800;
+            margin: 0 0 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .album-count {
+            font-size: .76rem;
+            margin-bottom: 12px;
+        }
+        .btn-album {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            width: 100%;
+            font-size: .72rem;
+            font-weight: 800;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+            padding: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: var(--font);
+            transition: background .2s;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="top-bar-left">
+            <div class="brand"><span class="apex">Apex</span> Martial Arts <span class="badge-student">Student Area</span></div>
+        </div>
+        <div class="top-bar-right">
+            <div class="cart-wrap"><a href="product-listing.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a></div>
+            <div class="top-bar-divider"></div>
+            <a href="index.html" class="btn-main-site"><i class="fas fa-globe"></i> Main Site</a>
+            <a href="#" class="btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-inner">
+            <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            <ul>
+                <li><a href="Stindex.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li class="has-dropdown">
+                    <a href="class-schedule.html">Class Schedule <i class="fas fa-chevron-down" style="font-size:.55rem;margin-left:3px;"></i></a>
+                    <ul class="dropdown-nav">
+                        <li><a href="class-schedule.html#adults">Adult Classes</a></li>
+                        <li><a href="class-schedule.html#kids">Kids Classes</a></li>
+                        <li><a href="class-schedule.html#advanced">Advanced / Black Belt</a></li>
+                        <li><a href="class-schedule.html#open-mat">Open Mat</a></li>
+                    </ul>
+                </li>
+                <li><a href="8-week-plans.html" class="active">8 Week Plans</a></li>
+                <li class="has-dropdown has-mega">
+                    <a href="video-library.html">Video Training Library <i class="fas fa-chevron-down" style="font-size:.6rem;margin-left:4px;"></i></a>
+                    <div class="mega-dropdown">
+                        <ul class="mega-col-1">
+                            <li><a href="#" data-l1="beginner">Beginner <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="intermediate">Intermediate <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="advanced">Advanced <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="kata">Kata Series <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l1="sparring">Sparring <i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                        <div class="mega-col-2" data-panel="beginner"><ul>
+                            <li><a href="#" data-l2="fundamentals">Fundamentals <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="kicking">Kicking Drills <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="selfdefense">Self Defense <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-2" data-panel="intermediate"><ul>
+                            <li><a href="#" data-l2="sparring-basics">Sparring Basics <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="combos">Combo Drills <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="kata-mid">Kata Vol. 1–2 <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-2" data-panel="advanced"><ul>
+                            <li><a href="#" data-l2="blackbelt">Black Belt Prep <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="competition">Competition Training <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="weapons">Weapons Kata <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-2" data-panel="kata"><ul>
+                            <li><a href="#" data-l2="heian">Heian Series <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="nidan">Nidan Series <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="kata-adv">Advanced Kata <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-2" data-panel="sparring"><ul>
+                            <li><a href="#" data-l2="counters">Counter Combos <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="point">Point Sparring <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href="#" data-l2="comp-spar">Competition Sparring <i class="fas fa-chevron-right"></i></a></li>
+                        </ul></div>
+                        <div class="mega-col-3" data-panel="fundamentals"><ul><li><a href="video-library.html">Stances & Blocks — 12:30</a></li><li><a href="video-library.html">Basic Punching Form — 8:15</a></li><li><a href="video-library.html">Dojo Test Walkthrough — 18:42</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="kicking"><ul><li><a href="video-library.html">Kicking Drills — Power & Accuracy — 11:55</a></li><li><a href="video-library.html">Roundhouse & Side Kick — 9:40</a></li><li><a href="video-library.html">Jump Kick Techniques — 7:20</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="selfdefense"><ul><li><a href="video-library.html">Real-World Self Defense — 28:40</a></li><li><a href="video-library.html">Wrist & Grab Escapes — 14:10</a></li><li><a href="video-library.html">Ground Defence Essentials — 19:45</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="sparring-basics"><ul><li><a href="video-library.html">Sparring Tips & Counters — 15:30</a></li><li><a href="video-library.html">Footwork & Distance — 10:05</a></li><li><a href="video-library.html">Blocking & Counter Strikes — 22:10</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="combos"><ul><li><a href="video-library.html">3-Strike Combo Drill — 13:20</a></li><li><a href="video-library.html">Kick-Punch Combinations — 16:00</a></li><li><a href="video-library.html">Speed & Timing Drills — 11:30</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="kata-mid"><ul><li><a href="video-library.html">Kata Series Vol. 1 — Heian Shodan — 32:08</a></li><li><a href="video-library.html">Kata Series Vol. 2 — Heian Nidan — 28:55</a></li><li><a href="video-library.html">Kata Breakdown & Bunkai — 25:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="blackbelt"><ul><li><a href="video-library.html">Black Belt Conditioning Drills — 35:00</a></li><li><a href="video-library.html">1st Dan Requirements — 40:15</a></li><li><a href="video-library.html">Dojo Etiquette & Leadership — 20:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="competition"><ul><li><a href="video-library.html">Competition Sparring Tactics — 30:10</a></li><li><a href="video-library.html">Tournament Preparation — 22:45</a></li><li><a href="video-library.html">Judge Scoring Criteria — 15:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="weapons"><ul><li><a href="video-library.html">Bo Staff Kata — 38:20</a></li><li><a href="video-library.html">Nunchaku Basics — 24:00</a></li><li><a href="video-library.html">Sai Kata Introduction — 18:30</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="heian"><ul><li><a href="video-library.html">Heian Shodan Full — 32:08</a></li><li><a href="video-library.html">Heian Nidan Full — 28:55</a></li><li><a href="video-library.html">Heian Sandan Full — 30:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="nidan"><ul><li><a href="video-library.html">Nidan Kata Breakdown — 35:10</a></li><li><a href="video-library.html">Nidan Bunkai Applications — 27:40</a></li><li><a href="video-library.html">Nidan Speed Drills — 18:00</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="kata-adv"><ul><li><a href="video-library.html">Advanced Kata — Kanku Dai — 41:20</a></li><li><a href="video-library.html">Bassai Dai Full — 36:00</a></li><li><a href="video-library.html">Empi Kata — 29:15</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="counters"><ul><li><a href="video-library.html">Sparring Tips & Counter Combos — 15:30</a></li><li><a href="video-library.html">Sweep & Counter Drill — 12:00</a></li><li><a href="video-library.html">Jab-Cross-Hook Counter — 10:45</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="point"><ul><li><a href="video-library.html">Point Scoring System — 14:00</a></li><li><a href="video-library.html">Speed Point Sparring — 20:30</a></li><li><a href="video-library.html">Distance Management — 11:15</a></li></ul></div>
+                        <div class="mega-col-3" data-panel="comp-spar"><ul><li><a href="video-library.html">Competition Sparring Tactics — 30:10</a></li><li><a href="video-library.html">Reading Your Opponent — 18:50</a></li><li><a href="video-library.html">Finals Strategy — 22:00</a></li></ul></div>
+                    </div>
+                </li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="Stcontact.html">Contact</a></li>
+                <li><a href="product-listing.html">Shop</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-noise"></div>
+        <div class="hero-content">
+            <span class="hero-eyebrow">8 Week Plans</span>
+            <h1>Anyone Can Begin Martial Arts.<br>Any Age, Any Fitness Level.</h1>
+            <p>Follow your personalised 8-week virtual training academy plan and level up every session.</p>
+        </div>
+    </section>
+
+    <div class="portal-body full" style="padding-top:36px; padding-bottom:48px;">
+        <main class="portal-main">
+
+            <!-- 2 Tabs -->
+            <div class="cycle-tabs">
+                <button class="cycle-btn active" onclick="showCycle('communication')">Communication 8 Week Plan</button>
+                <button class="cycle-btn" onclick="showCycle('belief')">Belief 8 Week Plan</button>
+            </div>
+
+            <!-- COMMUNICATION -->
+            <div class="cycle-section active" id="communication">
+                <div class="section-title-deco" style="margin-bottom:16px;">
+                    <h2>Communication 8 Week Plan</h2>
+                </div>
+                <p class="plan-intro">
+                    Below is the <strong>COMMUNICATION</strong> cycle of the ATA 8 Week Virtual Training Academy.
+                    The Tigers, K4K, and Teens/Adults week 1 videos are used for both Monday and Wednesday classes.
+                    ATA HIIT Week 1 video is used for both Tuesday and Thursday classes.
+                </p>
+                <div class="album-grid">
+                    <div class="album-card">
+                        <div class="album-thumb"><img src="assets/images/portal/landscape-1.jpg" alt="ATA Tigers"></div>
+                        <div class="album-info">
+                            <h4>ATA Tigers</h4>
+                            <div class="album-count">0</div>
+                            <button class="btn-album">VIEW ALBUM</button>
+                        </div>
+                    </div>
+                    <div class="album-card">
+                        <div class="album-thumb"><img src="assets/images/portal/landscape-2.jpg" alt="Karate 4 Kids"></div>
+                        <div class="album-info">
+                            <h4>Karate 4 Kids</h4>
+                            <div class="album-count">0</div>
+                            <button class="btn-album">VIEW ALBUM</button>
+                        </div>
+                    </div>
+                    <div class="album-card">
+                        <div class="album-thumb"><img src="assets/images/portal/landscape-3.jpg" alt="Teens & Adults"></div>
+                        <div class="album-info">
+                            <h4>Teens &amp; Adults</h4>
+                            <div class="album-count">0</div>
+                            <button class="btn-album">VIEW ALBUM</button>
+                        </div>
+                    </div>
+                    <div class="album-card">
+                        <div class="album-thumb"><img src="assets/images/portal/1.jpg" alt="ATA HIIT"></div>
+                        <div class="album-info">
+                            <h4>ATA HIIT</h4>
+                            <div class="album-count">0</div>
+                            <button class="btn-album">VIEW ALBUM</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BELIEF -->
+            <div class="cycle-section" id="belief">
+                <div class="section-title-deco" style="margin-bottom:16px;">
+                    <h2>Belief 8 Week Plan</h2>
+                </div>
+                <p class="plan-intro">
+                    Below is the <strong>BELIEF</strong> cycle of the ATA 8 Week Virtual Training Academy.
+                    The Tigers, K4K, and Teens/Adults week 1 videos are used for both Monday and Wednesday classes.
+                    ATA HIIT Week 1 video is used for both Tuesday and Thursday classes.
+                </p>
+                <div class="album-grid">
+                    <div class="album-card">
+                        <div class="album-thumb"><img src="assets/images/portal/2.jpg" alt="ATA Tigers"></div>
+                        <div class="album-info">
+                            <h4>ATA Tigers</h4>
+                            <div class="album-count">0</div>
+                            <button class="btn-album">VIEW ALBUM</button>
+                        </div>
+                    </div>
+                    <div class="album-card">
+                        <div class="album-thumb"><img src="assets/images/portal/1-1.jpg" alt="Karate 4 Kids"></div>
+                        <div class="album-info">
+                            <h4>Karate 4 Kids</h4>
+                            <div class="album-count">0</div>
+                            <button class="btn-album">VIEW ALBUM</button>
+                        </div>
+                    </div>
+                    <div class="album-card">
+                        <div class="album-thumb"><img src="assets/images/portal/2-2.jpg" alt="Teens & Adults"></div>
+                        <div class="album-info">
+                            <h4>Teens &amp; Adults</h4>
+                            <div class="album-count">0</div>
+                            <button class="btn-album">VIEW ALBUM</button>
+                        </div>
+                    </div>
+                    <div class="album-card">
+                        <div class="album-thumb"><img src="assets/images/portal/side-1.jpg" alt="ATA HIIT"></div>
+                        <div class="album-info">
+                            <h4>ATA HIIT</h4>
+                            <div class="album-count">0</div>
+                            <button class="btn-album">VIEW ALBUM</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="portal-footer">
+        <span>© 2025 Apex Martial Arts. All rights reserved.</span>
+        <div class="footer-links"><a href="Stcontact.html">Contact</a><a href="index.html">Main Site</a></div>
+    </footer>
+
+    <script src="assets/js/portal.js"></script>
+    <script>
+        function showCycle(id) {
+            document.querySelectorAll('.cycle-section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.cycle-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+                                                             
