@@ -3343,100 +3343,100 @@ iframe {
 /* --- Tablet (768–991px) ------------------------------------ */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .top-header {
-        flex-wrap: nowrap;
-        align-items: center;
-        padding: 7px 16px;
-        gap: 10px;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        padding: 7px 16px !important;
+        gap: 10px !important;
     }
 
     .top-header-left {
-        flex: 1 1 0;
-        min-width: 0;
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
     }
 
     .top-header-left a {
-        font-size: 12px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: block;
+        font-size: 12px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        display: block !important;
     }
 
     .top-header-right {
-        flex: 0 0 auto;
-        flex-wrap: nowrap;
-        gap: 14px;
+        flex: 0 0 auto !important;
+        flex-wrap: nowrap !important;
+        gap: 14px !important;
     }
 
     .top-header-right a {
-        font-size: 13px;
-        white-space: nowrap;
+        font-size: 13px !important;
+        white-space: nowrap !important;
     }
 }
 
 /* --- Mobile (≤767px) --------------------------------------- */
 @media (max-width: 767.98px) {
     .top-header {
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        padding: 6px 14px;
-        gap: 8px;
+        flex-wrap: nowrap !important;
+        justify-content: space-between !important;
+        padding: 6px 14px !important;
+        gap: 8px !important;
     }
 
     .top-header-left {
-        flex: 1 1 0;
-        min-width: 0;
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
     }
 
     .top-header-left a {
-        font-size: 11px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: block;
+        font-size: 11px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        display: block !important;
     }
 
     .top-header-right {
-        flex: 0 0 auto;
-        flex-wrap: nowrap;
-        gap: 12px;
-        align-items: center;
+        flex: 0 0 auto !important;
+        flex-wrap: nowrap !important;
+        gap: 12px !important;
+        align-items: center !important;
     }
 
     /* Hide text labels on phone & student portal — show icons only */
     .top-header-right > a {
-        font-size: 0;
+        font-size: 0 !important;
     }
     .top-header-right > a > i {
-        font-size: 16px;
+        font-size: 16px !important;
     }
     .top-header-right > a > i.me-2 {
         margin-right: 0 !important;
     }
 
     .top-header .cart-dropdown {
-        right: 0;
-        left: auto;
-        width: min(288px, calc(100vw - 28px));
+        right: 0 !important;
+        left: auto !important;
+        width: min(288px, calc(100vw - 28px)) !important;
     }
 }
 
 /* --- Small phones (≤420px) --------------------------------- */
 @media (max-width: 420px) {
     .top-header {
-        padding: 5px 12px;
+        padding: 5px 12px !important;
     }
 
     .top-header-left a {
-        font-size: 10px;
+        font-size: 10px !important;
     }
 
     .top-header-right {
-        gap: 10px;
+        gap: 10px !important;
     }
 
     .top-header-right > a > i {
-        font-size: 15px;
+        font-size: 15px !important;
     }
 }
 
