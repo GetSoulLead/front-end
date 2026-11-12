@@ -437,7 +437,7 @@ body {
 }
 
 .bg-image {
-    background-image: url(/assets/images/about/box-bg.png);
+    background-image: url(../images/about/box-bg.png);
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
