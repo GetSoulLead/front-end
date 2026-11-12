@@ -3408,10 +3408,15 @@ iframe {
         font-size: 0 !important;
     }
     .top-header-right > a > i {
-        font-size: 16px !important;
+        font-size: 12px !important;
     }
     .top-header-right > a > i.me-2 {
         margin-right: 0 !important;
+    }
+    /* Cart count badge */
+    .top-header-right .cart-count {
+        top: -5px !important;
+        font-size: 8px !important;
     }
 
     .top-header .cart-dropdown {
@@ -3436,7 +3441,7 @@ iframe {
     }
 
     .top-header-right > a > i {
-        font-size: 15px !important;
+        font-size: 12px !important;
     }
 }
 
